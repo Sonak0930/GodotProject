@@ -9,7 +9,10 @@ override.cfg
 # Godot-specific ignores
 .import/
 export.cfg
+logs/
 export_presets.cfg
+.DS_Store
+*~
 
 # Mono-specific ignores
 .mono/
