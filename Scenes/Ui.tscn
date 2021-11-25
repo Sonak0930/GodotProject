@@ -1,0 +1,119 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/mission_color_circle.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/targetColor_cir.gd" type="Script" id=2]
+
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Uibackground" type="Node2D" parent="."]
+
+[node name="Uiback03" type="Polygon2D" parent="Uibackground"]
+position = Vector2( -0.0560913, 5.88628 )
+color = Color( 0.435294, 0.32549, 0.113725, 1 )
+polygon = PoolVector2Array( 0, 0, 1024, 0, 1024, 115, 0, 115, 0, 115 )
+
+[node name="Uiback02" type="Polygon2D" parent="Uibackground"]
+position = Vector2( 0.784805, 0 )
+scale = Vector2( 1, 1 )
+color = Color( 0.784314, 0.776471, 0.666667, 1 )
+polygon = PoolVector2Array( 0, 0, 1024, 0, 1024, 115, 0, 115, 0, 115 )
+
+[node name="Uiback01" type="Polygon2D" parent="Uibackground"]
+position = Vector2( -0.0560913, 112.68 )
+scale = Vector2( 1, 0.0400001 )
+color = Color( 0.67451, 0.662745, 0.482353, 1 )
+polygon = PoolVector2Array( 0, 0, 1024, 0, 1024, 115, 0, 115, 0, 115 )
+
+[node name="R" type="Label" parent="."]
+margin_left = 149.973
+margin_top = 32.5778
+margin_right = 229.973
+margin_bottom = 46.5778
+custom_colors/font_color = Color( 0.0980392, 0.0509804, 0.0509804, 1 )
+text = "255 : R : 100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="G" type="Label" parent="."]
+margin_left = 149.973
+margin_top = 52.1065
+margin_right = 231.973
+margin_bottom = 66.1066
+custom_colors/font_color = Color( 0.0980392, 0.0509804, 0.0509804, 1 )
+text = "255 : G : 100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B" type="Label" parent="."]
+margin_left = 149.973
+margin_top = 72.2653
+margin_right = 230.973
+margin_bottom = 86.2653
+custom_colors/font_color = Color( 0.0980392, 0.0509804, 0.0509804, 1 )
+text = "255 : B : 100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="currColor_cir" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="targetColor_cir" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="CurrentColorLabel" type="Label" parent="."]
+margin_left = 40.5791
+margin_top = 45.9842
+margin_right = 124.579
+margin_bottom = 76.9842
+rect_pivot_offset = Vector2( 133.356, 133.573 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Current 
+Color"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TargetColorLabel" type="Label" parent="."]
+margin_left = 257.53
+margin_top = 45.9842
+margin_right = 341.53
+margin_bottom = 76.9842
+rect_pivot_offset = Vector2( 133.356, 133.573 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Target
+Color"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menuButton" type="Button" parent="."]
+margin_left = 942.645
+margin_top = 14.2952
+margin_right = 991.645
+margin_bottom = 34.2952
+rect_scale = Vector2( 1.4, 1.4 )
+text = "menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settingButton" type="Button" parent="."]
+margin_left = 931.713
+margin_top = 51.2947
+margin_right = 987.713
+margin_bottom = 71.2947
+rect_scale = Vector2( 1.4, 1.4 )
+text = "setting"
+__meta__ = {
+"_edit_use_anchors_": false
+}
