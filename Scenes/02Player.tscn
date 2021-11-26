@@ -3,7 +3,6 @@
 [ext_resource path="res://hermitcrab.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/02Player.gd" type="Script" id=2]
 
-
 [node name="KinematicBody2D" type="KinematicBody2D"]
 scale = Vector2( 0.2, 0.2 )
 collision_mask = 126

@@ -3,7 +3,6 @@
 [ext_resource path="res://Scripts/mission_color_circle.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/targetColor_cir.gd" type="Script" id=2]
 
-
 [node name="Node2D" type="Node2D"]
 
 [node name="Uibackground" type="Node2D" parent="."]
@@ -15,7 +14,6 @@ polygon = PoolVector2Array( 0, 0, 1024, 0, 1024, 115, 0, 115, 0, 115 )
 
 [node name="Uiback02" type="Polygon2D" parent="Uibackground"]
 position = Vector2( 0.784805, 0 )
-scale = Vector2( 1, 1 )
 color = Color( 0.784314, 0.776471, 0.666667, 1 )
 polygon = PoolVector2Array( 0, 0, 1024, 0, 1024, 115, 0, 115, 0, 115 )
 

@@ -5,7 +5,6 @@
 [ext_resource path="res://assets/Animations/Item_default_anim.tres" type="Animation" id=3]
 [ext_resource path="res://assets/collect_effects.png" type="Texture" id=4]
 
-
 [sub_resource type="Animation" id=1]
 resource_name = "Collect_anim"
 length = 0.5
