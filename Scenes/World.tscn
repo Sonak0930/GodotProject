@@ -6,9 +6,9 @@
 [ext_resource path="res://Texture/TX Struct.png" type="Texture" id=4]
 [ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=5]
 [ext_resource path="res://TileSets/PropsTileset.tres" type="TileSet" id=6]
-[ext_resource path="res://Scenes/02Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/ScenesJaemin/ExamplePlayer.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Ui.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/ScenesJaemin/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scripts/ScriptJaemin/Animation.gd" type="Script" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
@@ -129,11 +129,10 @@ collision_layer = 8
 format = 1
 tile_data = PoolIntArray( 393236, 1610612739, 0, 393243, 1610612739, 0 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
-position = Vector2( 77.2985, 284.22 )
-scale = Vector2( 0.1, 0.1 )
-
 [node name="UI" parent="." instance=ExtResource( 8 )]
 position = Vector2( 0, -121.231 )
 
-[node name="Player" parent="." instance=ExtResource( 9 )]
+[node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 94, 268.592 )
+scale = Vector2( 1, 1 )
+script = ExtResource( 9 )
