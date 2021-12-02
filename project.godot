@@ -10,66 +10,60 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Area2D",
-"class": "ColorObj",
+"class": "ColorObj_blue_mj",
 "language": "GDScript",
-"path": "res://Scripts/ColorObj.gd"
-}, {
-"base": "HBoxContainer",
-"class": "ContributorClass",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/ContributorClass.gd"
-}, {
-"base": "PanelContainer",
-"class": "GistItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/GistItem.gd"
-}, {
-"base": "HBoxContainer",
-"class": "InvitationItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/InvitationItem.gd"
-}, {
-"base": "Node2D",
-"class": "Player",
-"language": "GDScript",
-"path": "res://Scenes/02Player.gd"
-}, {
-"base": "PanelContainer",
-"class": "RepositoryItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/RepositoryItem.gd"
+"path": "res://Scripts/colorObjs/ColorObj_blue_mj.gd"
 }, {
 "base": "Area2D",
-"class": "WaterObj",
+"class": "ColorObj_green_mj",
 "language": "GDScript",
-"path": "res://Scripts/WaterObj.gd"
+"path": "res://Scripts/colorObjs/ColorObj_green_mj.gd"
+}, {
+"base": "Area2D",
+"class": "ColorObj_mj",
+"language": "GDScript",
+"path": "res://Scripts/colorObjs/ColorObj_mj.gd"
+}, {
+"base": "Area2D",
+"class": "ColorObj_red_mj",
+"language": "GDScript",
+"path": "res://Scripts/colorObjs/ColorObj_red_mj.gd"
+}, {
+"base": "Sprite",
+"class": "CurrentColor_circle_mj",
+"language": "GDScript",
+"path": "res://Scripts/UI/CurrentColor_circle_mj.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player_mj",
+"language": "GDScript",
+"path": "res://Scripts/Player_mj.gd"
+}, {
+"base": "Sprite",
+"class": "TargetColor_circle_mj",
+"language": "GDScript",
+"path": "res://Scripts/UI/TargetColor_circle_mj.gd"
 }, {
 "base": "Node2D",
-"class": "currColor_cir",
+"class": "world_mj",
 "language": "GDScript",
-"path": "res://Scripts/mission_color_circle.gd"
-}, {
-"base": "Node2D",
-"class": "targetColor_cir",
-"language": "GDScript",
-"path": "res://Scripts/targetColor_cir.gd"
+"path": "res://Scripts/World_mj.gd"
 } ]
 _global_script_class_icons={
-"ColorObj": "",
-"ContributorClass": "",
-"GistItem": "",
-"InvitationItem": "",
-"Player": "",
-"RepositoryItem": "",
-"WaterObj": "",
-"currColor_cir": "",
-"targetColor_cir": ""
+"ColorObj_blue_mj": "",
+"ColorObj_green_mj": "",
+"ColorObj_mj": "",
+"ColorObj_red_mj": "",
+"CurrentColor_circle_mj": "",
+"Player_mj": "",
+"TargetColor_circle_mj": "",
+"world_mj": ""
 }
 
 [application]
 
 config/name="20211124_CMPteam_01"
-run/main_scene="res://Scenes/World_Sample.tscn"
+run/main_scene="res://Scenes/World_mj.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -82,33 +76,31 @@ RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
 [display]
 
 window/size/height=730
-window/stretch/mode="2d"
-window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/github-integration/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [input]
 
 right={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
  ]
 }
 left={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
  ]
 }
 up={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
  ]
 }
 down={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
  ]
 }
 
