@@ -2,7 +2,8 @@
 
 [ext_resource path="res://assets/GhostWalk/Owlet_Monster_Walk_6.png" type="Texture" id=1]
 [ext_resource path="res://assets/GhostWalk/MonsterReversedWalking.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/ScriptJaemin/Ghost.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/ScriptJaemin/Ghost_jm.gd" type="Script" id=3]
+
 
 [sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 5, 5 )

@@ -14,30 +14,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/ColorObj.gd"
 }, {
-"base": "HBoxContainer",
-"class": "ContributorClass",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/ContributorClass.gd"
-}, {
-"base": "PanelContainer",
-"class": "GistItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/GistItem.gd"
-}, {
-"base": "HBoxContainer",
-"class": "InvitationItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/InvitationItem.gd"
-}, {
 "base": "KinematicBody2D",
 "class": "Player",
 "language": "GDScript",
 "path": "res://Scripts/02Player.gd"
-}, {
-"base": "PanelContainer",
-"class": "RepositoryItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/RepositoryItem.gd"
 }, {
 "base": "Area2D",
 "class": "WaterObj",
@@ -56,11 +36,7 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "ColorObj": "",
-"ContributorClass": "",
-"GistItem": "",
-"InvitationItem": "",
 "Player": "",
-"RepositoryItem": "",
 "WaterObj": "",
 "currColor_cir": "",
 "targetColor_cir": ""
@@ -69,7 +45,7 @@ _global_script_class_icons={
 [application]
 
 config/name="RobiSplash30"
-run/main_scene="res://Scenes/ScenesJaemin/Credit.tscn"
+run/main_scene="res://Scenes/ScenesJaemin/Credit_jm.tscn"
 config/icon="res://icon.png"
 
 [autoload]
