@@ -1,7 +1,4 @@
-[gd_scene load_steps=3 format=2]
-
-[ext_resource path="res://Scripts/mission_color_circle.gd" type="Script" id=1]
-[ext_resource path="res://Scripts/targetColor_cir.gd" type="Script" id=2]
+[gd_scene format=2]
 
 [node name="Node2D" type="Node2D"]
 
@@ -57,10 +54,8 @@ __meta__ = {
 }
 
 [node name="currColor_cir" type="Node2D" parent="."]
-script = ExtResource( 1 )
 
 [node name="targetColor_cir" type="Node2D" parent="."]
-script = ExtResource( 2 )
 
 [node name="CurrentColorLabel" type="Label" parent="."]
 margin_left = 40.5791
