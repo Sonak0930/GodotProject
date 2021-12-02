@@ -1,12 +1,13 @@
-extends AnimatedSprite
+extends KinematicBody2D
 
 onready var direction = randi()%4
 onready var moveleft = false
 onready var moveright = false
 onready var moveup = false
 onready var movedown = false
-
-onready var timer= get_node("Timer")
+onready var speed = 100
+onready var timer= $
+onready var anim = get_node("AnimatedSprite")
 
 func _initTimer():
 	timer.set_wait_time(5)
@@ -18,10 +19,7 @@ func _ready():
 	
 	
 	
-func _process(delta):
-	
-	
-
+func _move():
 	var v1 = Vector2.ZERO
 	var v2 = Vector2.ZERO
 
@@ -42,15 +40,15 @@ func _process(delta):
 		movedown = true
 		
 	if moveright:
-		self.play("run")
-		self.set_animation("Right")
+		anim.play("run")
+		anim.set_animation("Right")
 		v1 = Vector2.RIGHT
 	elif moveleft:
-		self.play("run")
-		self.set_animation("Left")
+		anim.play("run")
+		anim.set_animation("Left")
 		v1 = Vector2.LEFT
 	else:
-		self.stop()
+		anim.stop()
 		
 	if moveup:
 		v2 = Vector2.UP
@@ -58,14 +56,13 @@ func _process(delta):
 		v2 = Vector2.DOWN
 		
 	v1 += v2
-	
-	position += v1
-	
-
-	
+	v1*speed
+	move_and_slide(v1)
 	
 
-
+func _physics_process(delta):
+	_move()
+	
 func _on_Timer_timeout():
 	print(direction)
 	direction = randi()%4

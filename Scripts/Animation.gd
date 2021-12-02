@@ -28,7 +28,9 @@ func _moveWithKeyboard():
 		
 	v1 += v2
 	
-	position += v1
+	move_and_slide(v1)
+	
+func_ physics
 	
 
 	

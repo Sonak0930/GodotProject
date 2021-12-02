@@ -1,10 +1,12 @@
 extends KinematicBody2D
 
 onready var anima = $AnimatedSprite
+
+onready var speed = 200
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	_moveWithKeyboard()
+
 
 	if Input.is_action_pressed("ui_right"):
 		anima.play("run")
@@ -27,8 +29,10 @@ func _moveWithKeyboard():
 		v2 = Vector2.DOWN
 		
 	v1 += v2
+	v1 = v1*speed
 	
-	position += v1
+	move_and_slide(v1)
 	
-
+func _physics_process(delta):
+	_moveWithKeyboard()
 	
