@@ -8,7 +8,7 @@
 [ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=6]
 [ext_resource path="res://TileSets/PropsTileset.tres" type="TileSet" id=7]
 [ext_resource path="res://TileSets/StoneTileset.tres" type="TileSet" id=8]
-[ext_resource path="res://Texture/TX Struct.png" type="Texture" id=9]
+[ext_resource path="res://assets/Texture/TX Struct.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/Enemies/MeleeBot.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Ui.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=13]

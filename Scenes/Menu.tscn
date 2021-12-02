@@ -3,7 +3,7 @@
 [ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/WallTileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://TileSets/StoneTileset.tres" type="TileSet" id=3]
-[ext_resource path="res://Texture/TX Struct.png" type="Texture" id=4]
+[ext_resource path="res://assets/Texture/TX Struct.png" type="Texture" id=4]
 [ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=5]
 [ext_resource path="res://TileSets/PropsTileset.tres" type="TileSet" id=6]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-167.png" type="Texture" id=8]
