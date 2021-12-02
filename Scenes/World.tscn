@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 [gd_scene load_steps=13 format=2]
+=======
+[gd_scene load_steps=15 format=2]
+>>>>>>> MyoungJI
 
 [ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/WallTileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://TileSets/StoneTileset.tres" type="TileSet" id=3]
+<<<<<<< HEAD
 [ext_resource path="res://Texture/TX Struct.png" type="Texture" id=4]
 [ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=5]
 [ext_resource path="res://TileSets/PropsTileset.tres" type="TileSet" id=6]
@@ -11,6 +16,17 @@
 [ext_resource path="res://Scripts/ScriptJaemin/Animation_jm.gd" type="Script" id=9]
 [ext_resource path="res://Scenes/Ghost.tscn" type="PackedScene" id=10]
 
+=======
+[ext_resource path="res://assets/Texture/TX Struct.png" type="Texture" id=4]
+[ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=5]
+[ext_resource path="res://TileSets/PropsTileset.tres" type="TileSet" id=6]
+[ext_resource path="res://Scenes/colorObjs/ColorObj_blue.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Ui.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/colorObjs/ColorObj_red.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/colorObjs/ColorObj_green.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scripts/World.gd" type="Script" id=12]
+>>>>>>> MyoungJI
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
@@ -82,6 +98,10 @@ points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 1
 
 [node name="World" type="Node2D"]
 position = Vector2( 0, 121.408 )
+<<<<<<< HEAD
+=======
+script = ExtResource( 12 )
+>>>>>>> MyoungJI
 
 [node name="GroundTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -99,6 +119,17 @@ collision_layer = 8
 format = 1
 tile_data = PoolIntArray( 65537, 2, 0, 65539, 4, 0, 65540, 3, 0, 65542, 2, 0, 65544, 3, 0, 65546, 2, 0, 65548, 3, 0, 131073, 14, 0, 131077, 13, 0, 131078, 14, 0, 131081, 13, 0, 131082, 14, 0, 131085, 13, 0, 196609, 14, 0, 196613, 13, 0, 196614, 14, 0, 196617, 13, 0, 196618, 14, 0, 196621, 13, 0, 262145, 14, 0, 262147, 22, 0, 262149, 13, 0, 262150, 14, 0, 262153, 13, 0, 262154, 14, 0, 262157, 13, 0, 327681, 20, 0, 327684, 21, 0, 327686, 20, 0, 327689, 13, 0, 327690, 14, 0, 327692, 21, 0, 327693, 13, 0, 393225, 15, 0, 393226, 15, 0, 786450, 2, 0, 786452, 4, 0, 786453, 3, 0, 786455, 2, 0, 786457, 3, 0, 786459, 2, 0, 786461, 3, 0, 851986, 14, 0, 851990, 13, 0, 851991, 14, 0, 851994, 13, 0, 851995, 14, 0, 851998, 13, 0, 917522, 14, 0, 917526, 13, 0, 917527, 14, 0, 917530, 13, 0, 917531, 14, 0, 917534, 13, 0, 983058, 14, 0, 983060, 22, 0, 983062, 13, 0, 983063, 14, 0, 983066, 13, 0, 983067, 14, 0, 983070, 13, 0, 1048594, 20, 0, 1048597, 21, 0, 1048599, 20, 0, 1048602, 13, 0, 1048603, 14, 0, 1048605, 21, 0, 1048606, 13, 0, 1114138, 15, 0, 1114139, 15, 0 )
 
+<<<<<<< HEAD
+=======
+[node name="StructTileMap" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 32, 32 )
+show_collision = true
+collision_layer = 8
+format = 1
+tile_data = PoolIntArray( 393236, 1610612739, 0, 393243, 1610612739, 0 )
+
+>>>>>>> MyoungJI
 [node name="StoneTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 32, 32 )
@@ -107,6 +138,12 @@ collision_layer = 8
 format = 1
 tile_data = PoolIntArray( 65556, 0, 0, 65557, 5, 0, 65558, 5, 0, 65559, 5, 0, 65560, 5, 0, 65561, 5, 0, 65562, 5, 0, 65563, 5, 0, 65564, 1, 0, 131092, 8, 0, 131093, 4, 0, 131094, 4, 0, 131095, 4, 0, 131096, 4, 0, 131097, 4, 0, 131098, 4, 0, 131099, 4, 0, 131100, 7, 0, 196628, 40, 0, 196629, 4, 0, 196630, 4, 0, 196631, 4, 0, 196632, 4, 0, 196633, 4, 0, 196634, 4, 0, 196635, 4, 0, 196636, 7, 0, 262164, 40, 0, 262165, 4, 0, 262166, 4, 0, 262167, 4, 0, 262168, 4, 0, 262169, 4, 0, 262170, 4, 0, 262171, 4, 0, 262172, 7, 0, 327700, 2, 0, 327701, 6, 0, 327702, 6, 0, 327703, 6, 0, 327704, 6, 0, 327705, 6, 0, 327706, 6, 0, 327707, 6, 0, 327708, 3, 0 )
 
+<<<<<<< HEAD
+=======
+[node name="Player" parent="." instance=ExtResource( 9 )]
+position = Vector2( 36.5102, 282.557 )
+
+>>>>>>> MyoungJI
 [node name="PropsTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 6 )
 cell_size = Vector2( 32, 32 )
@@ -123,6 +160,7 @@ collision_layer = 8
 format = 1
 tile_data = PoolIntArray( 589824, 0, 0, 589828, 0, 0, 589832, 0, 0, 851970, 0, 0, 851974, 0, 0, 851978, 0, 0 )
 
+<<<<<<< HEAD
 [node name="StructTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
@@ -141,3 +179,39 @@ script = ExtResource( 9 )
 
 [node name="Node2D" parent="." instance=ExtResource( 10 )]
 position = Vector2( 509, 311.592 )
+=======
+[node name="UI" parent="." instance=ExtResource( 8 )]
+position = Vector2( 0, -121.231 )
+
+[node name="colorObjs" type="Node2D" parent="."]
+
+[node name="ColorObj_blue" parent="colorObjs" instance=ExtResource( 7 )]
+position = Vector2( 474.445, 196.95 )
+
+[node name="ColorObj_blue2" parent="colorObjs" instance=ExtResource( 7 )]
+position = Vector2( 531.445, 200.95 )
+
+[node name="ColorObj_blue3" parent="colorObjs" instance=ExtResource( 7 )]
+position = Vector2( 485.667, 229.266 )
+
+[node name="ColorObj_green" parent="colorObjs" instance=ExtResource( 11 )]
+position = Vector2( 521, 235 )
+
+[node name="ColorObj_green2" parent="colorObjs" instance=ExtResource( 11 )]
+position = Vector2( 540.821, 288.329 )
+
+[node name="ColorObj_green3" parent="colorObjs" instance=ExtResource( 11 )]
+position = Vector2( 504.482, 275.115 )
+
+[node name="ColorObj_red" parent="colorObjs" instance=ExtResource( 10 )]
+position = Vector2( 485, 299 )
+
+[node name="ColorObj_red2" parent="colorObjs" instance=ExtResource( 10 )]
+position = Vector2( 456.684, 275.875 )
+
+[node name="ColorObj_red4" parent="colorObjs" instance=ExtResource( 10 )]
+position = Vector2( 424.12, 278.235 )
+
+[node name="ColorObj_red3" parent="colorObjs" instance=ExtResource( 10 )]
+position = Vector2( 448.189, 244.727 )
+>>>>>>> MyoungJI
