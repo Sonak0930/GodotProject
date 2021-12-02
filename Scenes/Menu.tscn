@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/WallTileSet.tres" type="TileSet" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/Texture/TX Struct.png" type="Texture" id=4]
 [ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=5]
 [ext_resource path="res://TileSets/PropsTileset.tres" type="TileSet" id=6]
+[ext_resource path="res://Scenes/Player_Dh.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-167.png" type="Texture" id=8]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-184.png" type="Texture" id=9]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-168.png" type="Texture" id=10]
@@ -135,6 +136,9 @@ cell_size = Vector2( 32, 32 )
 show_collision = true
 collision_layer = 8
 format = 1
+
+[node name="Player_Dh" parent="." instance=ExtResource( 7 )]
+position = Vector2( 115, 339 )
 
 [node name="PlantTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 5 )
