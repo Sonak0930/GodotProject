@@ -39,7 +39,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/UI/CurrentColor_circle_mj.gd"
 }, {
-"base": "Node2D",
+"base": "KinematicBody2D",
 "class": "Player_Dh",
 "language": "GDScript",
 "path": "res://Scripts/Player_Dh.gd"

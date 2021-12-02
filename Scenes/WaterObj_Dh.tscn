@@ -76,4 +76,6 @@ __meta__ = {
 root_node = NodePath("../..")
 anims/Collect_anim = SubResource( 3 )
 
+[connection signal="body_entered" from="." to="." method="_on_WaterObj_Dh_body_entered"]
 [connection signal="body_entered" from="." to="." method="_on_WaterObj_body_entered"]
+[connection signal="animation_finished" from="Animations/Collect_anim" to="." method="_on_Collect_anim_animation_finished"]
