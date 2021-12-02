@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/Ui_mj.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player_mj.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=10]
 [ext_resource path="res://assets/Texture/TX Struct.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/World_mj.gd" type="Script" id=12]
+[ext_resource path="res://Scenes/waterObj_mj.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
@@ -150,6 +151,9 @@ position = Vector2( 500.255, 179.337 )
 [node name="ColorObj_blue_mj3" parent="colorObjs_mj" instance=ExtResource( 3 )]
 position = Vector2( 475.714, 145.357 )
 
+[node name="ColorObj_blue_mj4" parent="colorObjs_mj" instance=ExtResource( 3 )]
+position = Vector2( 462.229, 180.567 )
+
 [node name="ColorObj_green_mj" parent="colorObjs_mj" instance=ExtResource( 4 )]
 position = Vector2( 532.347, 218.979 )
 
@@ -170,3 +174,29 @@ position = Vector2( 547.449, 174.617 )
 
 [node name="ColorObj_red4" parent="colorObjs_mj" instance=ExtResource( 5 )]
 position = Vector2( 460.612, 284.107 )
+
+[node name="waterObjs_mj" type="Node2D" parent="."]
+
+[node name="WaterObj_mj" parent="waterObjs_mj" instance=ExtResource( 13 )]
+position = Vector2( 388.823, 271.223 )
+scale = Vector2( 0.163015, 0.163015 )
+
+[node name="WaterObj_mj2" parent="waterObjs_mj" instance=ExtResource( 13 )]
+position = Vector2( 502.694, 277.965 )
+scale = Vector2( 0.163015, 0.163015 )
+
+[node name="WaterObj_mj3" parent="waterObjs_mj" instance=ExtResource( 13 )]
+position = Vector2( 438.267, 222.528 )
+scale = Vector2( 0.163015, 0.163015 )
+
+[node name="WaterObj_mj4" parent="waterObjs_mj" instance=ExtResource( 13 )]
+position = Vector2( 372.342, 221.779 )
+scale = Vector2( 0.163015, 0.163015 )
+
+[node name="WaterObj_mj5" parent="waterObjs_mj" instance=ExtResource( 13 )]
+position = Vector2( 322.898, 251.745 )
+scale = Vector2( 0.163015, 0.163015 )
+
+[node name="WaterObj_mj6" parent="waterObjs_mj" instance=ExtResource( 13 )]
+position = Vector2( 270.457, 239.758 )
+scale = Vector2( 0.163015, 0.163015 )
