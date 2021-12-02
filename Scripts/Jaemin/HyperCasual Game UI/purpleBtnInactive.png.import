@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/purpleBtnInactive.png-14e07cf4eed9ceb2e759f5a3c0ce1600.stex"
+path="res://.import/purpleBtnInactive.png-f5290234a7b63a54a4bf7553c71ccb24.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/purpleBtnInactive.png"
-dest_files=[ "res://.import/purpleBtnInactive.png-14e07cf4eed9ceb2e759f5a3c0ce1600.stex" ]
+source_file="res://Scripts/Jaemin/HyperCasual Game UI/purpleBtnInactive.png"
+dest_files=[ "res://.import/purpleBtnInactive.png-f5290234a7b63a54a4bf7553c71ccb24.stex" ]
 
 [params]
 

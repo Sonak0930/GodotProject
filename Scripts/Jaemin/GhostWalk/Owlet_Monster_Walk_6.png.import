@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Owlet_Monster_Walk_6.png-d0060d25648949876971292f4ec3b7c3.stex"
+path="res://.import/Owlet_Monster_Walk_6.png-a7eedc8289b388b08d5b627ea1641f6b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GhostWalk/Owlet_Monster_Walk_6.png"
-dest_files=[ "res://.import/Owlet_Monster_Walk_6.png-d0060d25648949876971292f4ec3b7c3.stex" ]
+source_file="res://Scripts/Jaemin/GhostWalk/Owlet_Monster_Walk_6.png"
+dest_files=[ "res://.import/Owlet_Monster_Walk_6.png-a7eedc8289b388b08d5b627ea1641f6b.stex" ]
 
 [params]
 

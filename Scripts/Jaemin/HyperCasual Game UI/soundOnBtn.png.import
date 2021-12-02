@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/soundOnBtn.png-bea7663c89ba5c8632834ab121f0c510.stex"
+path="res://.import/soundOnBtn.png-c5803bddd43d61f0da6ba865cdca115b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/soundOnBtn.png"
-dest_files=[ "res://.import/soundOnBtn.png-bea7663c89ba5c8632834ab121f0c510.stex" ]
+source_file="res://Scripts/Jaemin/HyperCasual Game UI/soundOnBtn.png"
+dest_files=[ "res://.import/soundOnBtn.png-c5803bddd43d61f0da6ba865cdca115b.stex" ]
 
 [params]
 

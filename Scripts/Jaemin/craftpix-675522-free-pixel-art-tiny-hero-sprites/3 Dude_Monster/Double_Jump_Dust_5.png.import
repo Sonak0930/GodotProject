@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Double_Jump_Dust_5.png-4ed39cb64bb5408adfd8d6fee4fa031d.stex"
+path="res://.import/Double_Jump_Dust_5.png-f424e59bdb984a9154c9758beff1b05a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://craftpix-675522-free-pixel-art-tiny-hero-sprites/3 Dude_Monster/Double_Jump_Dust_5.png"
-dest_files=[ "res://.import/Double_Jump_Dust_5.png-4ed39cb64bb5408adfd8d6fee4fa031d.stex" ]
+source_file="res://Scripts/Jaemin/craftpix-675522-free-pixel-art-tiny-hero-sprites/3 Dude_Monster/Double_Jump_Dust_5.png"
+dest_files=[ "res://.import/Double_Jump_Dust_5.png-f424e59bdb984a9154c9758beff1b05a.stex" ]
 
 [params]
 

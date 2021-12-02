@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/coinIcon.png-3a183a159ac7bed62e5064ff556d3f0d.stex"
+path="res://.import/coinIcon.png-c6f13a30046ba6349d532b5681d60fc6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/coinIcon.png"
-dest_files=[ "res://.import/coinIcon.png-3a183a159ac7bed62e5064ff556d3f0d.stex" ]
+source_file="res://Scripts/Jaemin/HyperCasual Game UI/coinIcon.png"
+dest_files=[ "res://.import/coinIcon.png-c6f13a30046ba6349d532b5681d60fc6.stex" ]
 
 [params]
 

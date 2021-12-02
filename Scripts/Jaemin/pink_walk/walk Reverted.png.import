@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/walk Reverted.png-90632831474ad9fa6494b9e6afd3b49f.stex"
+path="res://.import/walk Reverted.png-7b69dd8c671a3f92071483894742a0ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pink_walk/walk Reverted.png"
-dest_files=[ "res://.import/walk Reverted.png-90632831474ad9fa6494b9e6afd3b49f.stex" ]
+source_file="res://Scripts/Jaemin/pink_walk/walk Reverted.png"
+dest_files=[ "res://.import/walk Reverted.png-7b69dd8c671a3f92071483894742a0ea.stex" ]
 
 [params]
 

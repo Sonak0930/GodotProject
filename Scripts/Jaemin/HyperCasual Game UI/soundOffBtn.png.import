@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/soundOffBtn.png-3d218de2dfd9b4c47571755219536836.stex"
+path="res://.import/soundOffBtn.png-04996ffc52dd83ba29d0f6278c607716.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/soundOffBtn.png"
-dest_files=[ "res://.import/soundOffBtn.png-3d218de2dfd9b4c47571755219536836.stex" ]
+source_file="res://Scripts/Jaemin/HyperCasual Game UI/soundOffBtn.png"
+dest_files=[ "res://.import/soundOffBtn.png-04996ffc52dd83ba29d0f6278c607716.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/borderCircle.png-9960626f19caace4133d3eb77190fe9d.stex"
+path="res://.import/borderCircle.png-f50df58d408e099e96628f71a84d34ca.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/borderCircle.png"
-dest_files=[ "res://.import/borderCircle.png-9960626f19caace4133d3eb77190fe9d.stex" ]
+source_file="res://Scripts/Jaemin/HyperCasual Game UI/borderCircle.png"
+dest_files=[ "res://.import/borderCircle.png-f50df58d408e099e96628f71a84d34ca.stex" ]
 
 [params]
 

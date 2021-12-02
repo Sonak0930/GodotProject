@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/deny-w.png-7897b4d59c46a228e49aaedb77364b95.stex"
+path="res://.import/deny-w.png-acbc65f401aca56bf4bc17040b36f77f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/github-integration/icons/deny-w.png"
-dest_files=[ "res://.import/deny-w.png-7897b4d59c46a228e49aaedb77364b95.stex" ]
+source_file="res://Scripts/Jaemin/addons/github-integration/icons/deny-w.png"
+dest_files=[ "res://.import/deny-w.png-acbc65f401aca56bf4bc17040b36f77f.stex" ]
 
 [params]
 

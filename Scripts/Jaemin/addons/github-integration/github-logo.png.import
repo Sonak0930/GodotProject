@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/github-logo.png-47e01e9fc59994c0db55903788d0795b.stex"
+path="res://.import/github-logo.png-978889a39edd0338198ba8064063889b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/github-integration/github-logo.png"
-dest_files=[ "res://.import/github-logo.png-47e01e9fc59994c0db55903788d0795b.stex" ]
+source_file="res://Scripts/Jaemin/addons/github-integration/github-logo.png"
+dest_files=[ "res://.import/github-logo.png-978889a39edd0338198ba8064063889b.stex" ]
 
 [params]
 

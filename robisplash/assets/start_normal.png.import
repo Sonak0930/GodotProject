@@ -2,21 +2,22 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/start_normal.png-597e2e468b8046627915c726d7077857.stex"
+path="res://.import/start_normal.png-1c4a76881c44f8149be255cc3abe5874.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/start_normal.png"
-source_md5="5c044b1314bb4910c2b17fbe6ed00d48"
-
-dest_files=[ "res://.import/start_normal.png-597e2e468b8046627915c726d7077857.stex" ]
-dest_md5="7dd7cb06e1f3245733ae4fad5d031399"
+source_file="res://robisplash/assets/start_normal.png"
+dest_files=[ "res://.import/start_normal.png-1c4a76881c44f8149be255cc3abe5874.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +27,8 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

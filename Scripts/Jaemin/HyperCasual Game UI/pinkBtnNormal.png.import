@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pinkBtnNormal.png-68d3d175ef7fe4499600c31a319a5528.stex"
+path="res://.import/pinkBtnNormal.png-45a9dee5fc8c82e2a5014ec520735c8c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/pinkBtnNormal.png"
-dest_files=[ "res://.import/pinkBtnNormal.png-68d3d175ef7fe4499600c31a319a5528.stex" ]
+source_file="res://Scripts/Jaemin/HyperCasual Game UI/pinkBtnNormal.png"
+dest_files=[ "res://.import/pinkBtnNormal.png-45a9dee5fc8c82e2a5014ec520735c8c.stex" ]
 
 [params]
 

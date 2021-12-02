@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lockIcon.png-6a23c93d1adbe19bec882b0ddce0fc84.stex"
+path="res://.import/lockIcon.png-70688286fba58fc63741752bc787a0ab.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/lockIcon.png"
-dest_files=[ "res://.import/lockIcon.png-6a23c93d1adbe19bec882b0ddce0fc84.stex" ]
+source_file="res://Scripts/Jaemin/HyperCasual Game UI/lockIcon.png"
+dest_files=[ "res://.import/lockIcon.png-70688286fba58fc63741752bc787a0ab.stex" ]
 
 [params]
 

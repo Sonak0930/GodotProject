@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arrow-left.svg-dd6535743349ac0a285fc99ef3ed711e.stex"
+path="res://.import/arrow-left.svg-3ab195c472466d303fe6c0057428bb59.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/github-integration/icons/arrow-left.svg"
-dest_files=[ "res://.import/arrow-left.svg-dd6535743349ac0a285fc99ef3ed711e.stex" ]
+source_file="res://Scripts/Jaemin/addons/github-integration/icons/arrow-left.svg"
+dest_files=[ "res://.import/arrow-left.svg-3ab195c472466d303fe6c0057428bb59.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rect.png-74da93779ef812b7f3f57455d0f343f3.stex"
+path="res://.import/rect.png-b91e885eb9587208517aeba6fd7b9981.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/rect.png"
-dest_files=[ "res://.import/rect.png-74da93779ef812b7f3f57455d0f343f3.stex" ]
+source_file="res://Scripts/Jaemin/HyperCasual Game UI/rect.png"
+dest_files=[ "res://.import/rect.png-b91e885eb9587208517aeba6fd7b9981.stex" ]
 
 [params]
 

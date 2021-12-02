@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/checked-white.png-369373d01ee5029fc1178bf0eb2cf357.stex"
+path="res://.import/checked-white.png-3116c673cb642ec302a6b30556fd4e26.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/github-integration/icons/checked-white.png"
-dest_files=[ "res://.import/checked-white.png-369373d01ee5029fc1178bf0eb2cf357.stex" ]
+source_file="res://Scripts/Jaemin/addons/github-integration/icons/checked-white.png"
+dest_files=[ "res://.import/checked-white.png-3116c673cb642ec302a6b30556fd4e26.stex" ]
 
 [params]
 

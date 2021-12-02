@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dude_Monster_Walk_6.png-262cc8d76b443b1f2de806ac467b138d.stex"
+path="res://.import/Dude_Monster_Walk_6.png-85df19475d224aa7bcbc37d9f2a24ea1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://craftpix-675522-free-pixel-art-tiny-hero-sprites/3 Dude_Monster/Dude_Monster_Walk_6.png"
-dest_files=[ "res://.import/Dude_Monster_Walk_6.png-262cc8d76b443b1f2de806ac467b138d.stex" ]
+source_file="res://Scripts/Jaemin/craftpix-675522-free-pixel-art-tiny-hero-sprites/3 Dude_Monster/Dude_Monster_Walk_6.png"
+dest_files=[ "res://.import/Dude_Monster_Walk_6.png-85df19475d224aa7bcbc37d9f2a24ea1.stex" ]
 
 [params]
 

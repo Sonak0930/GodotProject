@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hintIcon.png-399c416dfd3b5e2dad59f6207034e382.stex"
+path="res://.import/hintIcon.png-7d6db9b1c8260803ff20fd256c70c870.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/hintIcon.png"
-dest_files=[ "res://.import/hintIcon.png-399c416dfd3b5e2dad59f6207034e382.stex" ]
+source_file="res://Scripts/Jaemin/HyperCasual Game UI/hintIcon.png"
+dest_files=[ "res://.import/hintIcon.png-7d6db9b1c8260803ff20fd256c70c870.stex" ]
 
 [params]
 

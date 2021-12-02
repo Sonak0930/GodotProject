@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MonsterReversedWalking.png-6a14943418b7996e51b9ddbd593288fc.stex"
+path="res://.import/MonsterReversedWalking.png-5d8cb9ce789c6a1901a243c3fdd26333.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GhostWalk/MonsterReversedWalking.png"
-dest_files=[ "res://.import/MonsterReversedWalking.png-6a14943418b7996e51b9ddbd593288fc.stex" ]
+source_file="res://Scripts/Jaemin/GhostWalk/MonsterReversedWalking.png"
+dest_files=[ "res://.import/MonsterReversedWalking.png-5d8cb9ce789c6a1901a243c3fdd26333.stex" ]
 
 [params]
 

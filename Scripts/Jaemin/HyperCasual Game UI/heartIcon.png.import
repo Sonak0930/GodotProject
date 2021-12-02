@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heartIcon.png-6ead58544d9740f86955258371f16719.stex"
+path="res://.import/heartIcon.png-4a1ecacda09a322e5a80fe46ffe1d823.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/heartIcon.png"
-dest_files=[ "res://.import/heartIcon.png-6ead58544d9740f86955258371f16719.stex" ]
+source_file="res://Scripts/Jaemin/HyperCasual Game UI/heartIcon.png"
+dest_files=[ "res://.import/heartIcon.png-4a1ecacda09a322e5a80fe46ffe1d823.stex" ]
 
 [params]
 

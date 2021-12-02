@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slider1.png-94a8fa4a53ead6ec2e41d0ec10de0b6c.stex"
+path="res://.import/slider1.png-2aa3e9dcbfa7f52e6f4b5c1d63b14da9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/slider1.png"
-dest_files=[ "res://.import/slider1.png-94a8fa4a53ead6ec2e41d0ec10de0b6c.stex" ]
+source_file="res://Scripts/Jaemin/HyperCasual Game UI/slider1.png"
+dest_files=[ "res://.import/slider1.png-2aa3e9dcbfa7f52e6f4b5c1d63b14da9.stex" ]
 
 [params]
 

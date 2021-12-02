@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Owlet_Monster_Run_6.png-4f0112f621a4ae29afaea9d5a6a2963d.stex"
+path="res://.import/Owlet_Monster_Run_6.png-93e2eaeccb658614c4b38b1476edfc52.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://craftpix-675522-free-pixel-art-tiny-hero-sprites/2 Owlet_Monster/Owlet_Monster_Run_6.png"
-dest_files=[ "res://.import/Owlet_Monster_Run_6.png-4f0112f621a4ae29afaea9d5a6a2963d.stex" ]
+source_file="res://Scripts/Jaemin/craftpix-675522-free-pixel-art-tiny-hero-sprites/2 Owlet_Monster/Owlet_Monster_Run_6.png"
+dest_files=[ "res://.import/Owlet_Monster_Run_6.png-93e2eaeccb658614c4b38b1476edfc52.stex" ]
 
 [params]
 

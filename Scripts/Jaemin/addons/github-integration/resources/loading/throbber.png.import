@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/throbber.png-ae03ce9c717cd2fb342f9f5d37de98d0.stex"
+path="res://.import/throbber.png-9168d1b34e11bebce958b96ccea81054.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/github-integration/resources/loading/throbber.png"
-dest_files=[ "res://.import/throbber.png-ae03ce9c717cd2fb342f9f5d37de98d0.stex" ]
+source_file="res://Scripts/Jaemin/addons/github-integration/resources/loading/throbber.png"
+dest_files=[ "res://.import/throbber.png-9168d1b34e11bebce958b96ccea81054.stex" ]
 
 [params]
 

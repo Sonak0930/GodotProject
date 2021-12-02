@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rock2.png-8c2c4dcdaa89c4a1919090274d9fb3cb.stex"
+path="res://.import/Rock2.png-83ef1a99cce1a8011a65b089fd395f27.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://craftpix-675522-free-pixel-art-tiny-hero-sprites/3 Dude_Monster/Rock2.png"
-dest_files=[ "res://.import/Rock2.png-8c2c4dcdaa89c4a1919090274d9fb3cb.stex" ]
+source_file="res://Scripts/Jaemin/craftpix-675522-free-pixel-art-tiny-hero-sprites/3 Dude_Monster/Rock2.png"
+dest_files=[ "res://.import/Rock2.png-83ef1a99cce1a8011a65b089fd395f27.stex" ]
 
 [params]
 

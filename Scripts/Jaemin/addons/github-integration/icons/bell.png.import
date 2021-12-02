@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bell.png-f23eb8d10b79024fd8e597ba841b0bbc.stex"
+path="res://.import/bell.png-c15b80ed6ea67bd50952f601186d4fcb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/github-integration/icons/bell.png"
-dest_files=[ "res://.import/bell.png-f23eb8d10b79024fd8e597ba841b0bbc.stex" ]
+source_file="res://Scripts/Jaemin/addons/github-integration/icons/bell.png"
+dest_files=[ "res://.import/bell.png-c15b80ed6ea67bd50952f601186d4fcb.stex" ]
 
 [params]
 

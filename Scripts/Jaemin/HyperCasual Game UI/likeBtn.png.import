@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/likeBtn.png-6d33577257966b1cd7033d2756f801da.stex"
+path="res://.import/likeBtn.png-0db8e770dd317d9ce160010a6f4bdabe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/likeBtn.png"
-dest_files=[ "res://.import/likeBtn.png-6d33577257966b1cd7033d2756f801da.stex" ]
+source_file="res://Scripts/Jaemin/HyperCasual Game UI/likeBtn.png"
+dest_files=[ "res://.import/likeBtn.png-0db8e770dd317d9ce160010a6f4bdabe.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cornerSquare2.png-49c62293b9c85a637568d31f6a80e941.stex"
+path="res://.import/cornerSquare2.png-e20480d06c78a6c7184994879f181a93.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/cornerSquare2.png"
-dest_files=[ "res://.import/cornerSquare2.png-49c62293b9c85a637568d31f6a80e941.stex" ]
+source_file="res://Scripts/Jaemin/HyperCasual Game UI/cornerSquare2.png"
+dest_files=[ "res://.import/cornerSquare2.png-e20480d06c78a6c7184994879f181a93.stex" ]
 
 [params]
 
