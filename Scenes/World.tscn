@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/WallTileSet.tres" type="TileSet" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scenes/ScenesJaemin/ExamplePlayer.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Ui.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/ScriptJaemin/Animation.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Ghost.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
@@ -136,3 +137,6 @@ position = Vector2( 0, -121.231 )
 position = Vector2( 94, 268.592 )
 scale = Vector2( 1, 1 )
 script = ExtResource( 9 )
+
+[node name="Node2D" parent="." instance=ExtResource( 10 )]
+position = Vector2( 509, 311.592 )

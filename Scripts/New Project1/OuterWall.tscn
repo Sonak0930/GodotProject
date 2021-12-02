@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 508.5, 18 )
+
+[node name="OuterWall" type="StaticBody2D"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( -513, -20 )
+scale = Vector2( -0.00128412, 4.2187 )
+color = Color( 0.0156863, 0.0941176, 0.0117647, 1 )
+polygon = PoolVector2Array( -794948, 9.97245, 512, 10, -512, 0, -796950, -0.0826445 )

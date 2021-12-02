@@ -68,8 +68,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="20211124_CMPteam_01"
-run/main_scene="res://Scenes/World.tscn"
+config/name="RobiSplash30"
+run/main_scene="res://Scenes/ScenesJaemin/Credit.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -81,7 +81,8 @@ RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
 
 [display]
 
-window/size/height=730
+window/size/width=800
+window/size/height=450
 
 [editor_plugins]
 
