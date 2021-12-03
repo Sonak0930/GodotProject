@@ -1,12 +1,26 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/UI/TargetColor_circle_mj.gd" type="Script" id=1]
+[ext_resource path="res://assets/bucket.png" type="Texture" id=2]
 [ext_resource path="res://assets/Ellipse 1.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/UI/CurrentColor_circle_mj.gd" type="Script" id=4]
+[ext_resource path="res://assets/painting-bucket.png" type="Texture" id=5]
+[ext_resource path="res://assets/painting-bucket_small.png" type="Texture" id=7]
+[ext_resource path="res://assets/bucket_small.png" type="Texture" id=8]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends TextureButton
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+"
 
 [node name="UI_mj" type="Node2D"]
 __meta__ = {
-"_edit_horizontal_guides_": [ 13.7832, 107.121, 7.06565 ]
+"_edit_horizontal_guides_": [ 13.7832, 107.121, 7.06565, 26.8828, 92.8093, 41.0261 ],
+"_edit_vertical_guides_": [ 789.543, 388.639, 402.893, 775.734 ]
 }
 
 [node name="Uibackground" type="Node2D" parent="."]
@@ -114,6 +128,25 @@ __meta__ = {
 
 [node name="Polygon2D" type="Polygon2D" parent="Uibackground"]
 
+[node name="Polygon2D2" type="Polygon2D" parent="Uibackground"]
+position = Vector2( 347.622, 19.9156 )
+scale = Vector2( 0.975958, 1 )
+color = Color( 0.67451, 0.662745, 0.482353, 1 )
+offset = Vector2( -387.265, -19.9156 )
+polygon = PoolVector2Array( 388.454, 41.1727, 388.57, 92.6671, 402.978, 107.064, 775.719, 107.064, 789.165, 92.8831, 789.326, 40.9151, 775.639, 26.875, 402.427, 26.9022 )
+
+[node name="life is color" type="Label" parent="Uibackground"]
+margin_left = 363.482
+margin_top = 9.99443
+margin_right = 446.482
+margin_bottom = 23.9944
+rect_scale = Vector2( 1.15752, 1.15752 )
+custom_colors/font_color = Color( 0.258824, 0.188235, 0.0509804, 1 )
+text = "life is color..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CurrentColor_circle" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 275.035, 58.3374 )
@@ -190,6 +223,108 @@ custom_constants/line_spacing = 9
 text = "200
 200
 200"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI_bukkits" type="Node" parent="."]
+
+[node name="colorBukkit_red" type="TextureButton" parent="UI_bukkits"]
+modulate = Color( 0.866667, 0.27451, 0.266667, 1 )
+margin_left = 367.103
+margin_top = 39.6909
+margin_right = 638.103
+margin_bottom = 300.691
+rect_scale = Vector2( 0.206366, 0.206366 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 7 )
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colorBukkit_red_label" type="Label" parent="UI_bukkits"]
+margin_left = 423.943
+margin_top = 81.1121
+margin_right = 463.943
+margin_bottom = 95.1121
+rect_scale = Vector2( 1.128, 1.128 )
+custom_colors/font_color = Color( 0.258824, 0.188235, 0.0509804, 1 )
+text = "X 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colorBukkit_green" type="TextureButton" parent="UI_bukkits"]
+modulate = Color( 0.0784314, 0.701961, 0.0823529, 1 )
+margin_left = 458.716
+margin_top = 40.2522
+margin_right = 729.716
+margin_bottom = 301.252
+rect_scale = Vector2( 0.206366, 0.206366 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colorBukkit_green_label" type="Label" parent="UI_bukkits"]
+margin_left = 515.719
+margin_top = 81.112
+margin_right = 555.719
+margin_bottom = 95.112
+rect_scale = Vector2( 1.128, 1.128 )
+custom_colors/font_color = Color( 0.258824, 0.188235, 0.0509804, 1 )
+text = "X 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colorBukkit_blue" type="TextureButton" parent="UI_bukkits"]
+modulate = Color( 0.243137, 0.278431, 0.560784, 1 )
+margin_left = 557.444
+margin_top = 39.6909
+margin_right = 828.444
+margin_bottom = 300.691
+rect_scale = Vector2( 0.206366, 0.206366 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colorBukkit_blue_label" type="Label" parent="UI_bukkits"]
+margin_left = 613.63
+margin_top = 81.112
+margin_right = 653.63
+margin_bottom = 95.112
+rect_scale = Vector2( 1.128, 1.128 )
+custom_colors/font_color = Color( 0.258824, 0.188235, 0.0509804, 1 )
+text = "X 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="waterBukkit" type="TextureButton" parent="UI_bukkits"]
+margin_left = 658.673
+margin_top = 51.7812
+margin_right = 1170.67
+margin_bottom = 563.781
+rect_scale = Vector2( 0.0678326, 0.0851889 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="waterBukkit_label" type="Label" parent="UI_bukkits"]
+margin_left = 694.702
+margin_top = 81.1121
+margin_right = 734.702
+margin_bottom = 95.1121
+rect_scale = Vector2( 1.128, 1.128 )
+custom_colors/font_color = Color( 0.258824, 0.188235, 0.0509804, 1 )
+text = "X 0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
