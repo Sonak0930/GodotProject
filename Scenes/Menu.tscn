@@ -1,0 +1,286 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://TileSets/WallTileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://TileSets/StoneTileset.tres" type="TileSet" id=3]
+[ext_resource path="res://assets/Texture/TX Struct.png" type="Texture" id=4]
+[ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=5]
+[ext_resource path="res://TileSets/PropsTileset.tres" type="TileSet" id=6]
+[ext_resource path="res://Scenes/Player_Dh.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-167.png" type="Texture" id=8]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-184.png" type="Texture" id=9]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-168.png" type="Texture" id=10]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-188.png" type="Texture" id=11]
+[ext_resource path="res://assets/UIButtonsVideogames/Panel/Panel1_Opacity592x975px.png" type="Texture" id=12]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-189.png" type="Texture" id=13]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-185.png" type="Texture" id=14]
+[ext_resource path="res://assets/Font Colby/Colby-StBlk.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://assets/chain.png" type="Texture" id=16]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=17]
+[ext_resource path="res://Scripts/Title.gd" type="Script" id=18]
+[ext_resource path="res://Scripts/MenuItems.gd" type="Script" id=19]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
+
+[sub_resource type="TileSet" id=5]
+0/name = "TX Struct.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 224, 160, 64, 96 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "TX Struct.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 224, 32, 64, 96 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "TX Struct.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 384, 0, 128, 96 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 1 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "TX Struct.png 3"
+3/texture = ExtResource( 4 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 128, 160, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+
+[sub_resource type="DynamicFont" id=4]
+size = 60
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 15 )
+
+[node name="MenuScene" type="Node2D"]
+script = ExtResource( 17 )
+
+[node name="GroundTileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+show_collision = true
+collision_layer = 8
+format = 1
+tile_data = PoolIntArray( 0, 5, 0, 1, 5, 0, 2, 5, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 6, 5, 0, 7, 5, 0, 8, 5, 0, 9, 5, 0, 10, 5, 0, 11, 5, 0, 13, 19, 0, 14, 8, 0, 15, 7, 0, 17, 13, 0, 18, 19, 0, 19, 6, 0, 22, 5, 0, 23, 5, 0, 24, 5, 0, 25, 5, 0, 26, 5, 0, 27, 5, 0, 28, 6, 0, 29, 5, 0, 30, 5, 0, 65549, 19, 0, 65553, 13, 0, 65554, 19, 0, 65565, 6, 0, 65566, 6, 0, 131072, 5, 0, 131074, 5, 0, 131076, 5, 0, 131078, 5, 0, 131080, 5, 0, 131082, 6, 0, 131085, 19, 0, 131086, 8, 0, 131087, 7, 0, 131089, 13, 0, 131090, 19, 0, 131091, 6, 0, 131094, 6, 0, 131097, 19, 0, 131098, 5, 0, 131100, 5, 0, 131102, 5, 0, 196621, 19, 0, 196622, 19, 0, 196625, 13, 0, 196626, 19, 0, 196633, 19, 0, 196636, 5, 0, 196638, 5, 0, 262144, 19, 0, 262145, 19, 0, 262146, 19, 0, 262147, 19, 0, 262148, 19, 0, 262149, 19, 0, 262150, 19, 0, 262151, 19, 0, 262152, 19, 0, 262153, 19, 0, 262154, 19, 0, 262155, 19, 0, 262156, 19, 0, 262157, 19, 0, 262158, 8, 0, 262159, 7, 0, 262161, 13, 0, 262162, 19, 0, 262163, 19, 0, 262164, 19, 0, 262165, 19, 0, 262166, 19, 0, 262167, 19, 0, 262168, 19, 0, 262169, 19, 0, 262170, 19, 0, 262171, 19, 0, 262172, 5, 0, 262174, 5, 0, 327680, 6, 0, 327683, 6, 0, 327686, 6, 0, 327689, 19, 0, 327690, 19, 0, 327691, 19, 0, 327692, 19, 0, 327693, 21, 0, 327697, 10, 0, 327698, 20, 0, 327699, 19, 0, 327700, 19, 0, 327701, 19, 0, 327702, 19, 0, 327703, 19, 0, 327704, 6, 0, 327707, 19, 0, 327708, 5, 0, 327710, 5, 0, 393225, 19, 0, 393226, 19, 0, 393227, 19, 0, 393228, 21, 0, 393229, 4, 0, 393230, 12, 0, 393231, 7, 0, 393233, 12, 0, 393234, 10, 0, 393235, 21, 0, 393236, 20, 0, 393237, 19, 0, 393238, 19, 0, 393239, 19, 0, 393243, 19, 0, 458752, 17, 0, 458753, 17, 0, 458754, 17, 0, 458755, 17, 0, 458756, 17, 0, 458757, 17, 0, 458758, 17, 0, 458759, 17, 0, 458760, 17, 0, 458761, 17, 0, 458762, 17, 0, 458763, 17, 0, 458764, 4, 0, 458765, 7, 0, 458769, 7, 0, 458771, 1073741844, 0, 458772, 17, 0, 458773, 17, 0, 458774, 1610612756, 0, 458775, 17, 0, 458776, 17, 0, 458777, 17, 0, 458778, 1073741843, 0, 458779, 17, 0, 458780, 17, 0, 458781, 1073741845, 0, 458782, 17, 0, 458783, 17, 0, 524288, 12, 0, 524289, 12, 0, 524290, 12, 0, 524291, 12, 0, 524292, 12, 0, 524293, 12, 0, 524294, 12, 0, 524295, 12, 0, 524296, 12, 0, 524297, 12, 0, 524298, 12, 0, 524299, 12, 0, 524300, 12, 0, 524303, 7, 0, 524307, 1610612751, 0, 524308, 1073741843, 0, 524309, 1073741843, 0, 524310, 1610612752, 0, 524311, 12, 0, 524312, 12, 0, 524313, 12, 0, 524314, 1610612751, 0, 524315, 1073741844, 0, 524316, 1610612756, 0, 524317, 1610612752, 0, 524318, 12, 0, 524319, 12, 0, 589824, 7, 0, 589826, 7, 0, 589828, 7, 0, 589830, 7, 0, 589832, 7, 0, 589834, 7, 0, 589836, 7, 0, 589838, 7, 0, 589840, 7, 0, 589842, 7, 0, 589844, 7, 0, 589846, 7, 0, 589848, 7, 0, 589850, 7, 0, 589852, 7, 0, 589854, 7, 0, 720896, 18, 0, 720897, 18, 0, 720898, 18, 0, 720899, 18, 0, 720900, 18, 0, 720901, 18, 0, 720902, 18, 0, 720903, 18, 0, 720904, 18, 0, 720905, 18, 0, 720906, 18, 0, 720907, 18, 0, 720908, 15, 0, 720909, 12, 0, 720910, 12, 0, 720911, 7, 0, 720913, 12, 0, 720914, 12, 0, 720915, 16, 0, 720916, 18, 0, 720917, 18, 0, 720918, 18, 0, 720919, 18, 0, 720920, 18, 0, 720921, 18, 0, 720922, 18, 0, 720923, 18, 0, 720924, 18, 0, 720925, 18, 0, 720926, 18, 0, 720927, 18, 0, 786432, 6, 0, 786435, 6, 0, 786438, 6, 0, 786441, 19, 0, 786442, 19, 0, 786443, 19, 0, 786444, 20, 0, 786445, 15, 0, 786446, 12, 0, 786449, 12, 0, 786450, 16, 0, 786451, 20, 0, 786452, 19, 0, 786453, 19, 0, 786454, 19, 0, 786455, 19, 0, 786456, 6, 0, 786459, 19, 0, 786460, 19, 0, 786461, 19, 0, 786462, 19, 0, 786463, 19, 0, 851977, 19, 0, 851978, 19, 0, 851979, 19, 0, 851980, 19, 0, 851981, 20, 0, 851982, 15, 0, 851983, 7, 0, 851985, 16, 0, 851986, 20, 0, 851987, 19, 0, 851988, 19, 0, 851989, 19, 0, 851990, 19, 0, 851991, 19, 0, 851995, 5, 0, 851997, 5, 0, 851999, 19, 0, 917504, 19, 0, 917505, 5, 0, 917507, 6, 0, 917509, 5, 0, 917510, 6, 0, 917513, 19, 0, 917514, 19, 0, 917515, 19, 0, 917516, 19, 0, 917517, 19, 0, 917518, 14, 0, 917521, 13, 0, 917522, 19, 0, 917523, 19, 0, 917524, 19, 0, 917525, 19, 0, 917526, 19, 0, 917527, 19, 0, 917528, 19, 0, 917529, 19, 0, 917530, 19, 0, 917535, 19, 0, 983040, 19, 0, 983049, 19, 0, 983050, 6, 0, 983053, 19, 0, 983054, 14, 0, 983055, 7, 0, 983057, 13, 0, 983058, 19, 0, 983059, 6, 0, 983062, 6, 0, 983065, 5, 0, 983067, 5, 0, 983069, 5, 0, 983071, 19, 0, 1048576, 5, 0, 1048578, 5, 0, 1048580, 5, 0, 1048582, 5, 0, 1048584, 5, 0, 1048589, 19, 0, 1048590, 14, 0, 1048593, 13, 0, 1048594, 19, 0, 1048607, 19, 0, 1114122, 6, 0, 1114125, 19, 0, 1114126, 14, 0, 1114127, 7, 0, 1114129, 13, 0, 1114130, 19, 0, 1114131, 6, 0, 1114133, 5, 0, 1114134, 5, 0, 1114136, 5, 0, 1114138, 5, 0, 1114140, 5, 0, 1114142, 5, 0, 1179648, 19, 0, 1179649, 19, 0, 1179650, 19, 0, 1179651, 19, 0, 1179652, 5, 0, 1179653, 19, 0, 1179654, 19, 0, 1179655, 19, 0, 1179656, 19, 0, 1179657, 19, 0, 1179661, 19, 0, 1179662, 14, 0, 1179665, 13, 0, 1179666, 19, 0, 1179668, 5, 0, 1179669, 5, 0, 1179670, 5, 0, 1245184, 6, 0, 1245185, 5, 0, 1245186, 5, 0, 1245187, 6, 0, 1245188, 5, 0, 1245189, 5, 0, 1245190, 6, 0, 1245193, 6, 0, 1245194, 5, 0, 1245195, 6, 0, 1245196, 6, 0, 1245197, 11, 0, 1245198, 16, 0, 1245199, 7, 0, 1245200, 7, 0, 1245201, 15, 0, 1245202, 19, 0, 1245203, 6, 0, 1245204, 6, 0, 1245205, 6, 0, 1245206, 5, 0, 1245207, 5, 0, 1245208, 5, 0, 1245209, 5, 0, 1245210, 5, 0, 1245211, 6, 0, 1245212, 6, 0, 1245213, 6, 0, 1245214, 5, 0, 1310721, 6, 0, 1310722, 5, 0, 1310723, 5, 0, 1310724, 5, 0, 1310725, 5, 0, 1310726, 5, 0, 1310727, 5, 0, 1310728, 5, 0, 1310729, 5, 0, 1310730, 5, 0, 1310731, 5, 0, 1310732, 5, 0, 1310733, 21, 0, 1310734, 11, 0, 1310735, 7, 0, 1310736, 7, 0, 1310737, 20, 0, 1310738, 21, 0, 1310739, 6, 0, 1310740, 6, 0, 1310741, 6, 0, 1310742, 6, 0, 1310743, 5, 0, 1310744, 5, 0, 1310745, 6, 0, 1310746, 11, 0, 1310747, 15, 0, 1310748, 5, 0, 1310749, 5, 0, 1376256, 7, 0, 1376257, 4, 0, 1376258, 10, 0, 1376259, 11, 0, 1376260, 4, 0, 1376261, 7, 0, 1376262, 10, 0, 1376263, 4, 0, 1376264, 10, 0, 1376265, 10, 0, 1376266, 4, 0, 1376267, 7, 0, 1376268, 7, 0, 1376269, 7, 0, 1376270, 7, 0, 1376271, 7, 0, 1376272, 7, 0, 1376273, 7, 0, 1376274, 7, 0, 1376275, 7, 0, 1376276, 7, 0, 1376277, 10, 0, 1376278, 10, 0, 1376279, 11, 0, 1376280, 7, 0, 1376281, 10, 0, 1376282, 11, 0, 1376283, 5, 0, 1376284, 4, 0, 1376285, 7, 0, 1376286, 7, 0, 1441792, 7, 0, 1441793, 7, 0, 1441794, 7, 0, 1441795, 7, 0, 1441796, 7, 0, 1441797, 7, 0, 1441798, 7, 0, 1441799, 7, 0, 1441800, 7, 0, 1441801, 7, 0, 1441802, 7, 0, 1441803, 7, 0, 1441804, 7, 0, 1441805, 7, 0, 1441806, 7, 0, 1441807, 7, 0, 1441808, 7, 0, 1441809, 7, 0, 1441810, 7, 0, 1441811, 7, 0, 1441812, 7, 0, 1441813, 7, 0, 1441814, 7, 0, 1441815, 7, 0, 1441816, 7, 0, 1441817, 7, 0, 1441818, 7, 0, 1441819, 7, 0, 1441820, 7, 0, 1441821, 7, 0, 1441822, 7, 0 )
+
+[node name="WallTileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+show_collision = true
+collision_layer = 8
+format = 1
+tile_data = PoolIntArray( -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1, 0, -65530, 1, 0, -65529, 1, 0, -65528, 1, 0, -65527, 1, 0, -65526, 1, 0, -65525, 1, 0, -65524, 1, 0, -65523, 1, 0, -65522, 1, 0, -65521, 1, 0, -65520, 1, 0, -65519, 1, 0, -65518, 1, 0, -65517, 1, 0, -65516, 1, 0, -65515, 1, 0, -65514, 1, 0, -65513, 1, 0, -65512, 1, 0, -65511, 1, 0, -65510, 1, 0, -65509, 1, 0, -65508, 1, 0, -65507, 1, 0, -65506, 1, 0, -65505, 1, 0, 65535, 14, 0, 32, 13, 0, 131071, 14, 0, 65537, 2, 0, 65539, 4, 0, 65540, 3, 0, 65568, 13, 0, 196607, 14, 0, 131073, 14, 0, 131077, 13, 0, 131104, 13, 0, 262143, 14, 0, 196609, 14, 0, 196613, 13, 0, 196640, 13, 0, 327679, 14, 0, 262145, 14, 0, 262147, 22, 0, 262149, 13, 0, 262176, 13, 0, 393215, 14, 0, 327681, 20, 0, 327684, 21, 0, 327712, 13, 0, 458751, 14, 0, 393248, 13, 0, 524287, 14, 0, 458784, 13, 0, 589823, 14, 0, 524320, 13, 0, 655359, 14, 0, 589856, 13, 0, 720895, 14, 0, 655392, 13, 0, 786431, 14, 0, 720928, 13, 0, 851967, 14, 0, 786450, 2, 0, 786452, 4, 0, 786453, 3, 0, 786455, 2, 0, 786457, 3, 0, 786459, 2, 0, 786461, 3, 0, 786464, 13, 0, 917503, 14, 0, 851986, 14, 0, 851990, 13, 0, 851991, 14, 0, 851994, 13, 0, 851995, 14, 0, 851998, 13, 0, 852000, 13, 0, 983039, 14, 0, 917522, 14, 0, 917526, 13, 0, 917527, 14, 0, 917530, 13, 0, 917531, 14, 0, 917534, 13, 0, 917536, 13, 0, 1048575, 14, 0, 983058, 14, 0, 983060, 22, 0, 983062, 13, 0, 983063, 14, 0, 983066, 13, 0, 983067, 14, 0, 983070, 13, 0, 983072, 13, 0, 1114111, 14, 0, 1048594, 20, 0, 1048597, 21, 0, 1048599, 20, 0, 1048602, 13, 0, 1048603, 14, 0, 1048605, 21, 0, 1048606, 13, 0, 1048608, 13, 0, 1179647, 14, 0, 1114138, 15, 0, 1114139, 15, 0, 1114144, 13, 0, 1245183, 14, 0, 1179680, 13, 0, 1310719, 14, 0, 1245216, 13, 0, 1376255, 14, 0, 1310752, 13, 0, 1441791, 14, 0, 1376288, 13, 0, 1507327, 14, 0, 1441824, 13, 0, 1507328, 15, 0, 1507329, 15, 0, 1507330, 15, 0, 1507331, 15, 0, 1507332, 15, 0, 1507333, 15, 0, 1507334, 15, 0, 1507335, 15, 0, 1507336, 15, 0, 1507337, 15, 0, 1507338, 15, 0, 1507339, 15, 0, 1507340, 15, 0, 1507341, 15, 0, 1507342, 15, 0, 1507343, 15, 0, 1507344, 15, 0, 1507345, 15, 0, 1507346, 15, 0, 1507347, 15, 0, 1507348, 15, 0, 1507349, 15, 0, 1507350, 15, 0, 1507351, 15, 0, 1507352, 15, 0, 1507353, 15, 0, 1507354, 15, 0, 1507355, 15, 0, 1507356, 15, 0, 1507357, 15, 0, 1507358, 15, 0, 1507359, 15, 0, 1507360, 13, 0 )
+
+[node name="StoneTileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+show_collision = true
+collision_layer = 8
+format = 1
+
+[node name="PropsTileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 32, 32 )
+show_collision = true
+collision_layer = 8
+format = 1
+tile_data = PoolIntArray( -65505, 22, 0, 26, 15, 0, 65558, 5, 0, 131075, 12, 0, 131083, 13, 0, 196610, 12, 0, 196616, 13, 0, 262169, 16, 0, 393246, 14, 0, 458756, 15, 0, 458770, 15, 0, 589832, 15, 0, 851988, 1, 0, 851993, 13, 0, 917505, 15, 0, 917507, 5, 0, 917509, 5, 0, 917532, 13, 0, 1114118, 17, 0, 1114129, 15, 0, 1114139, 13, 0, 1179660, 17, 0, 1179661, 16, 0, 1245193, 15, 0 )
+
+[node name="StructTileMap" type="TileMap" parent="."]
+tile_set = SubResource( 5 )
+cell_size = Vector2( 32, 32 )
+show_collision = true
+collision_layer = 8
+format = 1
+
+[node name="Player_Dh" parent="." instance=ExtResource( 7 )]
+position = Vector2( 115, 339 )
+
+[node name="PlantTileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 32, 32 )
+show_collision = true
+collision_layer = 8
+format = 1
+tile_data = PoolIntArray( -131053, 0, 0, 65541, 5, 0, 65562, 0, 0, 131077, 5, 0, 196613, 5, 0, 786440, 0, 0, 786462, 5, 0, 851998, 5, 0, 917534, 5, 0, 983041, 0, 0, 983061, 0, 0 )
+
+[node name="Title" type="Node2D" parent="."]
+position = Vector2( 0, -200 )
+script = ExtResource( 18 )
+
+[node name="TitlePanel" type="Sprite" parent="Title"]
+position = Vector2( 512, 143 )
+scale = Vector2( 0.918919, 0.100513 )
+texture = ExtResource( 12 )
+
+[node name="Chains" type="Node2D" parent="Title"]
+
+[node name="Chain" type="Sprite" parent="Title/Chains"]
+position = Vector2( 386, 108 )
+rotation = 2.35619
+scale = Vector2( 0.154047, 0.154047 )
+texture = ExtResource( 16 )
+offset = Vector2( 183.721, 742.14 )
+
+[node name="Chain2" type="Sprite" parent="Title/Chains"]
+position = Vector2( 830, 108 )
+rotation = 2.35619
+scale = Vector2( 0.154047, 0.154047 )
+texture = ExtResource( 16 )
+offset = Vector2( 183.721, 742.14 )
+
+[node name="Title" type="Label" parent="Title"]
+margin_left = 230.0
+margin_top = 97.0
+margin_right = 794.0
+margin_bottom = 198.0
+custom_colors/font_color = Color( 0.980392, 1, 0.337255, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "MONO TO COLOR"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuItems" type="Node2D" parent="."]
+position = Vector2( 0, 500 )
+script = ExtResource( 19 )
+
+[node name="MenuItemPanel" type="Sprite" parent="MenuItems"]
+position = Vector2( 512, 451.5 )
+scale = Vector2( 0.5, 0.411282 )
+texture = ExtResource( 12 )
+
+[node name="MenuItemContainer" type="VBoxContainer" parent="MenuItems"]
+margin_left = 383.0
+margin_top = 269.0
+margin_right = 641.0
+margin_bottom = 629.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextureButton" type="TextureButton" parent="MenuItems/MenuItemContainer"]
+margin_right = 258.0
+margin_bottom = 87.0
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 10 )
+
+[node name="TextureButton2" type="TextureButton" parent="MenuItems/MenuItemContainer"]
+margin_top = 91.0
+margin_right = 258.0
+margin_bottom = 178.0
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 14 )
+
+[node name="TextureButton3" type="TextureButton" parent="MenuItems/MenuItemContainer"]
+margin_top = 182.0
+margin_right = 258.0
+margin_bottom = 269.0
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 13 )
+
+[node name="TextureButton4" type="TextureButton" parent="MenuItems/MenuItemContainer"]
+margin_top = 273.0
+margin_right = 258.0
+margin_bottom = 360.0
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 10 )
+
+[node name="Play" type="Label" parent="MenuItems"]
+margin_left = 414.0
+margin_top = 286.0
+margin_right = 611.0
+margin_bottom = 337.0
+custom_fonts/font = SubResource( 3 )
+text = "Play"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Options" type="Label" parent="MenuItems"]
+margin_left = 368.0
+margin_top = 381.0
+margin_right = 651.0
+margin_bottom = 432.0
+custom_fonts/font = SubResource( 3 )
+text = "Options"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Credit" type="Label" parent="MenuItems"]
+margin_left = 412.0
+margin_top = 470.0
+margin_right = 611.0
+margin_bottom = 521.0
+custom_fonts/font = SubResource( 3 )
+text = "Credit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Exit" type="Label" parent="MenuItems"]
+margin_left = 413.0
+margin_top = 559.0
+margin_right = 610.0
+margin_bottom = 610.0
+custom_fonts/font = SubResource( 3 )
+text = "Exit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
