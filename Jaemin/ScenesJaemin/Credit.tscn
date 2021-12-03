@@ -1,0 +1,128 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Jaemin/Fonts/AmaticBold.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Jaemin/ScenesJaemin/ExamplePlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Jaemin/Fonts/AmaticSmallText.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Jaemin/Assets_Jaemin/CreditImage (2).png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=3]
+resource_name = "Intro"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 524, 246 ), Vector2( 515, 392 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 405, 107 ) ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0 )
+
+[node name="Credit" type="Node"]
+
+[node name="CreditNode" type="Node" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="CreditNode"]
+position = Vector2( 5, -2.38419e-07 )
+scale = Vector2( 1.00885, 1.00885 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 1, -2, 4.76837e-07, 736.482, 1014.03, 731.526, 1012.04, 0.991228 )
+
+[node name="Sprite" type="Sprite" parent="CreditNode"]
+position = Vector2( 405, 107 )
+scale = Vector2( 1.27, 1.24752 )
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CreditNode"]
+autoplay = "Intro"
+anims/Intro = SubResource( 3 )
+anims/RESET = SubResource( 4 )
+
+[node name="NPCsInCredit" type="Node" parent="."]
+
+[node name="Player" type="Node" parent="NPCsInCredit"]
+
+[node name="KinematicBody2D" parent="NPCsInCredit/Player" instance=ExtResource( 2 )]
+position = Vector2( 141, 386 )
+scale = Vector2( 2, 2 )
+
+[node name="TextEdit2" type="TextEdit" parent="NPCsInCredit/Player"]
+material = SubResource( 1 )
+margin_left = 112.0
+margin_top = 305.0
+margin_right = 216.0
+margin_bottom = 363.0
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "Player"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit3" type="TextEdit" parent="NPCsInCredit/Player"]
+material = SubResource( 1 )
+margin_left = 69.0
+margin_top = 431.0
+margin_right = 230.0
+margin_bottom = 535.0
+custom_fonts/font = ExtResource( 3 )
+custom_styles/normal = SubResource( 2 )
+text = "Main character
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player2" type="Node" parent="NPCsInCredit"]
+
+[node name="KinematicBody2D" parent="NPCsInCredit/Player2" instance=ExtResource( 2 )]
+position = Vector2( 319, 387 )
+scale = Vector2( 2, 2 )
+
+[node name="TextEdit2" type="TextEdit" parent="NPCsInCredit/Player2"]
+material = SubResource( 1 )
+margin_left = 289.0
+margin_top = 307.0
+margin_right = 414.0
+margin_bottom = 395.0
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "Enemy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit3" type="TextEdit" parent="NPCsInCredit/Player2"]
+material = SubResource( 1 )
+margin_left = 286.0
+margin_top = 431.0
+margin_right = 411.0
+margin_bottom = 519.0
+custom_fonts/font = ExtResource( 3 )
+custom_styles/normal = SubResource( 2 )
+text = "Enemy"
+__meta__ = {
+"_edit_use_anchors_": false
+}

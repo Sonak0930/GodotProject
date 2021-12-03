@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BG.png-3931ee0439e0ddc6a525ba44ebb90b72.stex"
+path="res://.import/BG.png-50aebe35b41587c0e6337c08cdfd35c4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/BG.png"
-dest_files=[ "res://.import/BG.png-3931ee0439e0ddc6a525ba44ebb90b72.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/BG.png"
+dest_files=[ "res://.import/BG.png-50aebe35b41587c0e6337c08cdfd35c4.stex" ]
 
 [params]
 

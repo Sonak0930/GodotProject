@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/placeholder.png-fdd683ee36ca80dff9ce9c6b1ddb20ee.stex"
+path="res://.import/placeholder.png-ecb8dafc1e5dd8a5042438c99dfe318a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/github-integration/resources/user/placeholder.png"
-dest_files=[ "res://.import/placeholder.png-fdd683ee36ca80dff9ce9c6b1ddb20ee.stex" ]
+source_file="res://Jaemin/addons/github-integration/resources/user/placeholder.png"
+dest_files=[ "res://.import/placeholder.png-ecb8dafc1e5dd8a5042438c99dfe318a.stex" ]
 
 [params]
 

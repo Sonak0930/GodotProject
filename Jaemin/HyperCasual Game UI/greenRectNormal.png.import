@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/greenRectNormal.png-eb88eaed05d949e69a028be774894009.stex"
+path="res://.import/greenRectNormal.png-7d634ab1a1dfce42bbc8d66c21068c5e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/greenRectNormal.png"
-dest_files=[ "res://.import/greenRectNormal.png-eb88eaed05d949e69a028be774894009.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/greenRectNormal.png"
+dest_files=[ "res://.import/greenRectNormal.png-7d634ab1a1dfce42bbc8d66c21068c5e.stex" ]
 
 [params]
 

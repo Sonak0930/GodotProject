@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tickIcon.png-295dc80dced47bf75ce7331c2a0e970c.stex"
+path="res://.import/tickIcon.png-bde27abd1aa6414173df306448834991.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/tickIcon.png"
-dest_files=[ "res://.import/tickIcon.png-295dc80dced47bf75ce7331c2a0e970c.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/tickIcon.png"
+dest_files=[ "res://.import/tickIcon.png-bde27abd1aa6414173df306448834991.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pink_Monster_Death_8.png-82175fc32e4e3576c7f735ffdbfd5551.stex"
+path="res://.import/Pink_Monster_Death_8.png-de35d99b59f3602a483f34d44089c557.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://craftpix-675522-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Pink_Monster_Death_8.png"
-dest_files=[ "res://.import/Pink_Monster_Death_8.png-82175fc32e4e3576c7f735ffdbfd5551.stex" ]
+source_file="res://Jaemin/craftpix-675522-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Pink_Monster_Death_8.png"
+dest_files=[ "res://.import/Pink_Monster_Death_8.png-de35d99b59f3602a483f34d44089c557.stex" ]
 
 [params]
 

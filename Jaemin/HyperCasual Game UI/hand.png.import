@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hand.png-053a20045db3b4adb2f48b6adaf1b317.stex"
+path="res://.import/hand.png-a59dd6d2cdc945c7a85d2b46a1399e55.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/hand.png"
-dest_files=[ "res://.import/hand.png-053a20045db3b4adb2f48b6adaf1b317.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/hand.png"
+dest_files=[ "res://.import/hand.png-a59dd6d2cdc945c7a85d2b46a1399e55.stex" ]
 
 [params]
 

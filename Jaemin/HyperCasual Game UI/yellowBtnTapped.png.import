@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/yellowBtnTapped.png-f59d8054388f42ae2c7fbd3fa7be1e37.stex"
+path="res://.import/yellowBtnTapped.png-546a694ea02e72892994f4fdb6c4571b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/yellowBtnTapped.png"
-dest_files=[ "res://.import/yellowBtnTapped.png-f59d8054388f42ae2c7fbd3fa7be1e37.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/yellowBtnTapped.png"
+dest_files=[ "res://.import/yellowBtnTapped.png-546a694ea02e72892994f4fdb6c4571b.stex" ]
 
 [params]
 

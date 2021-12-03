@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/starIcon.png-7222e4dfea8b65698fdb532b50543d17.stex"
+path="res://.import/starIcon.png-311f686f73be7915a89509cd6e41d985.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/starIcon.png"
-dest_files=[ "res://.import/starIcon.png-7222e4dfea8b65698fdb532b50543d17.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/starIcon.png"
+dest_files=[ "res://.import/starIcon.png-311f686f73be7915a89509cd6e41d985.stex" ]
 
 [params]
 

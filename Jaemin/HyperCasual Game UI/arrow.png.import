@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arrow.png-6ece9dd381b98da45eeaa5449432a06a.stex"
+path="res://.import/arrow.png-e282453e4b090ec50e61c95d2c56b432.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/arrow.png"
-dest_files=[ "res://.import/arrow.png-6ece9dd381b98da45eeaa5449432a06a.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/arrow.png"
+dest_files=[ "res://.import/arrow.png-e282453e4b090ec50e61c95d2c56b432.stex" ]
 
 [params]
 

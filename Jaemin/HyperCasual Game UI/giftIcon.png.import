@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/giftIcon.png-7cda35e1bd85cff9849be4420600dfd9.stex"
+path="res://.import/giftIcon.png-c872375525b886ceab16f8943e8fcb6f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/giftIcon.png"
-dest_files=[ "res://.import/giftIcon.png-7cda35e1bd85cff9849be4420600dfd9.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/giftIcon.png"
+dest_files=[ "res://.import/giftIcon.png-c872375525b886ceab16f8943e8fcb6f.stex" ]
 
 [params]
 

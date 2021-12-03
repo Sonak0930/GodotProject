@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pink_Monster_Climb_4.png-57d81517ba88f3787fd97652b7acebba.stex"
+path="res://.import/Pink_Monster_Climb_4.png-7c52e7bd88bd19d2547a8cec56844ee9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://craftpix-675522-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Pink_Monster_Climb_4.png"
-dest_files=[ "res://.import/Pink_Monster_Climb_4.png-57d81517ba88f3787fd97652b7acebba.stex" ]
+source_file="res://Jaemin/craftpix-675522-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Pink_Monster_Climb_4.png"
+dest_files=[ "res://.import/Pink_Monster_Climb_4.png-7c52e7bd88bd19d2547a8cec56844ee9.stex" ]
 
 [params]
 
