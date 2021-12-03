@@ -80,11 +80,14 @@ _global_script_classes=[ {
 "path": "res://Scripts/UI/TargetColor_circle_mj.gd"
 }, {
 "base": "Area2D",
-
-
 "class": "WaterObj_Dh",
 "language": "GDScript",
 "path": "res://Scripts/WaterObj_Dh.gd"
+}, {
+"base": "Area2D",
+"class": "WaterObj_mj",
+"language": "GDScript",
+"path": "res://Scripts/waterObj_mj.gd"
 }, {
 "base": "Node2D",
 "class": "currColor_cir",
@@ -116,8 +119,8 @@ _global_script_class_icons={
 "Player_mj": "",
 "RepositoryItem": "",
 "TargetColor_circle_mj": "",
-
 "WaterObj_Dh": "",
+"WaterObj_mj": "",
 "currColor_cir": "",
 "targetColor_cir": "",
 "world_mj": ""
