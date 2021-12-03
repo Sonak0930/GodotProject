@@ -34,10 +34,30 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/colorObjs/ColorObj_red_mj.gd"
 }, {
+"base": "HBoxContainer",
+"class": "ContributorClass",
+"language": "GDScript",
+"path": "res://Jaemin/addons/github-integration/scripts/ContributorClass.gd"
+}, {
 "base": "Sprite",
 "class": "CurrentColor_circle_mj",
 "language": "GDScript",
 "path": "res://Scripts/UI/CurrentColor_circle_mj.gd"
+}, {
+"base": "PanelContainer",
+"class": "GistItem",
+"language": "GDScript",
+"path": "res://Jaemin/addons/github-integration/scripts/GistItem.gd"
+}, {
+"base": "HBoxContainer",
+"class": "InvitationItem",
+"language": "GDScript",
+"path": "res://Jaemin/addons/github-integration/scripts/InvitationItem.gd"
+}, {
+"base": "Sprite",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Jaemin/Player.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "Player_Dh",
@@ -49,17 +69,25 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Player_mj.gd"
 }, {
+"base": "PanelContainer",
+"class": "RepositoryItem",
+"language": "GDScript",
+"path": "res://Jaemin/addons/github-integration/scripts/RepositoryItem.gd"
+}, {
 "base": "Sprite",
 "class": "TargetColor_circle_mj",
 "language": "GDScript",
 "path": "res://Scripts/UI/TargetColor_circle_mj.gd"
 }, {
 "base": "Area2D",
-
-
 "class": "WaterObj_Dh",
 "language": "GDScript",
 "path": "res://Scripts/WaterObj_Dh.gd"
+}, {
+"base": "Area2D",
+"class": "WaterObj_mj",
+"language": "GDScript",
+"path": "res://Scripts/waterObj_mj.gd"
 }, {
 "base": "Node2D",
 "class": "currColor_cir",
@@ -82,12 +110,17 @@ _global_script_class_icons={
 "ColorObj_green_mj": "",
 "ColorObj_mj": "",
 "ColorObj_red_mj": "",
+"ContributorClass": "",
 "CurrentColor_circle_mj": "",
+"GistItem": "",
+"InvitationItem": "",
+"Player": "",
 "Player_Dh": "",
 "Player_mj": "",
+"RepositoryItem": "",
 "TargetColor_circle_mj": "",
-
 "WaterObj_Dh": "",
+"WaterObj_mj": "",
 "currColor_cir": "",
 "targetColor_cir": "",
 "world_mj": ""
@@ -118,22 +151,22 @@ enabled=PoolStringArray(  )
 
 right={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
  ]
 }
 left={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
  ]
 }
 up={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
  ]
 }
 down={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
  ]
 }
 

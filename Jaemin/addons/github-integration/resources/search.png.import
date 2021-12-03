@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/search.png-9b9b7cef4594258a01318d95c85ad610.stex"
+path="res://.import/search.png-8123c7000f9ae7503bcec1451db9cb6d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/github-integration/resources/search.png"
-dest_files=[ "res://.import/search.png-9b9b7cef4594258a01318d95c85ad610.stex" ]
+source_file="res://Jaemin/addons/github-integration/resources/search.png"
+dest_files=[ "res://.import/search.png-8123c7000f9ae7503bcec1451db9cb6d.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=true
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

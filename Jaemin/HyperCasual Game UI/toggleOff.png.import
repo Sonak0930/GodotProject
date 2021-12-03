@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/toggleOff.png-d52525efdf4550780cdbf6427ce81536.stex"
+path="res://.import/toggleOff.png-6fde1986bb71b83c381e6f42b288ed55.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/toggleOff.png"
-dest_files=[ "res://.import/toggleOff.png-d52525efdf4550780cdbf6427ce81536.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/toggleOff.png"
+dest_files=[ "res://.import/toggleOff.png-6fde1986bb71b83c381e6f42b288ed55.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

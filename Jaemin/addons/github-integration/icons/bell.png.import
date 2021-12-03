@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bell.png-f23eb8d10b79024fd8e597ba841b0bbc.stex"
+path="res://.import/bell.png-b9ba890ab90c16990da825dcefd35e06.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/github-integration/icons/bell.png"
-dest_files=[ "res://.import/bell.png-f23eb8d10b79024fd8e597ba841b0bbc.stex" ]
+source_file="res://Jaemin/addons/github-integration/icons/bell.png"
+dest_files=[ "res://.import/bell.png-b9ba890ab90c16990da825dcefd35e06.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=false

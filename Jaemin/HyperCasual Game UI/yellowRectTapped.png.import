@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/yellowRectTapped.png-6ff928c2b1c1acd4442fd6e781c7fe94.stex"
+path="res://.import/yellowRectTapped.png-2a6475e56029c9cd31bbf94f3eeed1d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/yellowRectTapped.png"
-dest_files=[ "res://.import/yellowRectTapped.png-6ff928c2b1c1acd4442fd6e781c7fe94.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/yellowRectTapped.png"
+dest_files=[ "res://.import/yellowRectTapped.png-2a6475e56029c9cd31bbf94f3eeed1d0.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

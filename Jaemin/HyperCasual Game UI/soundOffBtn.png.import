@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/soundOffBtn.png-3d218de2dfd9b4c47571755219536836.stex"
+path="res://.import/soundOffBtn.png-59e60593794a4bac24d789e71afe54eb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/soundOffBtn.png"
-dest_files=[ "res://.import/soundOffBtn.png-3d218de2dfd9b4c47571755219536836.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/soundOffBtn.png"
+dest_files=[ "res://.import/soundOffBtn.png-59e60593794a4bac24d789e71afe54eb.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

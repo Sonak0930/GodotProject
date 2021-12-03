@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pink_Monster_Walk_6.png-d3a8f16dcc2276cc6a58e58043e0960e.stex"
+path="res://.import/Pink_Monster_Walk_6.png-5dd58fa8a96c5942f4143d6b7bf13127.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pink_walk/Pink_Monster_Walk_6.png"
-dest_files=[ "res://.import/Pink_Monster_Walk_6.png-d3a8f16dcc2276cc6a58e58043e0960e.stex" ]
+source_file="res://Jaemin/pink_walk/Pink_Monster_Walk_6.png"
+dest_files=[ "res://.import/Pink_Monster_Walk_6.png-5dd58fa8a96c5942f4143d6b7bf13127.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

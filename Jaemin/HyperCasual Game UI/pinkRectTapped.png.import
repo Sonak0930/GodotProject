@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pinkRectTapped.png-6e4befe469514e2b9da2db3596a4b747.stex"
+path="res://.import/pinkRectTapped.png-cf3050ef1bf77435c5c8861b29fbdf0c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/pinkRectTapped.png"
-dest_files=[ "res://.import/pinkRectTapped.png-6e4befe469514e2b9da2db3596a4b747.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/pinkRectTapped.png"
+dest_files=[ "res://.import/pinkRectTapped.png-cf3050ef1bf77435c5c8861b29fbdf0c.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

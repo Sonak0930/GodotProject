@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/deny-w.png-7897b4d59c46a228e49aaedb77364b95.stex"
+path="res://.import/deny-w.png-b07c3b6b8561b2ae498640ea1f059aef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/github-integration/icons/deny-w.png"
-dest_files=[ "res://.import/deny-w.png-7897b4d59c46a228e49aaedb77364b95.stex" ]
+source_file="res://Jaemin/addons/github-integration/icons/deny-w.png"
+dest_files=[ "res://.import/deny-w.png-b07c3b6b8561b2ae498640ea1f059aef.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rock1.png-2e46ec99229f754a92781f2ba5a1c6e0.stex"
+path="res://.import/Rock1.png-c9e3a3fecb8fd96e6e35cf802d30c9cc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://craftpix-675522-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Rock1.png"
-dest_files=[ "res://.import/Rock1.png-2e46ec99229f754a92781f2ba5a1c6e0.stex" ]
+source_file="res://Jaemin/craftpix-675522-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Rock1.png"
+dest_files=[ "res://.import/Rock1.png-c9e3a3fecb8fd96e6e35cf802d30c9cc.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

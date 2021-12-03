@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/start_normal.png-85a96ed19e282bbc3729b6ad3139fdfd.stex"
+path="res://.import/start_normal.png-a1e4091cacb38e5df99eb4213d082826.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Assets_Jaemin/start_normal.png"
-dest_files=[ "res://.import/start_normal.png-85a96ed19e282bbc3729b6ad3139fdfd.stex" ]
+source_file="res://Jaemin/Assets_Jaemin/start_normal.png"
+dest_files=[ "res://.import/start_normal.png-a1e4091cacb38e5df99eb4213d082826.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

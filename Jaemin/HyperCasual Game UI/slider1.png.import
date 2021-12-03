@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/slider1.png-94a8fa4a53ead6ec2e41d0ec10de0b6c.stex"
+path="res://.import/slider1.png-d5696383460f6a692c5928d2e9c521c5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/slider1.png"
-dest_files=[ "res://.import/slider1.png-94a8fa4a53ead6ec2e41d0ec10de0b6c.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/slider1.png"
+dest_files=[ "res://.import/slider1.png-d5696383460f6a692c5928d2e9c521c5.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

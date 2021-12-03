@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heartIcon.png-6ead58544d9740f86955258371f16719.stex"
+path="res://.import/heartIcon.png-fee7845f8f3222aaaf285ccdac3ce581.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/heartIcon.png"
-dest_files=[ "res://.import/heartIcon.png-6ead58544d9740f86955258371f16719.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/heartIcon.png"
+dest_files=[ "res://.import/heartIcon.png-fee7845f8f3222aaaf285ccdac3ce581.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

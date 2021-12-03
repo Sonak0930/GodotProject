@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Owlet_Monster_Attack1_4.png-aa2b09018f2b3ba7264b55b967877285.stex"
+path="res://.import/Owlet_Monster_Attack1_4.png-234356545f801b2903b5d12a87fc1d8e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GhostWalk/Owlet_Monster_Attack1_4.png"
-dest_files=[ "res://.import/Owlet_Monster_Attack1_4.png-aa2b09018f2b3ba7264b55b967877285.stex" ]
+source_file="res://Jaemin/GhostWalk/Owlet_Monster_Attack1_4.png"
+dest_files=[ "res://.import/Owlet_Monster_Attack1_4.png-234356545f801b2903b5d12a87fc1d8e.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

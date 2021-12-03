@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/arrow-left.svg-dd6535743349ac0a285fc99ef3ed711e.stex"
+path="res://.import/arrow-left.svg-2c479b8d8ddb76fe3319d474a52106eb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/github-integration/icons/arrow-left.svg"
-dest_files=[ "res://.import/arrow-left.svg-dd6535743349ac0a285fc99ef3ed711e.stex" ]
+source_file="res://Jaemin/addons/github-integration/icons/arrow-left.svg"
+dest_files=[ "res://.import/arrow-left.svg-2c479b8d8ddb76fe3319d474a52106eb.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=true
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dude_Monster_Walk+Attack_6.png-fb6d0b783ae56319fa3f90af01484d6b.stex"
+path="res://.import/Dude_Monster_Walk+Attack_6.png-40d3eed3e5d7de5a1c30e28b60d1474b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://craftpix-675522-free-pixel-art-tiny-hero-sprites/3 Dude_Monster/Dude_Monster_Walk+Attack_6.png"
-dest_files=[ "res://.import/Dude_Monster_Walk+Attack_6.png-fb6d0b783ae56319fa3f90af01484d6b.stex" ]
+source_file="res://Jaemin/craftpix-675522-free-pixel-art-tiny-hero-sprites/3 Dude_Monster/Dude_Monster_Walk+Attack_6.png"
+dest_files=[ "res://.import/Dude_Monster_Walk+Attack_6.png-40d3eed3e5d7de5a1c30e28b60d1474b.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/settingsBtn.png-32e9c720e3c3f38558896b28f691bad8.stex"
+path="res://.import/settingsBtn.png-41450f99a42b5eb0e75653e5cfc3d0fa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/settingsBtn.png"
-dest_files=[ "res://.import/settingsBtn.png-32e9c720e3c3f38558896b28f691bad8.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/settingsBtn.png"
+dest_files=[ "res://.import/settingsBtn.png-41450f99a42b5eb0e75653e5cfc3d0fa.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

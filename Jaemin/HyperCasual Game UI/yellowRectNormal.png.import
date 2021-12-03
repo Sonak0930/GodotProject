@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/yellowRectNormal.png-c71f1c74cd453feeb4acd0f8c83a7b2b.stex"
+path="res://.import/yellowRectNormal.png-1d0f6b62c5cf09f1cf1882460c1db12f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HyperCasual Game UI/yellowRectNormal.png"
-dest_files=[ "res://.import/yellowRectNormal.png-c71f1c74cd453feeb4acd0f8c83a7b2b.stex" ]
+source_file="res://Jaemin/HyperCasual Game UI/yellowRectNormal.png"
+dest_files=[ "res://.import/yellowRectNormal.png-1d0f6b62c5cf09f1cf1882460c1db12f.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true
