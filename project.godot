@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Area2D",
+"class": "Bullet",
+"language": "GDScript",
+"path": "res://Scripts/Enemy_Script/Bullet.gd"
+}, {
+"base": "Area2D",
 "class": "ColorObj_Dh",
 "language": "GDScript",
 "path": "res://Scripts/ColorObj_Dh.gd"
@@ -75,6 +80,7 @@ _global_script_classes=[ {
 "path": "res://Scripts/World_mj.gd"
 } ]
 _global_script_class_icons={
+"Bullet": "",
 "ColorObj_Dh": "",
 "ColorObj_blue_mj": "",
 "ColorObj_green_mj": "",
@@ -106,6 +112,8 @@ RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
 [display]
 
 window/size/height=730
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [editor_plugins]
 
