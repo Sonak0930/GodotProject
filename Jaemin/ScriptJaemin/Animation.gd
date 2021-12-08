@@ -14,8 +14,8 @@ func _process(delta):
 	elif Input.is_action_pressed("ui_left"):
 		anima.play("run")
 		anima.set_animation("Left")
-	else:
-		anima.stop()
+	#else:
+		#anima.stop()
 func _moveWithKeyboard():
 	var v1 = Vector2.ZERO
 	var v2 = Vector2.ZERO
