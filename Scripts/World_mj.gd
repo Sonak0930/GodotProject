@@ -69,6 +69,9 @@ func compare_color():
 	if(Color(TargetColor) == Color(CurrentColor)):
 		is_complited = true
 		print("congrates!! you win!!")
+		
+		var gameManager = preload("res://Jaemin/ScriptJaemin/GameManager_jm.gd").new()
+		gameManager.adavanceStage()
 		print_tree_pretty()
 	else:
 		print("cheer up!!")
