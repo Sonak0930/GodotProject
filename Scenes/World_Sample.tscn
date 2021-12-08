@@ -17,7 +17,7 @@
 [ext_resource path="res://Scenes/Enemies/Shooter_Stop.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Enemies/MeleeBot_Stop.tscn" type="PackedScene" id=16]
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
 
 [sub_resource type="TileSet" id=2]
@@ -59,14 +59,14 @@ points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 1
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 3 )
+2/shape = SubResource( 1 )
 2/shape_one_way = false
 2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
@@ -85,12 +85,12 @@ points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 1
 3/shapes = [  ]
 3/z_index = 0
 
-[sub_resource type="Curve2D" id=4]
+[sub_resource type="Curve2D" id=3]
 _data = {
 "points": PoolVector2Array( -11.7725, 11.7725, 11.7725, -11.7725, 371, 245.592, -27.3291, -8.40896, 27.3291, 8.40896, 467, 249.592, 1.26134, -23.1247, -1.26134, 23.1247, 567, 304.592, 29.4314, 1.26134, -29.4314, -1.26134, 509, 351.592, 19.3406, 21.0224, -19.3406, -21.0224, 389, 321.592, -22.4492, 17.9594, 22.4492, -17.9594, 371, 246.592 )
 }
 
-[sub_resource type="Curve2D" id=5]
+[sub_resource type="Curve2D" id=4]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 817, 285.592, 0, 0, 0, 0, 855.372, 288.268, 0, 0, 0, 0, 877, 287.592, 0, 0, 0, 0, 936, 287.592, 0, 0, 0, 0, 817, 285.592 )
 }
@@ -236,8 +236,40 @@ scale = Vector2( 0.262509, 0.32 )
 [node name="ColorObj_Dh" parent="Collectables/ColorParent4" instance=ExtResource( 1 )]
 modulate = Color( 1, 0, 0, 1 )
 
-[connection signal="body_entered" from="Collectables/WaterParent/WaterObj_Dh" to="." method="_on_WaterObj_body_entered"]
-[connection signal="body_entered" from="Collectables/ColorParent/ColorObj_Dh" to="." method="_on_ColorObj_body_entered"]
-[connection signal="body_entered" from="Collectables/ColorParent2/ColorObj_Dh" to="." method="_on_ColorObj_body_entered"]
-[connection signal="body_entered" from="Collectables/ColorParent3/ColorObj_Dh" to="." method="_on_ColorObj_body_entered"]
-[connection signal="body_entered" from="Collectables/ColorParent4/ColorObj_Dh" to="." method="_on_ColorObj_body_entered"]
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="BatPath" type="Path2D" parent="Enemies"]
+curve = SubResource( 3 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/BatPath"]
+position = Vector2( 371, 245.592 )
+rotation = -0.595013
+rotate = false
+
+[node name="Bat" parent="Enemies/BatPath/PathFollow2D" instance=ExtResource( 13 )]
+rotation = 0.591667
+scale = Vector2( 1.5, 1.5 )
+
+[node name="MeleePath" type="Path2D" parent="Enemies"]
+self_modulate = Color( 1, 0.501961, 0.501961, 0.701961 )
+curve = SubResource( 4 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/MeleePath"]
+position = Vector2( 817, 285.592 )
+rotation = 0.0333111
+rotate = false
+
+[node name="MeleeBot" parent="Enemies/MeleePath/PathFollow2D" instance=ExtResource( 10 )]
+
+[node name="MeleePath2" type="Path2D" parent="Enemies"]
+self_modulate = Color( 1, 0.501961, 0.501961, 0.701961 )
+position = Vector2( -211, 3.592 )
+curve = SubResource( 4 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/MeleePath2"]
+position = Vector2( 817, 285.592 )
+rotation = 0.0333111
+rotate = false
+
+[node name="MeleeBot" parent="Enemies/MeleePath2/PathFollow2D" instance=ExtResource( 10 )]
+\
