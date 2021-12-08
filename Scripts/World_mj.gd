@@ -2,181 +2,206 @@ extends Node2D
 
 class_name world_mj
 
+#player
+onready var player = $Player_mj
+# color comparison judge
+var is_same
 # color var
 var TargetColor 
 var CurrentColor
+# colorbukkits
+var colorbucket_red_num
+var colorbucket_green_num
+var colorbucket_blue_num
+var Waterbucket_num
+
+# var for UI
 # var contain UI color circle node
 onready var targetCol_cir = get_node("UI_mj/TargetColor_circle")
 onready var currentCol_cir = get_node("UI_mj/CurrentColor_circle")
 # var contain UI label node 
 onready var targetCol_label = get_node("UI_mj/TargetColor_RGB")
 onready var currentCol_label = get_node("UI_mj/CurrentColor_RGB")
-
-# colorbukkits
-var colorbukkit_red_num = 1
-var colorbukkit_green_num = 1
-var colorbukkit_blue_num = 1
 # colorbukkit button 
-onready var colorbukkit_red_button = get_node("UI_mj/UI_bukkits/colorBukkit_red")
-onready var colorbukkit_green_button = get_node("UI_mj/UI_bukkits/colorBukkit_green")
-onready var colorbukkit_blue_button = get_node("UI_mj/UI_bukkits/colorBukkit_blue")
+onready var colorbucket_red_button = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_red_button")
+onready var colorbucket_green_button = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_green_button")
+onready var colorbucket_blue_button = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_blue_button")
+onready var Waterbucket_button = get_node("UI_mj/UI_colorBucket_buttons/waterBucket_button")
 # colorbukkits_num_label
-onready var colorbukkit_red_label = get_node("UI_mj/UI_bukkits/colorBukkit_red_label")
-onready var colorbukkit_green_label = get_node("UI_mj/UI_bukkits/colorBukkit_green_label")
-onready var colorbukkit_blue_label = get_node("UI_mj/UI_bukkits/colorBukkit_blue_label")
-#Waterbukkit
-var Waterbukkit_num
-#Waterbukkit_button
-onready var Waterbukkit_button = get_node("UI_mj/UI_bukkits/waterBukkit")
-#Waterbukkit_label
-onready var Waterbukkit_label = get_node("UI_mj/UI_bukkits/waterBukkit_label")
+onready var colorbucket_red_label = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_red_label")
+onready var colorbucket_green_label = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_green_label")
+onready var colorbucket_blue_label = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_blue_label")
+onready var Waterbucket_label = get_node("UI_mj/UI_colorBucket_buttons/waterBucket_label")
 
-# game judgement var
-var is_complited
+
+
 
 func _ready():
+	#connect with player
+	player.connect("attacked",self,"_on_attacked")
+	player.connect("collected",self,"_on_collected")
 	# reset game judgement var
-	is_complited = false
-	
+	is_same = false
 	#set TargetCol and  reset CurrentCol
 	TargetColor = Color(200,150,150,1)
 	CurrentColor = Color(50,50,50,1)
+	# set colorBukkit num
+	colorbucket_red_num = 1
+	colorbucket_green_num = 1
+	colorbucket_blue_num = 1
+	Waterbucket_num = 0
 	
+	#reset UI
 	#reset UI circle color
 	targetCol_cir.set_color(TargetColor)
 	currentCol_cir.reset_color()
 	# set UI CurrentColor_label and TargetColor_label
 	targetCol_label.text = str(TargetColor[0])+"\n"+str(TargetColor[1])+"\n"+str(TargetColor[2])
 	currentCol_label.text = str(CurrentColor[0])+"\n"+str(CurrentColor[1])+"\n"+str(CurrentColor[2])
-	
 	# connect colorbukkit_button
-	colorbukkit_red_button.connect("pressed",self,"_on_colorBukkit_red_pressed")
-	colorbukkit_green_button.connect("pressed",self,"_on_colorBukkit_green_pressed")
-	colorbukkit_blue_button.connect("pressed",self,"_on_colorBukkit_blue_pressed")
-	colorbukkit_red_label.text = "X" + str(colorbukkit_red_num)
-	colorbukkit_green_label.text = "X" + str(colorbukkit_green_num)
-	colorbukkit_blue_label.text = "X" + str(colorbukkit_blue_num)
+	colorbucket_red_button.connect("pressed",self,"_on_colorBukkit_red_pressed")
+	colorbucket_green_button.connect("pressed",self,"_on_colorBukkit_green_pressed")
+	colorbucket_blue_button.connect("pressed",self,"_on_colorBukkit_blue_pressed")
+	Waterbucket_button.connect("pressed",self,"_on_Waterbukkit_pressed")
+	update_ui()
 	
-	#set Waterbukkit
-	Waterbukkit_num = 0
-	Waterbukkit_label.text = "X"+str(Waterbukkit_num)
-	#connect Waterbukkit
-	Waterbukkit_button.connect("pressed",self,"_on_Waterbukkit_pressed")
+
+var bat_speed = 100
+var melee_speed = 100
+# Enemy movment control
+func _process(delta):
+	# Update bat offset
+	$Enemies/BatPath/PathFollow2D.offset += bat_speed * delta
+	
+	# Update Meleebot offset
+	$Enemies/MeleePath/MeleePathFollow2D.offset += melee_speed * delta
+	#$Enemies/MeleePath2/MeleePathFollow2D.offset += melee_speed * delta
+	# Update Shooter offset
+	#$Enemies/ShooterPath/ShooterPathFollow2D.offset += melee_speed * delta
+	
 
 
+
+# color calulation
 func compare_color():
-	print(TargetColor,",",CurrentColor)
 	if(Color(TargetColor) == Color(CurrentColor)):
-		is_complited = true
+		is_same = true
 		print("congrates!! you win!!")
-		print_tree_pretty()
 	else:
 		print("cheer up!!")
 
-var max_Bukkit_num = 10
 func life_is_color():
 	var node = get_node("colorObjs_mj")
-	if(colorbukkit_blue_num+colorbukkit_green_num+colorbukkit_red_num==0):
+	if(CurrentColor[0]+CurrentColor[1]+CurrentColor[2]==0):
 		print("you lose!")
-	elif node.get_child_count()==0 && (!is_complited):
+	elif node.get_child_count()==0 && (!is_same) && Waterbucket_num == 0:
 		print("node child count:",node.get_child_count())
 		print("you lose!")
+	elif (CurrentColor[0]<TargetColor[0]||CurrentColor[1]<TargetColor[1]||CurrentColor[2]<TargetColor[2])&& node.get_child_count()==0:
+		print("you lose")
 
-# when ColorObj_"red" send signal "body_entered" add R value of currentColor_circle
-func _on_ColorObj_red_body_entered(body):
-	#update CurrentColor
-	CurrentColor = CurrentColor+Color(50,0,0,0)
-	#update CurrentColor circle
-	currentCol_cir.update_color(CurrentColor)
-	#update CurrentColor label
-	currentCol_label.text = str(CurrentColor[0])+"\n"+str(CurrentColor[1])+"\n"+str(CurrentColor[2])
+
+
+# reaction to "ememies" coillision
+func _on_attacked(enemyName): 
+		var subtractiveColor = set_random_color(1) 
+		CurrentColor = Color(CurrentColor) - Color(subtractiveColor)
+		update_ui()
+		compare_color()
+		life_is_color()
+
+func set_random_color(colBitrange)->Color:
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	var rnum = rng.randi_range(0,255)
+	var rnum2 = rng.randi_range(1,colBitrange)
+	var resultColor = Color(0,0,0,0)
+	if 0 <= rnum  && rnum < 85:
+		resultColor = Color(50*rnum2,0,0,0)
+	elif 85 <= rnum && rnum < 170:
+		resultColor = Color(0,50*rnum2,0,0)
+	elif 170 <= rnum && rnum <= 255:
+		resultColor = Color(0,0,50*rnum2,0)
+	if CurrentColor[0]+CurrentColor[1]+CurrentColor[2]==50:
+		resultColor = CurrentColor
+	return resultColor
+
+
+
+# reaction to "bukkits" coillision
+var bucketNames = {
+	"redBucket":Color(50,0,0,0),
+	"greenBucket":Color(0,50,0,0),
+	"blueBucket":Color(0,0,50,0),
+	"waterBucket":0}
+
+func _on_collected(colorBucketName):
+	for key in bucketNames:
+		if colorBucketName == key:
+			if key == "waterBucket":
+				Waterbucket_num += 1
+				break
+			#print("dict works, current colorBukkit is ",key, bukkitNames[key])
+			CurrentColor = Color(CurrentColor) + Color(bucketNames[key])
+			break
+	update_ui()
 	compare_color()
-	colorbukkit_red_num += 1
-	colorbukkit_red_label.text = "X" + str(colorbukkit_red_num)
-	print("colorbukkits_red_num:",colorbukkit_red_num)
 	life_is_color()
 
-# when ColorObj_"green" send signal "body_entered" add G value of currentColor_circle
-func _on_ColorObj_green_body_entered(body):
-	#update CurrentColor
-	CurrentColor = CurrentColor+Color(0,50,0,0)
-	#update CurrentColor circle
+func update_ui():
+	#color circle
 	currentCol_cir.update_color(CurrentColor)
-	#update CurrentColor label
+	for i in [0,1,2]:
+		if CurrentColor[i]<0:
+			CurrentColor[i] = 0
 	currentCol_label.text = str(CurrentColor[0])+"\n"+str(CurrentColor[1])+"\n"+str(CurrentColor[2])
-	compare_color()
-	colorbukkit_green_num += 1
-	colorbukkit_green_label.text = "X" + str(colorbukkit_green_num)
-	print("colorbukkits_green_num:",colorbukkit_green_num)
-	life_is_color()
+	# bukkits labels
+	colorbucket_red_num = CurrentColor[0]/50
+	colorbucket_green_num = CurrentColor[1]/50
+	colorbucket_blue_num = CurrentColor[2]/50
+	colorbucket_red_label.text = "X" + str(colorbucket_red_num)
+	colorbucket_green_label.text = "X" + str(colorbucket_green_num)
+	colorbucket_blue_label.text = "X" + str(colorbucket_blue_num)
+	Waterbucket_label.text = "X" + str(Waterbucket_num)
 
-# when ColorObj_"blue" send signal "body_entered" add B value of currentColor_circle
-func _on_ColorObj_blue_body_entered(body):
-	#update CurrentColors
-	CurrentColor = CurrentColor+Color(0,0,50,0)
-	#update CurrentColor circle
-	currentCol_cir.update_color(CurrentColor)
-	#update CurrentColor label
-	currentCol_label.text = str(CurrentColor[0])+"\n"+str(CurrentColor[1])+"\n"+str(CurrentColor[2])
-	compare_color()
-	colorbukkit_blue_num += 1
-	colorbukkit_blue_label.text = "X" + str(colorbukkit_blue_num)
-	print("colorbukkits_blue_num:",colorbukkit_blue_num)
-	life_is_color()
 
-func _on_WaterObj_mj_body_entered(body):
-	Waterbukkit_num += 1
-	Waterbukkit_label.text = "X" + str(Waterbukkit_num)
-	print("Waterbukkit_num:",Waterbukkit_num)
-	life_is_color()
 
-var selectedColor = Color(0,0,50,0)
-var is_Waterbukkit_pressed = false
+# reaction to button_pressed 
+var is_Waterbucket_pressed = false
 func _on_colorBukkit_red_pressed():
-	if is_Waterbukkit_pressed:
-		if colorbukkit_red_num >0:
+	if is_Waterbucket_pressed:
+		if colorbucket_red_num >0:
 			CurrentColor = Color(CurrentColor)-Color(50,0,0,0)
-			#update CurrentColor circle
-			currentCol_cir.update_color(CurrentColor)
-			#update CurrentColor label
-			currentCol_label.text = str(CurrentColor[0])+"\n"+str(CurrentColor[1])+"\n"+str(CurrentColor[2])
+			update_ui()
 			compare_color()
-			colorbukkit_red_num -= 1
-			colorbukkit_red_label.text = "X" + str(colorbukkit_red_num)
-			is_Waterbukkit_pressed = false
 			life_is_color()
+			is_Waterbucket_pressed = false
 
 func _on_colorBukkit_green_pressed():
-	if is_Waterbukkit_pressed:
-		if colorbukkit_green_num >0:
+	if is_Waterbucket_pressed:
+		if colorbucket_green_num >0:
 			CurrentColor = Color(CurrentColor)-Color(0,50,0,0)
-			#update CurrentColor circle
-			currentCol_cir.update_color(CurrentColor)
-			#update CurrentColor label
-			currentCol_label.text = str(CurrentColor[0])+"\n"+str(CurrentColor[1])+"\n"+str(CurrentColor[2])
+			update_ui()
 			compare_color()
-			colorbukkit_green_num -= 1
-			colorbukkit_green_label.text = "X" + str(colorbukkit_green_num)
-			is_Waterbukkit_pressed = false
 			life_is_color()
+			is_Waterbucket_pressed = false
 
 func _on_colorBukkit_blue_pressed():
-	if is_Waterbukkit_pressed:
-		if colorbukkit_blue_num >0:
+	if is_Waterbucket_pressed:
+		if colorbucket_blue_num >0:
 			CurrentColor = Color(CurrentColor)-Color(0,0,50,0)
-			#update CurrentColor circle
-			currentCol_cir.update_color(CurrentColor)
-			#update CurrentColor label
-			currentCol_label.text = str(CurrentColor[0])+"\n"+str(CurrentColor[1])+"\n"+str(CurrentColor[2])
+			update_ui()
 			compare_color()
-			colorbukkit_blue_num -= 1
-			colorbukkit_blue_label.text = "X" + str(colorbukkit_blue_num)
-			is_Waterbukkit_pressed = false
 			life_is_color()
+			is_Waterbucket_pressed = false
 
 func _on_Waterbukkit_pressed():
-	if Waterbukkit_num >0:
-		Waterbukkit_num -= 1
-		Waterbukkit_label.text = "X" + str(Waterbukkit_num)
-		is_Waterbukkit_pressed = true
-		life_is_color()
+	if is_Waterbucket_pressed:
+		pass
+	else:
+		if Waterbucket_num >0:
+			Waterbucket_num -= 1
+			update_ui()
+			compare_color()
+			life_is_color()
+			is_Waterbucket_pressed = true

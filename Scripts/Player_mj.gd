@@ -3,13 +3,13 @@ extends KinematicBody2D
 class_name Player_mj
 
 onready var anima = $AnimatedSprite
-
 var speed = 120.0
 
-func _process(delta):
-	
-	_moveWithKeyboard()
+signal attacked(body, enemyName)
+signal collected(colorObjName)
 
+func _process(delta):
+	_moveWithKeyboard()
 	if Input.is_action_pressed("ui_right"):
 		anima.play("run")
 		anima.set_animation("Right")
@@ -18,7 +18,7 @@ func _process(delta):
 		anima.set_animation("Left")
 	else:
 		anima.stop()
-
+		
 
 func _moveWithKeyboard():
 	if Input.is_action_pressed("ui_left"):
@@ -32,3 +32,12 @@ func _moveWithKeyboard():
 		move_and_slide(Vector2(0,-speed))
 	if Input.is_action_pressed("ui_down"):
 		move_and_slide(Vector2(0,speed))
+
+
+func _on_ColorObj_body_entered(body,colorObjName):
+	emit_signal("collected",colorObjName)
+	#print("player said: I took ",colorBukkitName)
+
+func _on_Enemies_body_entered(body, enemyName):
+	emit_signal("attacked",enemyName)
+	#print("player said: I've just attacked by ",enemyName)

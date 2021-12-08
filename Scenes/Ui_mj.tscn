@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/UI/TargetColor_circle_mj.gd" type="Script" id=1]
 [ext_resource path="res://assets/bucket.png" type="Texture" id=2]
@@ -7,15 +7,6 @@
 [ext_resource path="res://assets/painting-bucket.png" type="Texture" id=5]
 [ext_resource path="res://assets/painting-bucket_small.png" type="Texture" id=7]
 [ext_resource path="res://assets/bucket_small.png" type="Texture" id=8]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends TextureButton
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-"
 
 [node name="UI_mj" type="Node2D"]
 __meta__ = {
@@ -227,9 +218,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="UI_bukkits" type="Node" parent="."]
+[node name="UI_colorBucket_buttons" type="Node" parent="."]
 
-[node name="colorBukkit_red" type="TextureButton" parent="UI_bukkits"]
+[node name="colorBucket_red_button" type="TextureButton" parent="UI_colorBucket_buttons"]
 modulate = Color( 0.866667, 0.27451, 0.266667, 1 )
 margin_left = 367.103
 margin_top = 39.6909
@@ -238,12 +229,11 @@ margin_bottom = 300.691
 rect_scale = Vector2( 0.206366, 0.206366 )
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 7 )
-script = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="colorBukkit_red_label" type="Label" parent="UI_bukkits"]
+[node name="colorBucket_red_label" type="Label" parent="UI_colorBucket_buttons"]
 margin_left = 423.943
 margin_top = 81.1121
 margin_right = 463.943
@@ -255,7 +245,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="colorBukkit_green" type="TextureButton" parent="UI_bukkits"]
+[node name="colorBucket_green_button" type="TextureButton" parent="UI_colorBucket_buttons"]
 modulate = Color( 0.0784314, 0.701961, 0.0823529, 1 )
 margin_left = 458.716
 margin_top = 40.2522
@@ -268,7 +258,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="colorBukkit_green_label" type="Label" parent="UI_bukkits"]
+[node name="colorBucket_green_label" type="Label" parent="UI_colorBucket_buttons"]
 margin_left = 515.719
 margin_top = 81.112
 margin_right = 555.719
@@ -280,7 +270,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="colorBukkit_blue" type="TextureButton" parent="UI_bukkits"]
+[node name="colorBucket_blue_button" type="TextureButton" parent="UI_colorBucket_buttons"]
 modulate = Color( 0.243137, 0.278431, 0.560784, 1 )
 margin_left = 557.444
 margin_top = 39.6909
@@ -293,7 +283,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="colorBukkit_blue_label" type="Label" parent="UI_bukkits"]
+[node name="colorBucket_blue_label" type="Label" parent="UI_colorBucket_buttons"]
 margin_left = 613.63
 margin_top = 81.112
 margin_right = 653.63
@@ -305,7 +295,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="waterBukkit" type="TextureButton" parent="UI_bukkits"]
+[node name="waterBucket_button" type="TextureButton" parent="UI_colorBucket_buttons"]
 margin_left = 658.673
 margin_top = 51.7812
 margin_right = 1170.67
@@ -317,7 +307,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="waterBukkit_label" type="Label" parent="UI_bukkits"]
+[node name="waterBucket_label" type="Label" parent="UI_colorBucket_buttons"]
 margin_left = 694.702
 margin_top = 81.1121
 margin_right = 734.702
