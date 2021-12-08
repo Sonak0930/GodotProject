@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bucket_small.png-9277168c23ceaef11f46f450560b4f6e.stex"
+path="res://.import/Icon50.png-0da2014e32b9212a76e6fdcaf0e2ea49.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bucket_small.png"
-dest_files=[ "res://.import/bucket_small.png-9277168c23ceaef11f46f450560b4f6e.stex" ]
+source_file="res://assets/UIButtonsVideogames/arrows/Icon50.png"
+dest_files=[ "res://.import/Icon50.png-0da2014e32b9212a76e6fdcaf0e2ea49.stex" ]
 
 [params]
 

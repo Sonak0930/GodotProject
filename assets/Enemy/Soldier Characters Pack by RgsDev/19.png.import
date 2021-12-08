@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bucket_small.png-9277168c23ceaef11f46f450560b4f6e.stex"
+path="res://.import/19.png-232899c4bdc32ca3e79d222a8e4d640f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bucket_small.png"
-dest_files=[ "res://.import/bucket_small.png-9277168c23ceaef11f46f450560b4f6e.stex" ]
+source_file="res://assets/Enemy/Soldier Characters Pack by RgsDev/19.png"
+dest_files=[ "res://.import/19.png-232899c4bdc32ca3e79d222a8e4d640f.stex" ]
 
 [params]
 

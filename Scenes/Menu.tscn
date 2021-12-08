@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/WallTileSet.tres" type="TileSet" id=2]
@@ -19,6 +19,24 @@
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=17]
 [ext_resource path="res://Scripts/Title.gd" type="Script" id=18]
 [ext_resource path="res://Scripts/MenuItems.gd" type="Script" id=19]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-179.png" type="Texture" id=20]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-182.png" type="Texture" id=21]
+[ext_resource path="res://assets/UIButtonsVideogames/Panel/Window04.png" type="Texture" id=22]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-156.png" type="Texture" id=23]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-171.png" type="Texture" id=24]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-176.png" type="Texture" id=25]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-177.png" type="Texture" id=26]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-172.png" type="Texture" id=27]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/font/Colby-StBlk.ttf" type="DynamicFontData" id=28]
+[ext_resource path="res://assets/UIButtonsVideogames/arrows/Icon33.png" type="Texture" id=29]
+[ext_resource path="res://assets/UIButtonsVideogames/arrows/Icon52.png" type="Texture" id=30]
+[ext_resource path="res://assets/UIButtonsVideogames/arrows/Icon50.png" type="Texture" id=31]
+[ext_resource path="res://assets/UIButtonsVideogames/arrows/Icon51.png" type="Texture" id=32]
+[ext_resource path="res://assets/UIButtonsVideogames/arrows/Icon43.png" type="Texture" id=33]
+[ext_resource path="res://assets/UIButtonsVideogames/arrows/Icon40.png" type="Texture" id=34]
+[ext_resource path="res://assets/UIButtonsVideogames/arrows/Icon44.png" type="Texture" id=35]
+[ext_resource path="res://assets/UIButtonsVideogames/arrows/Icon45.png" type="Texture" id=36]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-165.png" type="Texture" id=37]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
@@ -95,6 +113,35 @@ font_data = ExtResource( 15 )
 [sub_resource type="DynamicFont" id=3]
 size = 40
 font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 15 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 0.517647, 0.517647, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 1, 0.517647, 0.517647, 1 )
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://assets/UIButtonsVideogames/72ppp/font/Colby-StBlk.ttf"
+
+[sub_resource type="DynamicFont" id=9]
+size = 18
+font_data = SubResource( 10 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 29
+font_data = ExtResource( 28 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 40
+font_data = ExtResource( 28 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 40
+font_data = ExtResource( 28 )
 
 [node name="MenuScene" type="Node2D"]
 script = ExtResource( 17 )
@@ -206,27 +253,27 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="TextureButton" type="TextureButton" parent="MenuItems/MenuItemContainer"]
+[node name="PlayButton" type="TextureButton" parent="MenuItems/MenuItemContainer"]
 margin_right = 258.0
 margin_bottom = 87.0
 texture_normal = ExtResource( 8 )
 texture_hover = ExtResource( 10 )
 
-[node name="TextureButton2" type="TextureButton" parent="MenuItems/MenuItemContainer"]
+[node name="OptionsButton" type="TextureButton" parent="MenuItems/MenuItemContainer"]
 margin_top = 91.0
 margin_right = 258.0
 margin_bottom = 178.0
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 14 )
 
-[node name="TextureButton3" type="TextureButton" parent="MenuItems/MenuItemContainer"]
+[node name="CreditButton" type="TextureButton" parent="MenuItems/MenuItemContainer"]
 margin_top = 182.0
 margin_right = 258.0
 margin_bottom = 269.0
 texture_normal = ExtResource( 11 )
 texture_hover = ExtResource( 13 )
 
-[node name="TextureButton4" type="TextureButton" parent="MenuItems/MenuItemContainer"]
+[node name="ExitButton" type="TextureButton" parent="MenuItems/MenuItemContainer"]
 margin_top = 273.0
 margin_right = 258.0
 margin_bottom = 360.0
@@ -284,3 +331,284 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
+[node name="OptionsPanel" type="Node2D" parent="."]
+visible = false
+
+[node name="mainSprite" type="Sprite" parent="OptionsPanel"]
+position = Vector2( 518, 440 )
+scale = Vector2( 0.864322, 1.32168 )
+texture = ExtResource( 20 )
+
+[node name="Title" type="Node2D" parent="OptionsPanel"]
+position = Vector2( -205, 111 )
+
+[node name="TitleSprite" type="Sprite" parent="OptionsPanel/Title"]
+position = Vector2( 720, 183 )
+scale = Vector2( 1, 0.662791 )
+texture = ExtResource( 21 )
+
+[node name="Options" type="Label" parent="OptionsPanel/Title"]
+margin_left = 634.0
+margin_top = 163.0
+margin_right = 803.0
+margin_bottom = 204.0
+custom_fonts/font = SubResource( 6 )
+text = "Options"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VolumeOptions" type="Node2D" parent="OptionsPanel"]
+position = Vector2( -205, 111 )
+
+[node name="vol_sprite" type="Sprite" parent="OptionsPanel/VolumeOptions"]
+position = Vector2( 592.5, 268.75 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 23 )
+
+[node name="HSlider" type="HSlider" parent="OptionsPanel/VolumeOptions"]
+margin_left = 637.0
+margin_top = 254.0
+margin_right = 855.0
+margin_bottom = 283.0
+custom_styles/grabber_area_highlight = SubResource( 7 )
+custom_styles/grabber_area = SubResource( 8 )
+min_value = -80.0
+max_value = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KeyOptions" type="Node2D" parent="OptionsPanel"]
+position = Vector2( -205, 111 )
+
+[node name="Change keys" type="Label" parent="OptionsPanel/KeyOptions"]
+margin_left = 637.0
+margin_top = 313.0
+margin_right = 805.0
+margin_bottom = 338.0
+custom_colors/font_color = Color( 0.654902, 0.654902, 0.654902, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "- Change keys -"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionsPanel/KeyOptions"]
+margin_left = 571.0
+margin_top = 349.0
+margin_right = 999.0
+margin_bottom = 439.0
+rect_scale = Vector2( 0.7, 0.7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpBtn" type="TextureButton" parent="OptionsPanel/KeyOptions/HBoxContainer"]
+margin_right = 104.0
+margin_bottom = 90.0
+toggle_mode = true
+texture_normal = ExtResource( 31 )
+texture_hover = ExtResource( 33 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DownBtn" type="TextureButton" parent="OptionsPanel/KeyOptions/HBoxContainer"]
+margin_left = 108.0
+margin_right = 212.0
+margin_bottom = 90.0
+toggle_mode = true
+texture_normal = ExtResource( 29 )
+texture_hover = ExtResource( 34 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftBtn" type="TextureButton" parent="OptionsPanel/KeyOptions/HBoxContainer"]
+margin_left = 216.0
+margin_right = 320.0
+margin_bottom = 90.0
+toggle_mode = true
+texture_normal = ExtResource( 32 )
+texture_hover = ExtResource( 35 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightBtn" type="TextureButton" parent="OptionsPanel/KeyOptions/HBoxContainer"]
+margin_left = 324.0
+margin_right = 428.0
+margin_bottom = 90.0
+toggle_mode = true
+texture_normal = ExtResource( 30 )
+texture_hover = ExtResource( 36 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="panel" type="Node2D" parent="OptionsPanel/KeyOptions"]
+visible = false
+
+[node name="PressKeyPanel" type="Sprite" parent="OptionsPanel/KeyOptions/panel"]
+modulate = Color( 1, 1, 1, 0.733333 )
+position = Vector2( 707.98, 270.375 )
+scale = Vector2( 0.77451, 0.219933 )
+texture = ExtResource( 22 )
+
+[node name="Presskey" type="Label" parent="OptionsPanel/KeyOptions/panel"]
+margin_left = 619.0
+margin_top = 239.0
+margin_right = 817.0
+margin_bottom = 269.0
+custom_fonts/font = SubResource( 11 )
+text = "- Press Key -"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AcceptBtn" type="TextureButton" parent="OptionsPanel"]
+margin_left = 378.0
+margin_top = 545.0
+margin_right = 634.0
+margin_bottom = 632.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 24 )
+texture_hover = ExtResource( 27 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitBtn" type="TextureButton" parent="OptionsPanel"]
+margin_left = 526.0
+margin_top = 543.0
+margin_right = 782.0
+margin_bottom = 630.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 25 )
+texture_hover = ExtResource( 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayPanel" type="Node2D" parent="."]
+visible = false
+
+[node name="mainSprite" type="Sprite" parent="PlayPanel"]
+position = Vector2( 515, 466.5 )
+scale = Vector2( 0.864322, 1.57692 )
+texture = ExtResource( 20 )
+
+[node name="Title" type="Node2D" parent="PlayPanel"]
+position = Vector2( -184, 109 )
+
+[node name="TitleSprite" type="Sprite" parent="PlayPanel/Title"]
+position = Vector2( 696, 175 )
+scale = Vector2( 1, 0.662791 )
+texture = ExtResource( 37 )
+
+[node name="Play" type="Label" parent="PlayPanel/Title"]
+margin_left = 610.0
+margin_top = 155.0
+margin_right = 779.0
+margin_bottom = 196.0
+custom_fonts/font = SubResource( 6 )
+text = "Play"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayPanel"]
+margin_left = 385.0
+margin_top = 371.0
+margin_right = 642.0
+margin_bottom = 640.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGameButton" type="TextureButton" parent="PlayPanel/VBoxContainer"]
+margin_right = 257.0
+margin_bottom = 87.0
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadGameButton" type="TextureButton" parent="PlayPanel/VBoxContainer"]
+margin_top = 91.0
+margin_right = 257.0
+margin_bottom = 178.0
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="TextureButton" parent="PlayPanel/VBoxContainer"]
+margin_top = 182.0
+margin_right = 257.0
+margin_bottom = 269.0
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGame" type="Label" parent="PlayPanel"]
+margin_left = 404.0
+margin_top = 390.0
+margin_right = 624.0
+margin_bottom = 431.0
+custom_fonts/font = SubResource( 12 )
+text = "New game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadGame" type="Label" parent="PlayPanel"]
+margin_left = 396.0
+margin_top = 481.0
+margin_right = 632.0
+margin_bottom = 522.0
+custom_fonts/font = SubResource( 13 )
+text = "Load game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadGame2" type="Label" parent="PlayPanel"]
+margin_left = 396.0
+margin_top = 573.0
+margin_right = 632.0
+margin_bottom = 614.0
+custom_fonts/font = SubResource( 13 )
+text = "Back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="MenuItems/MenuItemContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="MenuItems/MenuItemContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="MenuItems/MenuItemContainer/CreditButton" to="." method="_on_CreditButton_pressed"]
+[connection signal="pressed" from="MenuItems/MenuItemContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="value_changed" from="OptionsPanel/VolumeOptions/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="OptionsPanel/KeyOptions/HBoxContainer/UpBtn" to="." method="_on_UpBtn_pressed"]
+[connection signal="pressed" from="OptionsPanel/KeyOptions/HBoxContainer/DownBtn" to="." method="_on_DownBtn_pressed"]
+[connection signal="pressed" from="OptionsPanel/KeyOptions/HBoxContainer/LeftBtn" to="." method="_on_LeftBtn_pressed"]
+[connection signal="pressed" from="OptionsPanel/KeyOptions/HBoxContainer/RightBtn" to="." method="_on_RightBtn_pressed"]
+[connection signal="pressed" from="OptionsPanel/AcceptBtn" to="." method="_on_AcceptBtn_pressed"]
+[connection signal="pressed" from="OptionsPanel/ExitBtn" to="." method="_on_ExitBtn_pressed"]
+[connection signal="pressed" from="PlayPanel/VBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]

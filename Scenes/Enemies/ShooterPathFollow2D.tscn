@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Enemies/Shooter_Move.tscn" type="PackedScene" id=2]
+
+[node name="ShooterPathFollow2D" type="PathFollow2D"]
+
+[node name="Shooter_Move" parent="." instance=ExtResource( 2 )]
