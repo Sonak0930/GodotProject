@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scenes/ColorObj_Dh.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/WaterObj_Dh.tscn" type="PackedScene" id=2]
@@ -9,10 +9,13 @@
 [ext_resource path="res://TileSets/PropsTileset.tres" type="TileSet" id=7]
 [ext_resource path="res://TileSets/StoneTileset.tres" type="TileSet" id=8]
 [ext_resource path="res://assets/Texture/TX Struct.png" type="Texture" id=9]
-[ext_resource path="res://Scenes/Enemies/MeleeBot.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Enemies/MeleePathFollow2D.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Ui.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Player_Dh.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Enemies/ShooterPathFollow2D.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Enemies/Shooter_Stop.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Enemies/MeleeBot_Stop.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
@@ -92,6 +95,11 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 817, 285.592, 0, 0, 0, 0, 855.372, 288.268, 0, 0, 0, 0, 877, 287.592, 0, 0, 0, 0, 936, 287.592, 0, 0, 0, 0, 817, 285.592 )
 }
 
+[sub_resource type="Curve2D" id=6]
+_data = {
+"points": PoolVector2Array( -12.1838, 30.1947, 12.1838, -30.1947, 403, 280.592, -49.7948, -16.4217, 49.7948, 16.4217, 483, 278.592, -24.8974, -9.53517, 24.8974, 9.53517, 551, 278.592, 28.0758, -23.3082, -28.0758, 23.3082, 543, 401.592, 36.0217, 44.4974, -36.0217, -44.4974, 417, 404.592, 0, 0, 0, 0, 403, 281.592 )
+}
+
 [node name="World_Sample" type="Node2D"]
 position = Vector2( 0, 121.408 )
 script = ExtResource( 3 )
@@ -139,6 +147,48 @@ tile_data = PoolIntArray( 393236, 1610612739, 0, 393243, 1610612739, 0 )
 [node name="Player_Dh" parent="." instance=ExtResource( 12 )]
 position = Vector2( 221, 246.592 )
 
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="BatPath" type="Path2D" parent="Enemies"]
+curve = SubResource( 4 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/BatPath"]
+position = Vector2( 371, 245.592 )
+rotation = -0.595013
+rotate = false
+
+[node name="Bat" parent="Enemies/BatPath/PathFollow2D" instance=ExtResource( 13 )]
+rotation = 0.591667
+scale = Vector2( 1.5, 1.5 )
+
+[node name="MeleePath" type="Path2D" parent="Enemies"]
+self_modulate = Color( 1, 0.501961, 0.501961, 0.701961 )
+curve = SubResource( 5 )
+
+[node name="MeleePathFollow2D" parent="Enemies/MeleePath" instance=ExtResource( 10 )]
+position = Vector2( 817, 285.592 )
+
+[node name="MeleePath2" type="Path2D" parent="Enemies"]
+self_modulate = Color( 1, 0.501961, 0.501961, 0.701961 )
+position = Vector2( -211, 3.592 )
+curve = SubResource( 5 )
+
+[node name="MeleePathFollow2D" parent="Enemies/MeleePath2" instance=ExtResource( 10 )]
+position = Vector2( 817, 285.592 )
+
+[node name="ShooterPath" type="Path2D" parent="Enemies"]
+curve = SubResource( 6 )
+
+[node name="ShooterPathFollow2D" parent="Enemies/ShooterPath" instance=ExtResource( 14 )]
+position = Vector2( 403, 280.592 )
+rotation = -1.15756
+
+[node name="Shooter_Stop" parent="Enemies" instance=ExtResource( 15 )]
+position = Vector2( 320, 467.592 )
+
+[node name="MeleeBot_Stop" parent="Enemies" instance=ExtResource( 16 )]
+position = Vector2( 642, 354.592 )
+
 [node name="PlantTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
 cell_size = Vector2( 32, 32 )
@@ -185,43 +235,6 @@ scale = Vector2( 0.262509, 0.32 )
 
 [node name="ColorObj_Dh" parent="Collectables/ColorParent4" instance=ExtResource( 1 )]
 modulate = Color( 1, 0, 0, 1 )
-
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="BatPath" type="Path2D" parent="Enemies"]
-curve = SubResource( 4 )
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/BatPath"]
-position = Vector2( 371, 245.592 )
-rotation = -0.595013
-rotate = false
-
-[node name="Bat" parent="Enemies/BatPath/PathFollow2D" instance=ExtResource( 13 )]
-rotation = 0.591667
-scale = Vector2( 1.5, 1.5 )
-
-[node name="MeleePath" type="Path2D" parent="Enemies"]
-self_modulate = Color( 1, 0.501961, 0.501961, 0.701961 )
-curve = SubResource( 5 )
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/MeleePath"]
-position = Vector2( 817, 285.592 )
-rotation = 0.0333111
-rotate = false
-
-[node name="MeleeBot" parent="Enemies/MeleePath/PathFollow2D" instance=ExtResource( 10 )]
-
-[node name="MeleePath2" type="Path2D" parent="Enemies"]
-self_modulate = Color( 1, 0.501961, 0.501961, 0.701961 )
-position = Vector2( -211, 3.592 )
-curve = SubResource( 5 )
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/MeleePath2"]
-position = Vector2( 817, 285.592 )
-rotation = 0.0333111
-rotate = false
-
-[node name="MeleeBot" parent="Enemies/MeleePath2/PathFollow2D" instance=ExtResource( 10 )]
 
 [connection signal="body_entered" from="Collectables/WaterParent/WaterObj_Dh" to="." method="_on_WaterObj_body_entered"]
 [connection signal="body_entered" from="Collectables/ColorParent/ColorObj_Dh" to="." method="_on_ColorObj_body_entered"]
