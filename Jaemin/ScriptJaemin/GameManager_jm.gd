@@ -16,7 +16,7 @@ func advanceStage():
 	stage += 1
 	
 	drawing = $TextureButton
-	drawing.visible = true
+	#drawing.visible = true
 	#drawing.set_visible(true)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
