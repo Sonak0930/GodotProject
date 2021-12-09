@@ -77,7 +77,7 @@ func _process(delta):
 	$Enemies/MeleePath/MeleePathFollow2D.offset += melee_speed * delta
 	#$Enemies/MeleePath2/MeleePathFollow2D.offset += melee_speed * delta
 	# Update Shooter offset
-	#$Enemies/ShooterPath/ShooterPathFollow2D.offset += melee_speed * delta
+	$Enemies/ShooterPath/ShooterPathFollow2D.offset += melee_speed * delta
 	
 
 
