@@ -21,9 +21,6 @@
 [ext_resource path="res://Scenes/Panel/WaterPanel.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scenes/Panel/GameOverPanel.tscn" type="PackedScene" id=22]
 
-[ext_resource path="res://Scenes/Panel/WaterPanel.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Scenes/Panel/GameOverPanel.tscn" type="PackedScene" id=24]
-
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
@@ -284,13 +281,7 @@ visible = false
 position = Vector2( 18, -90.408 )
 
 
-[node name="WaterPanel" parent="Panels" instance=ExtResource( 23 )]
+[node name="WaterPanel" parent="Panels" instance=ExtResource( 21 )]
 visible = false
 position = Vector2( 23, -76.408 )
-
-[node name="Shooter_Move2" parent="Enemies/ShooterPath/ShooterPathFollow2D" instance=ExtResource( 16 )]
-collision_layer = 2
-
-[node name="Wall_mj" parent="." instance=ExtResource( 21 )]
-position = Vector2( -1.68179, -117.725 )
 
