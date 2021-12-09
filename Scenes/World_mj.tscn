@@ -13,6 +13,16 @@
 [ext_resource path="res://assets/Texture/TX Struct.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/World_mj.gd" type="Script" id=12]
 [ext_resource path="res://Scenes/waterObj_mj.tscn" type="PackedScene" id=13]
+<<<<<<< Updated upstream
+=======
+[ext_resource path="res://Scenes/Enemies/MeleePathFollow2D.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Enemies/MeleeBot_Stop.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Enemies/Shooter_Stop.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Enemies/ShooterPathFollow2D.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Panel/WaterPanel.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Panel/GameOverPanel.tscn" type="PackedScene" id=22]
+>>>>>>> Stashed changes
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
@@ -177,17 +187,68 @@ position = Vector2( 460.612, 284.107 )
 
 [node name="waterObjs_mj" type="Node2D" parent="."]
 
+<<<<<<< Updated upstream
 [node name="WaterObj_mj" parent="waterObjs_mj" instance=ExtResource( 13 )]
 position = Vector2( 388.823, 271.223 )
 scale = Vector2( 0.163015, 0.163015 )
+=======
+[node name="WaterBucket" type="Node2D" parent="waterObjs_mj"]
+position = Vector2( 122.488, 158.165 )
+
+[node name="WaterObj_mj" parent="waterObjs_mj/WaterBucket" instance=ExtResource( 13 )]
+position = Vector2( 2, -2 )
+collision_layer = 4
+
+[node name="WaterBucket2" type="Node2D" parent="waterObjs_mj"]
+position = Vector2( 251, 260.592 )
+
+[node name="WaterObj_mj" parent="waterObjs_mj/WaterBucket2" instance=ExtResource( 13 )]
+position = Vector2( -1, 0 )
+collision_layer = 4
+
+[node name="WaterBucket3" type="Node2D" parent="waterObjs_mj"]
+position = Vector2( 258.058, 95.1366 )
+
+[node name="WaterObj_mj" parent="waterObjs_mj/WaterBucket3" instance=ExtResource( 13 )]
+collision_layer = 4
+
+[node name="WaterBucket4" type="Node2D" parent="waterObjs_mj"]
+position = Vector2( 397.195, 148.651 )
+
+[node name="WaterObj_mj" parent="waterObjs_mj/WaterBucket4" instance=ExtResource( 13 )]
+collision_layer = 4
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="MeleePath" type="Path2D" parent="Enemies"]
+curve = SubResource( 3 )
+
+[node name="MeleePathFollow2D" parent="Enemies/MeleePath" instance=ExtResource( 14 )]
+position = Vector2( 441.137, 350.363 )
+
+[node name="MeleeBot_Stop" parent="Enemies" instance=ExtResource( 17 )]
+position = Vector2( 737, 167.592 )
+
+[node name="BatPath" type="Path2D" parent="Enemies"]
+curve = SubResource( 4 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/BatPath"]
+position = Vector2( 37.3359, 415.031 )
+rotate = false
+>>>>>>> Stashed changes
 
 [node name="WaterObj_mj2" parent="waterObjs_mj" instance=ExtResource( 13 )]
 position = Vector2( 502.694, 277.965 )
 scale = Vector2( 0.163015, 0.163015 )
 
+<<<<<<< Updated upstream
 [node name="WaterObj_mj3" parent="waterObjs_mj" instance=ExtResource( 13 )]
 position = Vector2( 438.267, 222.528 )
 scale = Vector2( 0.163015, 0.163015 )
+=======
+[node name="Shooter_Stop" parent="Enemies" instance=ExtResource( 18 )]
+position = Vector2( 527.502, 333.754 )
+>>>>>>> Stashed changes
 
 [node name="WaterObj_mj4" parent="waterObjs_mj" instance=ExtResource( 13 )]
 position = Vector2( 372.342, 221.779 )
@@ -197,6 +258,18 @@ scale = Vector2( 0.163015, 0.163015 )
 position = Vector2( 322.898, 251.745 )
 scale = Vector2( 0.163015, 0.163015 )
 
+<<<<<<< Updated upstream
 [node name="WaterObj_mj6" parent="waterObjs_mj" instance=ExtResource( 13 )]
 position = Vector2( 270.457, 239.758 )
 scale = Vector2( 0.163015, 0.163015 )
+=======
+[node name="Panels" type="Node2D" parent="."]
+
+[node name="GameOverPanel" parent="Panels" instance=ExtResource( 22 )]
+visible = false
+position = Vector2( 18, -90.408 )
+
+[node name="WaterPanel" parent="Panels" instance=ExtResource( 21 )]
+visible = false
+position = Vector2( 23, -76.408 )
+>>>>>>> Stashed changes

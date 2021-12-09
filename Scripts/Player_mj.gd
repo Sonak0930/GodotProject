@@ -32,3 +32,17 @@ func _moveWithKeyboard():
 		move_and_slide(Vector2(0,-speed))
 	if Input.is_action_pressed("ui_down"):
 		move_and_slide(Vector2(0,speed))
+<<<<<<< Updated upstream
+=======
+
+
+func _on_ColorObj_body_entered(body,colorObjName):
+	emit_signal("collected",colorObjName)
+	#print("player said: I took ",colorBukkitName)
+
+func _on_Enemies_body_entered(body, enemyName):
+	if body != self:
+		return
+	emit_signal("attacked",enemyName)
+	print("player said: I've just attacked by ",enemyName)
+>>>>>>> Stashed changes

@@ -4,6 +4,14 @@ class_name Bullet
 
 var speed = 750
 
+<<<<<<< Updated upstream
+=======
+func _ready():
+	connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
+	connect("body_entered", self,"_on_Enemies_body_entered")
+	visNotifier.connect("screen_exited",self,"_on_VisibilityNotifier2D_screen_exited")
+
+>>>>>>> Stashed changes
 func _physics_process(delta):
 	# move the bullet
 	position += transform.x * speed * delta

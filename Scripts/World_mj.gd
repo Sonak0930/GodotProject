@@ -78,9 +78,27 @@ func life_is_color():
 	var node = get_node("colorObjs_mj")
 	if(colorbukkit_blue_num+colorbukkit_green_num+colorbukkit_red_num==0):
 		print("you lose!")
+<<<<<<< Updated upstream
 	elif node.get_child_count()==0 && (!is_complited):
 		print("node child count:",node.get_child_count())
 		print("you lose!")
+=======
+		$"./Panels/GameOverPanel".visible = true
+		get_tree().paused = true
+		
+		
+	elif node.get_child_count()==0 && (!is_same) && Waterbucket_num == 0:
+		print("node child count:",node.get_child_count())
+		print("you lose!")
+		$"./Panels/GameOverPanel".visible = true
+		get_tree().paused = true
+	elif (CurrentColor[0]<TargetColor[0]||CurrentColor[1]<TargetColor[1]||CurrentColor[2]<TargetColor[2])&& node.get_child_count()==0:
+		print("you lose")
+		$"./Panels/GameOverPanel".visible = true
+		get_tree().paused = true
+
+
+>>>>>>> Stashed changes
 
 # when ColorObj_"red" send signal "body_entered" add R value of currentColor_circle
 func _on_ColorObj_red_body_entered(body):
@@ -130,8 +148,14 @@ func _on_WaterObj_mj_body_entered(body):
 	print("Waterbukkit_num:",Waterbukkit_num)
 	life_is_color()
 
+<<<<<<< Updated upstream
 var selectedColor = Color(0,0,50,0)
 var is_Waterbukkit_pressed = false
+=======
+# reaction to button_pressed
+"""
+var is_Waterbucket_pressed = false
+>>>>>>> Stashed changes
 func _on_colorBukkit_red_pressed():
 	if is_Waterbukkit_pressed:
 		if colorbukkit_red_num >0:
@@ -175,8 +199,28 @@ func _on_colorBukkit_blue_pressed():
 			life_is_color()
 
 func _on_Waterbukkit_pressed():
+<<<<<<< Updated upstream
 	if Waterbukkit_num >0:
 		Waterbukkit_num -= 1
 		Waterbukkit_label.text = "X" + str(Waterbukkit_num)
 		is_Waterbukkit_pressed = true
 		life_is_color()
+=======
+	if is_Waterbucket_pressed:
+		pass
+	else:
+		if Waterbucket_num >0:
+			Waterbucket_num -= 1
+			update_ui()
+			compare_color()
+			life_is_color()
+			is_Waterbucket_pressed = true
+"""
+
+func _on_Waterbukkit_pressed():
+	""" Updated """
+	var sum = colorbucket_red_num + colorbucket_green_num + colorbucket_blue_num
+	if sum > 1 and Waterbucket_num > 0:
+		$"./Panels/WaterPanel".visible = true
+	
+>>>>>>> Stashed changes
