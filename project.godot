@@ -129,7 +129,7 @@ _global_script_class_icons={
 [application]
 
 config/name="20211124_CMPteam_01"
-run/main_scene="res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn"
+run/main_scene="res://Scenes/World_mj.tscn"
 config/icon="res://icon.png"
 
 [autoload]
