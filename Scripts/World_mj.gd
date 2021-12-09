@@ -28,12 +28,17 @@ onready var colorbucket_green_button = get_node("UI_mj/UI_colorBucket_buttons/co
 onready var colorbucket_blue_button = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_blue_button")
 onready var Waterbucket_button = get_node("UI_mj/UI_colorBucket_buttons/waterBucket_button")
 # colorbukkits_num_label
+
+
 onready var colorbucket_red_label = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_red_label")
 onready var colorbucket_green_label = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_green_label")
 onready var colorbucket_blue_label = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_blue_label")
 onready var Waterbucket_label = get_node("UI_mj/UI_colorBucket_buttons/waterBucket_label")
+onready var Waterbukkit_label = get_node("UI_mj/UI_bukkits/waterBukkit_label")
 
-
+onready var GameManager = $"/root/GameManagerJm"
+# game judgement var
+var is_complited
 
 
 func _ready():
@@ -87,6 +92,13 @@ func compare_color():
 	if(Color(TargetColor) == Color(CurrentColor)):
 		is_same = true
 		print("congrates!! you win!!")
+
+		
+		
+		get_tree().change_scene("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
+		GameManager.advanceStage()
+		
+		print_tree_pretty()
 
 	else:
 		print("cheer up!!")
