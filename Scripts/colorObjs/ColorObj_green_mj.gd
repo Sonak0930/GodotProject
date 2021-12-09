@@ -2,28 +2,19 @@ extends Area2D
 
 class_name ColorObj_green_mj
 
-# set the color of paintBukkit to green
-var defaultVal = 55 
-var colorObj_R = defaultVal
-var colorObj_G = defaultVal + 200
-var colorObj_B = defaultVal
+onready var default_anim = $Animations/Item_default_anim
+onready var collect_anim = $Animations/Collect_anim
+onready var player = get_node("/root/World_mj/Player_mj")
+var colorObjName = ["greenBucket"]
 
-# connect body_entered signal to self and ui(currentColor circle)
 func _ready():
-	connect("body_entered",self,"_on_ColorObj_green_body_entered")
-	var world = get_node("/root/World_mj")
-	print(world)
-	connect("body_entered",world,"_on_ColorObj_green_body_entered")
-	set_color()
+	connect("body_entered",self,"_on_ColorObj_body_entered")
+	connect("body_entered",player,"_on_ColorObj_body_entered",colorObjName)
+	default_anim.play("item_default_anim")
 
-# when player entered to colorObj_green -> remove the colorObj_green
-func _on_ColorObj_green_body_entered(body):
+func _on_ColorObj_body_entered(body):
 	if body is Player_mj:
-		queue_free()
+		collect_anim.play("Collect_anim")
 
-# set the color of paintBukkit to green
-func set_color():
-	var sprite = $Sprite
-	sprite.modulate.r8 = colorObj_R
-	sprite.modulate.g8 = colorObj_G
-	sprite.modulate.b8 = colorObj_B
+func _on_Collect_anim_animation_finished(anim_name):
+	queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scenes/Ui_mj.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player_mj.tscn" type="PackedScene" id=2]
@@ -13,6 +13,13 @@
 [ext_resource path="res://assets/Texture/TX Struct.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/World_mj.gd" type="Script" id=12]
 [ext_resource path="res://Scenes/waterObj_mj.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Enemies/MeleePathFollow2D.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Enemies/MeleeBot_Move.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Enemies/Shooter_Move.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Enemies/MeleeBot_Stop.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Enemies/Shooter_Stop.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Enemies/ShooterPathFollow2D.tscn" type="PackedScene" id=20]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
@@ -82,6 +89,21 @@ points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 1
 3/shapes = [  ]
 3/z_index = 0
 
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 441.137, 350.363, 0, 0, 0, 0, 502.523, 389.886, 0, 0, 0, 0, 581.567, 356.25, 0, 0, 0, 0, 567.272, 324.296, 0, 0, 0, 0, 548.772, 257.865, 0, 0, 0, 0, 494.955, 246.933, 0, 0, 0, 0, 467.205, 184.707, 0, 0, 0, 0, 473.932, 117.435, 0, 0, 0, 0, 552.977, 102.299, 0, 0, 0, 0, 577.362, 157.798, 0, 0, 0, 0, 561.385, 199.002, 0, 0, 0, 0, 489.068, 214.138, 0, 0, 0, 0, 386.479, 251.138, 0, 0, 0, 0, 305.753, 271.319, 0, 0, 0, 0, 284.731, 229.274, 0, 0, 0, 0, 271.276, 191.434, 0, 0, 0, 0, 251.095, 174.616, 0, 0, 0, 0, 242.686, 112.39, 0, 0, 0, 0, 260.345, 99.7763, 0, 0, 0, 0, 260.345, 116.594, 0, 0, 0, 0, 244.368, 124.162, 0, 0, 0, 0, 246.89, 164.525, 0, 0, 0, 0, 271.276, 192.275, 0, 0, 0, 0, 286.412, 232.638, 0, 0, 0, 0, 333.503, 236.002, 0, 0, 0, 0, 377.229, 203.207, 0, 0, 0, 0, 368.82, 167.889, 0, 0, 0, 0, 378.911, 142.662, 0, 0, 0, 0, 391.524, 114.072, 0, 0, 0, 0, 391.524, 77.0721, 0, 0, 0, 0, 371.343, 76.2312, 0, 0, 0, 0, 402.456, 119.958, 0, 0, 0, 0, 404.979, 154.435, 0, 0, 0, 0, 368.82, 170.412, 0, 0, 0, 0, 362.093, 280.569, 0, 0, 0, 0, 397.411, 341.114, 0, 0, 0, 0, 440.296, 350.363, 0, 0, 0, 0, 441.137, 350.363 )
+}
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 37.3359, 415.031, 0, 0, 0, 0, 62.7918, 523.925, 0, 0, 0, 0, 144.816, 344.32, 0, 0, 0, 0, 224.012, 539.481, 0, 0, 0, 0, 286.238, 342.906, 0, 0, 0, 0, 345.635, 516.854, 0, 0, 0, 0, 405.031, 399.474, 0, 0, 0, 0, 471.5, 473.013, 0, 0, 0, 0, 37.3359, 415.031 )
+}
+
+[sub_resource type="Curve2D" id=5]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 132.884, 301.222, 0, 0, 0, 0, 323.766, 237.149, 0, 0, 0, 0, 491.956, 400, 0, 0, 0, 0, 644.128, 315.905, 0, 0, 0, 0, 706.865, 325.249, 0, 0, 0, 0, 840.349, 361.289, 0, 0, 0, 0, 912.43, 334.593, 0, 0, 0, 0, 968.494, 337.262, 0, 0, 0, 0, 861.706, 283.869, 0, 0, 0, 0, 773.607, 285.204, 0, 0, 0, 0, 580.055, 293.213, 0, 0, 0, 0, 489.286, 307.896 )
+}
+
 [node name="World_mj" type="Node2D"]
 position = Vector2( 0, 121.408 )
 script = ExtResource( 12 )
@@ -127,7 +149,7 @@ cell_size = Vector2( 32, 32 )
 show_collision = true
 collision_layer = 8
 format = 1
-tile_data = PoolIntArray( 19, 536870931, 0, 20, 5, 0, 22, 24, 0, 23, 24, 0, 24, 20, 0, 25, 24, 0, 26, 24, 0, 27, 5, 0, 29, 536870931, 0, 131075, 12, 0, 131083, 13, 0, 131090, 536870935, 0, 131091, 24, 0, 131093, 4, 0, 131095, 6, 0, 131098, 536870933, 0, 131099, 4, 0, 131101, 24, 0, 131102, 536870935, 0, 196610, 12, 0, 196616, 13, 0, 196627, 24, 0, 196630, 536870934, 0, 196637, 24, 0, 262163, 536870931, 0, 262173, 536870931, 0, 393238, 24, 0, 393239, 24, 0, 393240, 24, 0, 393241, 24, 0, 393242, 24, 0, 393246, 17, 0, 458756, 15, 0, 458770, 15, 0, 589832, 15, 0, 851988, 1, 0, 851993, 13, 0, 917505, 15, 0, 917532, 13, 0, 1114118, 17, 0, 1114129, 15, 0, 1114139, 13, 0, 1179660, 17, 0, 1179661, 16, 0 )
+tile_data = PoolIntArray( 19, 536870931, 0, 20, 5, 0, 22, 1610612760, 0, 23, 1610612760, 0, 24, 20, 0, 25, 1610612760, 0, 26, 1610612760, 0, 27, 5, 0, 29, 536870931, 0, 131075, 12, 0, 131083, 13, 0, 131090, 536870935, 0, 131091, -1610612712, 0, 131093, 4, 0, 131095, 6, 0, 131098, 536870933, 0, 131099, 4, 0, 131101, -1073741800, 0, 131102, 536870935, 0, 196610, 12, 0, 196616, 13, 0, 196627, -1610612712, 0, 196630, 536870934, 0, 196637, -1073741800, 0, 262163, 536870931, 0, 262173, 536870931, 0, 393235, -1610612712, 0, 393238, 24, 0, 393239, 24, 0, 393240, 24, 0, 393241, 24, 0, 393242, 24, 0, 393245, -1073741800, 0, 393246, 17, 0, 458756, 15, 0, 458770, 15, 0, 458781, -1073741800, 0, 589832, 15, 0, 851988, 1, 0, 851993, 13, 0, 917505, 15, 0, 917532, 13, 0, 1114118, 17, 0, 1114129, 15, 0, 1114139, 13, 0, 1179660, 17, 0, 1179661, 16, 0 )
 
 [node name="PlantTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 9 )
@@ -142,61 +164,114 @@ position = Vector2( 0, -121.231 )
 
 [node name="colorObjs_mj" type="Node2D" parent="."]
 
-[node name="ColorObj_blue_mj" parent="colorObjs_mj" instance=ExtResource( 3 )]
-position = Vector2( 481.377, 231.25 )
+[node name="colorBucket_red" type="Node2D" parent="colorObjs_mj"]
+position = Vector2( 529.78, 146.669 )
 
-[node name="ColorObj_blue_mj2" parent="colorObjs_mj" instance=ExtResource( 3 )]
-position = Vector2( 500.255, 179.337 )
+[node name="ColorObj_red" parent="colorObjs_mj/colorBucket_red" instance=ExtResource( 5 )]
 
-[node name="ColorObj_blue_mj3" parent="colorObjs_mj" instance=ExtResource( 3 )]
-position = Vector2( 475.714, 145.357 )
+[node name="colorBucket_red2" type="Node2D" parent="colorObjs_mj"]
+position = Vector2( 727.025, 68.2771 )
 
-[node name="ColorObj_blue_mj4" parent="colorObjs_mj" instance=ExtResource( 3 )]
-position = Vector2( 462.229, 180.567 )
+[node name="ColorObj_red" parent="colorObjs_mj/colorBucket_red2" instance=ExtResource( 5 )]
 
-[node name="ColorObj_green_mj" parent="colorObjs_mj" instance=ExtResource( 4 )]
-position = Vector2( 532.347, 218.979 )
+[node name="colorBucket_red3" type="Node2D" parent="colorObjs_mj"]
+position = Vector2( 331.271, 279.431 )
 
-[node name="ColorObj_green_mj2" parent="colorObjs_mj" instance=ExtResource( 4 )]
-position = Vector2( 540.842, 119.872 )
+[node name="ColorObj_red" parent="colorObjs_mj/colorBucket_red3" instance=ExtResource( 5 )]
 
-[node name="ColorObj_green_mj3" parent="colorObjs_mj" instance=ExtResource( 4 )]
-position = Vector2( 534.234, 272.78 )
+[node name="colorBucket_red4" type="Node2D" parent="colorObjs_mj"]
+position = Vector2( 529.78, 146.669 )
 
-[node name="ColorObj_red" parent="colorObjs_mj" instance=ExtResource( 5 )]
-position = Vector2( 488.928, 98.1632 )
+[node name="ColorObj_red" parent="colorObjs_mj/colorBucket_red4" instance=ExtResource( 5 )]
 
-[node name="ColorObj_red2" parent="colorObjs_mj" instance=ExtResource( 5 )]
-position = Vector2( 525.74, 80.2295 )
+[node name="colorBucket_green" type="Node2D" parent="colorObjs_mj"]
+position = Vector2( 479.204, 269.315 )
 
-[node name="ColorObj_red3" parent="colorObjs_mj" instance=ExtResource( 5 )]
-position = Vector2( 547.449, 174.617 )
+[node name="ColorObj_green_mj" parent="colorObjs_mj/colorBucket_green" instance=ExtResource( 4 )]
 
-[node name="ColorObj_red4" parent="colorObjs_mj" instance=ExtResource( 5 )]
-position = Vector2( 460.612, 284.107 )
+[node name="colorBucket_green2" type="Node2D" parent="colorObjs_mj"]
+position = Vector2( 359.087, 432.422 )
+
+[node name="ColorObj_green_mj" parent="colorObjs_mj/colorBucket_green2" instance=ExtResource( 4 )]
+
+[node name="colorBucket_green3" type="Node2D" parent="colorObjs_mj"]
+position = Vector2( 139.083, 412.192 )
+
+[node name="ColorObj_green_mj" parent="colorObjs_mj/colorBucket_green3" instance=ExtResource( 4 )]
+
+[node name="colorBucket_blue" type="Node2D" parent="colorObjs_mj"]
+position = Vector2( 400.812, 288.281 )
+
+[node name="ColorObj_blue_mj" parent="colorObjs_mj/colorBucket_blue" instance=ExtResource( 3 )]
+
+[node name="colorBucket_blue2" type="Node2D" parent="colorObjs_mj"]
+position = Vector2( 508.285, 428.629 )
+
+[node name="ColorObj_blue_mj" parent="colorObjs_mj/colorBucket_blue2" instance=ExtResource( 3 )]
+
+[node name="colorBucket_blue3" type="Node2D" parent="colorObjs_mj"]
+position = Vector2( 547.482, 278.166 )
+
+[node name="ColorObj_blue_mj" parent="colorObjs_mj/colorBucket_blue3" instance=ExtResource( 3 )]
 
 [node name="waterObjs_mj" type="Node2D" parent="."]
 
-[node name="WaterObj_mj" parent="waterObjs_mj" instance=ExtResource( 13 )]
-position = Vector2( 388.823, 271.223 )
-scale = Vector2( 0.163015, 0.163015 )
+[node name="WaterBucket" type="Node2D" parent="waterObjs_mj"]
+position = Vector2( 122.488, 158.165 )
 
-[node name="WaterObj_mj2" parent="waterObjs_mj" instance=ExtResource( 13 )]
-position = Vector2( 502.694, 277.965 )
-scale = Vector2( 0.163015, 0.163015 )
+[node name="WaterObj_mj" parent="waterObjs_mj/WaterBucket" instance=ExtResource( 13 )]
+collision_layer = 4
 
-[node name="WaterObj_mj3" parent="waterObjs_mj" instance=ExtResource( 13 )]
-position = Vector2( 438.267, 222.528 )
-scale = Vector2( 0.163015, 0.163015 )
+[node name="WaterBucket2" type="Node2D" parent="waterObjs_mj"]
+position = Vector2( 249.733, 256.869 )
 
-[node name="WaterObj_mj4" parent="waterObjs_mj" instance=ExtResource( 13 )]
-position = Vector2( 372.342, 221.779 )
-scale = Vector2( 0.163015, 0.163015 )
+[node name="WaterObj_mj" parent="waterObjs_mj/WaterBucket2" instance=ExtResource( 13 )]
+collision_layer = 4
 
-[node name="WaterObj_mj5" parent="waterObjs_mj" instance=ExtResource( 13 )]
-position = Vector2( 322.898, 251.745 )
-scale = Vector2( 0.163015, 0.163015 )
+[node name="WaterBucket3" type="Node2D" parent="waterObjs_mj"]
+position = Vector2( 258.058, 95.1366 )
 
-[node name="WaterObj_mj6" parent="waterObjs_mj" instance=ExtResource( 13 )]
-position = Vector2( 270.457, 239.758 )
-scale = Vector2( 0.163015, 0.163015 )
+[node name="WaterObj_mj" parent="waterObjs_mj/WaterBucket3" instance=ExtResource( 13 )]
+collision_layer = 4
+
+[node name="WaterBucket4" type="Node2D" parent="waterObjs_mj"]
+position = Vector2( 397.195, 148.651 )
+
+[node name="WaterObj_mj" parent="waterObjs_mj/WaterBucket4" instance=ExtResource( 13 )]
+collision_layer = 4
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="MeleePath" type="Path2D" parent="Enemies"]
+curve = SubResource( 3 )
+
+[node name="MeleePathFollow2D" parent="Enemies/MeleePath" instance=ExtResource( 14 )]
+position = Vector2( 441.137, 350.363 )
+
+[node name="MeleeBot_Move2" parent="Enemies/MeleePath/MeleePathFollow2D" instance=ExtResource( 15 )]
+
+[node name="MeleeBot_Stop" parent="Enemies" instance=ExtResource( 17 )]
+position = Vector2( 633.568, 325.269 )
+
+[node name="BatPath" type="Path2D" parent="Enemies"]
+curve = SubResource( 4 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/BatPath"]
+position = Vector2( 37.3359, 415.031 )
+rotate = false
+
+[node name="Bat" parent="Enemies/BatPath/PathFollow2D" instance=ExtResource( 19 )]
+
+[node name="Shooter_Stop" parent="Enemies" instance=ExtResource( 18 )]
+position = Vector2( 527.502, 333.754 )
+collision_layer = 2
+
+[node name="ShooterPath" type="Path2D" parent="Enemies"]
+curve = SubResource( 5 )
+
+[node name="ShooterPathFollow2D" parent="Enemies/ShooterPath" instance=ExtResource( 20 )]
+position = Vector2( 132.884, 301.222 )
+rotation = -0.323842
+
+[node name="Shooter_Move2" parent="Enemies/ShooterPath/ShooterPathFollow2D" instance=ExtResource( 16 )]
+collision_layer = 2
