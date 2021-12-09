@@ -135,7 +135,7 @@ _global_script_class_icons={
 [application]
 
 config/name="20211124_CMPteam_01"
-run/main_scene="res://Scenes/World_mj.tscn"
+run/main_scene="res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -144,6 +144,7 @@ PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
+GameManagerJm="*res://Jaemin/ScriptJaemin/GameManager_jm.gd"
 
 [display]
 

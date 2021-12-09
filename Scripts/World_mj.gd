@@ -31,6 +31,7 @@ onready var Waterbukkit_button = get_node("UI_mj/UI_bukkits/waterBukkit")
 #Waterbukkit_label
 onready var Waterbukkit_label = get_node("UI_mj/UI_bukkits/waterBukkit_label")
 
+onready var GameManager = $"/root/GameManagerJm"
 # game judgement var
 var is_complited
 
@@ -70,9 +71,9 @@ func compare_color():
 		is_complited = true
 		print("congrates!! you win!!")
 		
-		var gameManager = preload("res://Jaemin/ScriptJaemin/GameManager_jm.gd").new()
+		
 		get_tree().change_scene("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
-		#gameManager.advanceStage()
+		GameManager.advanceStage()
 		
 		print_tree_pretty()
 	else:
