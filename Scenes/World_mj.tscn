@@ -21,9 +21,8 @@
 [ext_resource path="res://Scenes/Panel/WaterPanel.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scenes/Panel/GameOverPanel.tscn" type="PackedScene" id=22]
 
-[ext_resource path="res://Scenes/wall_mj.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Scenes/Panel/WaterPanel.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Scenes/Panel/GameOverPanel.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/Panel/WaterPanel.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Panel/GameOverPanel.tscn" type="PackedScene" id=22]
 
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
