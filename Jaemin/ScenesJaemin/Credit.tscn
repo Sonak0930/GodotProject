@@ -6,7 +6,7 @@
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Jaemin/Assets_Jaemin/CreditImage (2).png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Enemies/MeleeBot.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Jaemin/ScenesJaemin/NPCinCredits_jm.gd" type="Script" id=7]
+[ext_resource path="res://Jaemin/ScriptJaemin/NPCinCredits_jm.gd" type="Script" id=7]
 
 [sub_resource type="Animation" id=3]
 resource_name = "Intro"
