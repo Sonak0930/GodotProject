@@ -39,7 +39,7 @@ func _on_ColorObj_body_entered(body,colorObjName):
 	#print("player said: I took ",colorBukkitName)
 
 func _on_Enemies_body_entered(body, enemyName):
-	if body != self and enemyName == "bullet":
+	if body != self:
 		return
 	emit_signal("attacked",enemyName)
 	print("player said: I've just attacked by ",enemyName)

@@ -24,6 +24,7 @@ animations = [ {
 } ]
 
 [node name="Shooter_Stop" type="Area2D"]
+collision_layer = 2
 script = ExtResource( 8 )
 Bullet = ExtResource( 9 )
 

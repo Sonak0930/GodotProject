@@ -1,14 +1,23 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/UI/TargetColor_circle_mj.gd" type="Script" id=1]
 [ext_resource path="res://assets/bucket.png" type="Texture" id=2]
 [ext_resource path="res://assets/Ellipse 1.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/UI/CurrentColor_circle_mj.gd" type="Script" id=4]
 [ext_resource path="res://assets/painting-bucket.png" type="Texture" id=5]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/font/Colby-StBlk.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/painting-bucket_small.png" type="Texture" id=7]
 [ext_resource path="res://assets/bucket_small.png" type="Texture" id=8]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-189.png" type="Texture" id=9]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-188.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Ui_mj.gd" type="Script" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 6 )
 
 [node name="UI_mj" type="Node2D"]
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 13.7832, 107.121, 7.06565, 26.8828, 92.8093, 41.0261 ],
 "_edit_vertical_guides_": [ 789.543, 388.639, 402.893, 775.734 ]
@@ -318,3 +327,30 @@ text = "X 0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ExitGameButton" type="TextureButton" parent="."]
+margin_left = 797.0
+margin_top = 31.0
+margin_right = 1054.0
+margin_bottom = 118.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitToMain" type="Label" parent="."]
+margin_left = 766.0
+margin_top = 39.0
+margin_right = 1011.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 1 )
+text = "Exit To Menu"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ExitGameButton" to="." method="_on_ExitGameButton_pressed"]
