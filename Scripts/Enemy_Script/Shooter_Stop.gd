@@ -4,12 +4,14 @@ export (PackedScene) var Bullet
 
 # get a reference to the sprite
 onready var animated_sprite = $AnimatedSprite # animation: idle, shoot
-
+onready var player = get_node("/root/World_mj/Player_mj")
+var enemyName = ["shooter_stop"]
 var sec = 0.0
 
 
 func _ready():
 	animated_sprite.play("idle")
+	connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
 
 func _process(delta):
 	sec += delta

@@ -46,6 +46,7 @@ tracks/2/keys = {
 }
 
 [node name="ColorObj_red" type="Area2D"]
+modulate = Color( 0.815686, 0.231373, 0.231373, 1 )
 collision_layer = 4
 script = ExtResource( 1 )
 
@@ -67,3 +68,5 @@ anims/item_default_anim = ExtResource( 4 )
 [node name="Collect_anim" type="AnimationPlayer" parent="Animations"]
 root_node = NodePath("../..")
 anims/Collect_anim = SubResource( 1 )
+
+[connection signal="animation_finished" from="Animations/Collect_anim" to="." method="_on_Collect_anim_animation_finished"]

@@ -89,11 +89,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/WaterObj_Dh.gd"
 }, {
-"base": "Area2D",
-"class": "WaterObj_mj",
-"language": "GDScript",
-"path": "res://Scripts/waterObj_mj.gd"
-}, {
 "base": "Node2D",
 "class": "currColor_cir",
 "language": "GDScript",
@@ -126,7 +121,6 @@ _global_script_class_icons={
 "RepositoryItem": "",
 "TargetColor_circle_mj": "",
 "WaterObj_Dh": "",
-"WaterObj_mj": "",
 "currColor_cir": "",
 "targetColor_cir": "",
 "world_mj": ""
@@ -149,8 +143,6 @@ GameManagerJm="*res://Jaemin/ScriptJaemin/GameManager_jm.gd"
 [display]
 
 window/size/height=730
-window/stretch/mode="2d"
-window/stretch/aspect="keep"
 
 [editor_plugins]
 

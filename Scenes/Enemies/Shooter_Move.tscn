@@ -13,7 +13,7 @@
 [ext_resource path="res://Scripts/Enemy_Script/Shooter_Move.gd" type="Script" id=11]
 [ext_resource path="res://Scenes/Enemies/Bullet.tscn" type="PackedScene" id=12]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 4 ) ],
 "loop": false,
@@ -33,7 +33,7 @@ Bullet = ExtResource( 12 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -15 )
 scale = Vector2( 1.5, 1.5 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "run"
 
 [node name="Muzzle" type="Position2D" parent="."]
