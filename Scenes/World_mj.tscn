@@ -18,6 +18,8 @@
 [ext_resource path="res://Scenes/Enemies/Shooter_Stop.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scenes/Enemies/ShooterPathFollow2D.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Panel/WaterPanel.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Panel/GameOverPanel.tscn" type="PackedScene" id=22]
 
 [ext_resource path="res://Scenes/wall_mj.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scenes/Panel/WaterPanel.tscn" type="PackedScene" id=22]
@@ -281,6 +283,7 @@ rotation = -0.323842
 [node name="GameOverPanel" parent="Panels" instance=ExtResource( 22 )]
 visible = false
 position = Vector2( 18, -90.408 )
+
 
 [node name="WaterPanel" parent="Panels" instance=ExtResource( 23 )]
 visible = false
