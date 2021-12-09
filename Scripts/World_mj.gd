@@ -107,11 +107,19 @@ func life_is_color():
 	var node = get_node("colorObjs_mj")
 	if(CurrentColor[0]+CurrentColor[1]+CurrentColor[2]==0):
 		print("you lose!")
+		$"./Panels/GameOverPanel".visible = true
+		get_tree().paused = true
+		
+		
 	elif node.get_child_count()==0 && (!is_same) && Waterbucket_num == 0:
 		print("node child count:",node.get_child_count())
 		print("you lose!")
+		$"./Panels/GameOverPanel".visible = true
+		get_tree().paused = true
 	elif (CurrentColor[0]<TargetColor[0]||CurrentColor[1]<TargetColor[1]||CurrentColor[2]<TargetColor[2])&& node.get_child_count()==0:
 		print("you lose")
+		$"./Panels/GameOverPanel".visible = true
+		get_tree().paused = true
 
 
 
@@ -179,7 +187,8 @@ func update_ui():
 
 
 
-# reaction to button_pressed 
+# reaction to button_pressed
+"""
 var is_Waterbucket_pressed = false
 func _on_colorBukkit_red_pressed():
 	if is_Waterbucket_pressed:
@@ -218,3 +227,11 @@ func _on_Waterbukkit_pressed():
 			compare_color()
 			life_is_color()
 			is_Waterbucket_pressed = true
+"""
+
+func _on_Waterbukkit_pressed():
+	""" Updated """
+	var sum = colorbucket_red_num + colorbucket_green_num + colorbucket_blue_num
+	if sum > 1 and Waterbucket_num > 0:
+		$"./Panels/WaterPanel".visible = true
+	
