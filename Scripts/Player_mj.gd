@@ -3,8 +3,8 @@ extends KinematicBody2D
 class_name Player_mj
 
 onready var anima = $AnimatedSprite
-#var speed = 120.0
-var speed = 300
+var speed = 120.0
+#var speed = 300
 
 signal attacked(body, enemyName)
 signal collected(colorObjName)

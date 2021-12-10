@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://TileSets/StoneTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Scenes/colorObjs/ColorObj_green_mj.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Enemies/Shooter_Stop.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Enemies/MeleeBot_Stop.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Curve2D" id=5]
 _data = {
@@ -215,6 +216,10 @@ position = Vector2( 917, 187.592 )
 scale = Vector2( -1, 1 )
 
 [node name="MeleeBot" type="Node2D" parent="Enemies"]
+
+[node name="MeleeBot_Stop" parent="Enemies/MeleeBot" instance=ExtResource( 18 )]
+position = Vector2( 852, 363.592 )
+scale = Vector2( -1, 1 )
 
 [node name="StructTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
