@@ -18,7 +18,10 @@
 [ext_resource path="res://Jaemin/Assets_Jaemin/UI_Jm/HomeButton.png" type="Texture" id=16]
 
 [node name="ConnectingScene" type="Node2D"]
+
 script = ExtResource( 13 )
+
+
 
 [node name="TextureRect1" type="TextureRect" parent="."]
 visible = false

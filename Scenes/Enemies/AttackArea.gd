@@ -1,8 +1,12 @@
 extends Area2D
 
-onready var player = get_node("/root/World_mj/Player_mj")
-
+var player
+onready var world_node = get_tree().get_current_scene()
 var enemyName = ["melee_attack area"]
 
 func _ready():
-	connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
+	if world_node != null:
+		for child in world_node.get_children():
+			if child is Player_mj:
+				player = child
+				connect("body_entered",player,"_on_Enemies_body_entered",enemyName)

@@ -21,14 +21,14 @@ func _process(delta):
 
 
 func _moveWithKeyboard():
-	if Input.is_action_pressed("ui_left"):
-		#v1 = Vector2.LEFT
-		move_and_slide(Vector2(-speed,0))
+	var velocity = Vector2()
 	if Input.is_action_pressed("ui_right"):
-		#v1 = Vector2.RIGHT
-		move_and_slide(Vector2(speed,0))
-	if Input.is_action_pressed("ui_up"):
-		#v2 = Vector2.UP
-		move_and_slide(Vector2(0,-speed))
+		velocity.x += 1
+	if Input.is_action_pressed("ui_left"):
+		velocity.x -= 1
 	if Input.is_action_pressed("ui_down"):
-		move_and_slide(Vector2(0,speed))
+		velocity.y += 1
+	if Input.is_action_pressed("ui_up"):
+		velocity.y -= 1
+	velocity = velocity.normalized() * speed
+	move_and_slide(velocity)

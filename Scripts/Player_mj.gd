@@ -4,6 +4,7 @@ class_name Player_mj
 
 onready var anima = $AnimatedSprite
 var speed = 120.0
+#var speed = 300
 
 signal attacked(body, enemyName)
 signal collected(colorObjName)
@@ -18,25 +19,27 @@ func _process(delta):
 		anima.set_animation("Left")
 	else:
 		anima.stop()
-		
-
+	
+# Normalize update
 func _moveWithKeyboard():
-	if Input.is_action_pressed("ui_left"):
-		#v1 = Vector2.LEFT
-		move_and_slide(Vector2(-speed,0))
+	var velocity = Vector2()
 	if Input.is_action_pressed("ui_right"):
-		#v1 = Vector2.RIGHT
-		move_and_slide(Vector2(speed,0))
-	if Input.is_action_pressed("ui_up"):
-		#v2 = Vector2.UP
-		move_and_slide(Vector2(0,-speed))
+		velocity.x += 1
+	if Input.is_action_pressed("ui_left"):
+		velocity.x -= 1
 	if Input.is_action_pressed("ui_down"):
-		move_and_slide(Vector2(0,speed))
+		velocity.y += 1
+	if Input.is_action_pressed("ui_up"):
+		velocity.y -= 1
+	velocity = velocity.normalized() * speed
+	move_and_slide(velocity)
 
 
 func _on_ColorObj_body_entered(body,colorObjName):
+	if body != self:
+		return
 	emit_signal("collected",colorObjName)
-	#print("player said: I took ",colorBukkitName)
+	print("player said: I took ",colorObjName)
 
 func _on_Enemies_body_entered(body, enemyName):
 	if body != self:

@@ -2,12 +2,19 @@ extends Area2D
 
 onready var default_anim = $Animations/Item_default_anim
 onready var collect_anim = $Animations/Collect_anim
-onready var player = get_node("/root/World_mj/Player_mj")
+var player
+onready var world_node = get_tree().get_current_scene()
+
 var colorObjtName = ["waterBucket"]
 
 func _ready():
-	connect("body_entered",self,"_on_ColorObj_body_entered")
-	connect("body_entered",player,"_on_ColorObj_body_entered",colorObjtName)
+	if world_node != null:
+		for child in world_node.get_children():
+			if child is Player_mj:
+				player = child
+				connect("body_entered",self,"_on_ColorObj_body_entered")
+				connect("body_entered",player,"_on_ColorObj_body_entered",colorObjtName)
+				
 	default_anim.play("item_default_anim")
 
 func _on_ColorObj_body_entered(body):
