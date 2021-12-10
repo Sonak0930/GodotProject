@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var world_node = $"./../.."
+onready var world_node = $"./".owner
 
 onready var red_label = $UI_colorBucket_buttons/colorBucket_red_label
 onready var green_label = $UI_colorBucket_buttons/colorBucket_green_label

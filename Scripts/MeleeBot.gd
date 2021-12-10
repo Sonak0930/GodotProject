@@ -3,13 +3,19 @@ extends Area2D
 
 # get a reference to the sprite
 onready var animated_sprite = $AnimatedSprite # animation: idle, run, attack
-onready var player = get_node("/root/World_mj/Player_mj")
+var player
+onready var world_node = get_tree().get_current_scene()
+
 var sec = 0.0
 var enemyName = ["melee"]
 
 func _ready():
 	animated_sprite.play("run")
-	connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
+	if world_node != null:
+		for child in world_node.get_children():
+			if child is Player_mj:
+				player = child
+				connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
 
 
 func _process(delta):

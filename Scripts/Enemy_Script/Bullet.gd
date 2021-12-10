@@ -2,16 +2,23 @@ extends Area2D
 
 class_name Bullet
 
-onready var player = get_node("/root/World_mj/Player_mj")
+var player
+onready var world_node = get_tree().get_current_scene()
 var enemyName = ["bullet"]
 onready var visNotifier = $VisibilityNotifier2D
 
 var speed = 750
 
 func _ready():
-	connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
+	if world_node != null:
+		for child in world_node.get_children():
+			if child is Player_mj:
+				player = child
+				connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
 	connect("body_entered", self,"_on_Enemies_body_entered")
 	visNotifier.connect("screen_exited",self,"_on_VisibilityNotifier2D_screen_exited")
+
+
 
 func _physics_process(delta):
 	# move the bullet

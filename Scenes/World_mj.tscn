@@ -22,7 +22,7 @@
 [ext_resource path="res://Scenes/Panel/WaterPanel.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Scenes/Panel/GameOverPanel.tscn" type="PackedScene" id=22]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=6]
 points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
 
 [sub_resource type="TileSet" id=2]
@@ -64,14 +64,14 @@ points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 1
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 1 )
+2/shape = SubResource( 6 )
 2/shape_one_way = false
 2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
@@ -181,7 +181,7 @@ position = Vector2( 331.271, 279.431 )
 [node name="ColorObj_red" parent="colorObjs_mj/colorBucket_red3" instance=ExtResource( 5 )]
 
 [node name="colorBucket_red4" type="Node2D" parent="colorObjs_mj"]
-position = Vector2( 529.78, 146.669 )
+position = Vector2( 518, 49.592 )
 
 [node name="ColorObj_red" parent="colorObjs_mj/colorBucket_red4" instance=ExtResource( 5 )]
 
@@ -222,26 +222,22 @@ position = Vector2( 122.488, 158.165 )
 
 [node name="WaterObj_mj" parent="waterObjs_mj/WaterBucket" instance=ExtResource( 13 )]
 position = Vector2( 2, -2 )
-collision_layer = 4
 
 [node name="WaterBucket2" type="Node2D" parent="waterObjs_mj"]
 position = Vector2( 251, 260.592 )
 
 [node name="WaterObj_mj" parent="waterObjs_mj/WaterBucket2" instance=ExtResource( 13 )]
 position = Vector2( -1, 0 )
-collision_layer = 4
 
 [node name="WaterBucket3" type="Node2D" parent="waterObjs_mj"]
 position = Vector2( 258.058, 95.1366 )
 
 [node name="WaterObj_mj" parent="waterObjs_mj/WaterBucket3" instance=ExtResource( 13 )]
-collision_layer = 4
 
 [node name="WaterBucket4" type="Node2D" parent="waterObjs_mj"]
 position = Vector2( 397.195, 148.651 )
 
 [node name="WaterObj_mj" parent="waterObjs_mj/WaterBucket4" instance=ExtResource( 13 )]
-collision_layer = 4
 
 [node name="Enemies" type="Node2D" parent="."]
 
