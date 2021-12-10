@@ -81,16 +81,18 @@ func _ready():
 
 var bat_speed = 90
 var melee_speed = 100
+var shooter_speed = 90
 # Enemy movment control
 func _process(delta):
 	
 	# Update bat offset
 	$Enemies/Bat/batPath/PathFollow2D.offset += bat_speed * delta
-	
+	$Enemies/Bat/batPath2/PathFollow2D.offset += bat_speed * delta
 	# Update Meleebot offset
-	
+	$Enemies/MeleeBot/MeleePath/MeleePathFollow2D.offset += melee_speed * delta
 	# Update Shooter offset
-	
+	$Enemies/Shooter/Shooter_path/ShooterPathFollow2D.offset += shooter_speed * delta
+	$Enemies/Shooter/Shooter_path2/ShooterPathFollow2D.offset += shooter_speed * delta
 	
 
 

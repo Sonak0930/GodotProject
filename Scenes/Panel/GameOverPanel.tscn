@@ -96,4 +96,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="pressed" from="PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
 [connection signal="pressed" from="ExitGameButton" to="." method="_on_ExitGameButton_pressed"]
