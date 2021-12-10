@@ -3,7 +3,7 @@ extends Area2D
 # get a reference to the sprite
 onready var animated_sprite = $AnimatedSprite # animation: idle, run, attack
 var player
-onready var world_node = $"./../".owner
+onready var world_node = get_tree().get_current_scene()
 
 var sec = 0.0
 var enemyName = ["melee_move"]
