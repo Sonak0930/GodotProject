@@ -13,6 +13,7 @@ func _ready():
 
 func _on_ColorObj_body_entered(body):
 	if body is Player:
+		$CollisionPolygon2D.disabled = true
 		queue_free()
 
 func set_color():

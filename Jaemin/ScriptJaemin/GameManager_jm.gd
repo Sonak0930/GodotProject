@@ -17,8 +17,10 @@ func _ready():
 func advanceStage():
 	stage += 1
 	
+
 	drawing = connectingScene.instance().get_child(stage)
 	drawing.visible = true
+
 	#drawing.set_visible(true)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
