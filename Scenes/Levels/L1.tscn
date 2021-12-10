@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://TileSets/StoneTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=2]
@@ -18,10 +18,32 @@
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Enemies/Shooter_Stop.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Enemies/MeleeBot_Stop.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Enemies/ShooterPathFollow2D.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Enemies/MeleePathFollow2D.tscn" type="PackedScene" id=20]
 
 [sub_resource type="Curve2D" id=5]
 _data = {
 "points": PoolVector2Array( -15.1361, 9.24986, 15.1361, -9.24986, 212, 172.592, -31.1132, -22.7042, 31.1132, 22.7042, 320, 174.592, -1.68179, -31.9541, 1.68179, 31.9541, 375, 270.592, 17.6588, -14.2952, -17.6588, 14.2952, 352, 364.592, 33.6359, 23.5451, -33.6359, -23.5451, 219, 350.592, 2.52269, 43.7266, -2.52269, -43.7266, 189, 248.592, -23.9655, 18.4997, 23.9655, -18.4997, 212, 171.592 )
+}
+
+[sub_resource type="Curve2D" id=8]
+_data = {
+"points": PoolVector2Array( -9.91068, 5.19131, 9.91068, -5.19131, 486, 6, -16.4217, -14.8325, 16.4217, 14.8325, 634, 6, 14.3028, -10.0649, -14.3028, 10.0649, 616, 34, 20.1298, 9.00544, -20.1298, -9.00544, 446, 33, -20.7652, 16.9897, 20.7652, -16.9897, 486, 6 )
+}
+
+[sub_resource type="Curve2D" id=6]
+_data = {
+"points": PoolVector2Array( -13.773, 14.8325, 13.773, -14.8325, 51, 496.592, -47.6758, -9.00544, 47.6758, 9.00544, 300, 502.592, -2.11893, -34.4325, 2.11893, 34.4325, 416, 549.592, 29.665, -0.529732, -29.665, 0.529732, 385, 589.592, 31.7839, 3.17839, -31.7839, -3.17839, 252, 577.592, 22.2487, 16.9514, -22.2487, -16.9514, 92, 577.592, 3.70812, 8.4757, -3.70812, -8.4757, 57, 522.592, -15.8919, 15.8919, 15.8919, -15.8919, 51, 496.592 )
+}
+
+[sub_resource type="Curve2D" id=9]
+_data = {
+"points": PoolVector2Array( -19.1543, 20.0452, 19.1543, -20.0452, 248, 222.592, -35.9077, -0.629961, 35.9077, 0.629961, 355, 247.592, -41.5774, 3.1498, 41.5774, -3.1498, 428, 218.592, 8.46354, -34.2996, -8.46354, 34.2996, 513, 277.592, 23.6088, 10.2453, -23.6088, -10.2453, 291, 341.592, 18.2634, 14.6998, -18.2634, -14.6998, 261, 274.592, -16.4816, 14.6998, 16.4816, -14.6998, 248, 223.592 )
+}
+
+[sub_resource type="Curve2D" id=7]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 552, 419.592, 0, 0, 0, 0, 656, 418.592, 0, 0, 0, 0, 601, 404.592, 0, 0, 0, 0, 551, 419.592 )
 }
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
@@ -209,17 +231,53 @@ rotate = false
 [node name="Bat" parent="Enemies/Bat/batPath/PathFollow2D" instance=ExtResource( 16 )]
 rotation = 0.472119
 
+[node name="batPath2" type="Path2D" parent="Enemies/Bat"]
+position = Vector2( 240, 8.592 )
+curve = SubResource( 8 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Bat/batPath2"]
+position = Vector2( 486, 6 )
+rotation = -0.172165
+rotate = false
+
+[node name="Bat" parent="Enemies/Bat/batPath2/PathFollow2D" instance=ExtResource( 16 )]
+rotation = 0.172165
+scale = Vector2( 1, 1 )
+
 [node name="Shooter" type="Node2D" parent="Enemies"]
 
 [node name="Shooter_Stop" parent="Enemies/Shooter" instance=ExtResource( 17 )]
 position = Vector2( 917, 187.592 )
 scale = Vector2( -1, 1 )
 
+[node name="Shooter_path" type="Path2D" parent="Enemies/Shooter"]
+curve = SubResource( 6 )
+
+[node name="ShooterPathFollow2D" parent="Enemies/Shooter/Shooter_path" instance=ExtResource( 19 )]
+position = Vector2( 51, 496.592 )
+rotation = -0.524601
+
+[node name="Shooter_path2" type="Path2D" parent="Enemies/Shooter"]
+curve = SubResource( 9 )
+
+[node name="ShooterPathFollow2D" parent="Enemies/Shooter/Shooter_path2" instance=ExtResource( 19 )]
+position = Vector2( 248, 222.592 )
+rotation = -0.677044
+
 [node name="MeleeBot" type="Node2D" parent="Enemies"]
 
 [node name="MeleeBot_Stop" parent="Enemies/MeleeBot" instance=ExtResource( 18 )]
 position = Vector2( 852, 363.592 )
 scale = Vector2( -1, 1 )
+
+[node name="MeleeBot_Stop2" parent="Enemies/MeleeBot" instance=ExtResource( 18 )]
+position = Vector2( 718, 363.592 )
+
+[node name="MeleePath" type="Path2D" parent="Enemies/MeleeBot"]
+curve = SubResource( 7 )
+
+[node name="MeleePathFollow2D" parent="Enemies/MeleeBot/MeleePath" instance=ExtResource( 20 )]
+position = Vector2( 552, 419.592 )
 
 [node name="StructTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
@@ -235,7 +293,7 @@ cell_size = Vector2( 32, 32 )
 show_collision = true
 collision_layer = 8
 format = 1
-tile_data = PoolIntArray( 196624, 5, 0, 196626, 5, 0, 262146, 15, 0, 262171, 14, 0, 327700, 3, 0, 393220, 16, 0, 393237, 21, 0, 393240, 12, 0, 393243, 21, 0, 458774, 24, 0, 458775, 24, 0, 458776, 20, 0, 458777, 24, 0, 458778, 24, 0, 524309, 22, 0, 524315, 22, 0, 589840, 1, 0, 589841, 1, 0, 589842, 1, 0, 589845, 22, 0, 589846, 4, 0, 589850, 4, 0, 589851, 22, 0, 655376, 1, 0, 655381, 19, 0, 655387, 19, 0, 720912, 1, 0, 786446, 21, 0, 786448, 1, 0, 786455, 6, 0, 786456, 19, 0, 851983, 22, 0, 917522, 1, 0, 983058, 1, 0, 983059, 1, 0, 983060, 0, 0, 1048599, 15, 0, 1114132, 1, 0 )
+tile_data = PoolIntArray( 196613, 5, 0, 196624, 5, 0, 196626, 5, 0, 262146, 15, 0, 262171, 14, 0, 327700, 3, 0, 393220, 16, 0, 393237, 21, 0, 393240, 12, 0, 393243, 21, 0, 458774, 24, 0, 458775, 24, 0, 458776, 20, 0, 458777, 24, 0, 458778, 24, 0, 524309, 22, 0, 524315, 22, 0, 589840, 1, 0, 589841, 1, 0, 589842, 1, 0, 589845, 22, 0, 589846, 4, 0, 589850, 4, 0, 589851, 22, 0, 655376, 1, 0, 655381, 19, 0, 655387, 19, 0, 720912, 1, 0, 786446, 21, 0, 786448, 1, 0, 786455, 6, 0, 786456, 19, 0, 851983, 22, 0, 917522, 1, 0, 983058, 1, 0, 983059, 1, 0, 983060, 0, 0, 1048599, 15, 0, 1114132, 1, 0 )
 
 [node name="PlantTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
@@ -243,7 +301,7 @@ cell_size = Vector2( 32, 32 )
 show_collision = true
 collision_layer = 8
 format = 1
-tile_data = PoolIntArray( 2, 0, 0, 5, 0, 0, 21, 0, 0, 23, 0, 0 )
+tile_data = PoolIntArray( 2, 0, 0, 5, 0, 0, 21, 0, 0, 23, 0, 0, 327708, 0, 0, 393219, 4, 0, 458754, 5, 0, 524288, 0, 0, 851981, 0, 0, 851993, 0, 0 )
 
 [node name="UI_mj" parent="." instance=ExtResource( 10 )]
 position = Vector2( 0, -121.231 )
