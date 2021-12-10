@@ -59,6 +59,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Jaemin/addons/github-integration/scripts/InvitationItem.gd"
 }, {
+"base": "Node2D",
+"class": "L1",
+"language": "GDScript",
+"path": "res://Scenes/Levels/L1.gd"
+}, {
 "base": "Sprite",
 "class": "Player",
 "language": "GDScript",
@@ -115,6 +120,7 @@ _global_script_class_icons={
 "CurrentColor_circle_mj": "",
 "GistItem": "",
 "InvitationItem": "",
+"L1": "",
 "Player": "",
 "Player_Dh": "",
 "Player_mj": "",
@@ -143,6 +149,8 @@ GameManagerJm="*res://Jaemin/ScriptJaemin/GameManager_jm.gd"
 [display]
 
 window/size/height=730
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [editor_plugins]
 
