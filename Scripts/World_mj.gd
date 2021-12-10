@@ -76,13 +76,20 @@ var melee_speed = 100
 # Enemy movment control
 func _process(delta):
 	# Update bat offset
-	$Enemies/BatPath/PathFollow2D.offset += bat_speed * delta
+	
+	
+	if $Enemies/BatPath/PathFollow2D != null:
+		$Enemies/BatPath/PathFollow2D.offset += bat_speed * delta
 	
 	# Update Meleebot offset
-	$Enemies/MeleePath/MeleePathFollow2D.offset += melee_speed * delta
-	#$Enemies/MeleePath2/MeleePathFollow2D.offset += melee_speed * delta
+	if $Enemies/MeleePath/MeleePathFollow2D != null:
+		$Enemies/MeleePath/MeleePathFollow2D.offset += melee_speed * delta
+	
+	if $Enemies/MeleePath2/MeleePathFollow2D != null:
+		$Enemies/MeleePath2/MeleePathFollow2D.offset += melee_speed * delta
 	# Update Shooter offset
-	$Enemies/ShooterPath/ShooterPathFollow2D.offset += melee_speed * delta
+	if $Enemies/ShooterPath/ShooterPathFollow2D != null:
+		$Enemies/ShooterPath/ShooterPathFollow2D.offset += melee_speed * delta
 	
 
 
@@ -235,3 +242,6 @@ func _on_Waterbukkit_pressed():
 	if sum > 1 and Waterbucket_num > 0:
 		$"./Panels/WaterPanel".visible = true
 	
+
+
+

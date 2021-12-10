@@ -1,11 +1,8 @@
-extends Node
- 
-var connectingScene = preload("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
+extends Node2D
 
-var stage = -1
-var drawingName = ""
+
+var stage = GameManagerJm.stage
 onready var drawing
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("started")
@@ -16,10 +13,7 @@ func _ready():
 
 func advanceStage():
 	stage += 1
-	drawing = connectingScene.instance().get_child(stage)
-	
-
-	drawing = connectingScene.instance().get_child(stage)
+	drawing = get_child(stage)
 	drawing.visible = true
 	
 
@@ -29,5 +23,3 @@ func advanceStage():
 #	pass
 func _on_TextureButton_pressed():
 	get_tree().change_scene("res://Scenes/World_mj.tscn")
-
-
