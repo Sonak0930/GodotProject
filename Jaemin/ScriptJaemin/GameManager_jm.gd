@@ -1,9 +1,11 @@
 extends Node
  
 var connectingScene = preload("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
-var stage = 0
+
+var stage = -1
 var drawingName = ""
 onready var drawing
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("started")
@@ -15,7 +17,7 @@ func _ready():
 func advanceStage():
 	stage += 1
 	
-	drawing = $TextureButton
+	drawing = connectingScene.instance().get_child(stage)
 	drawing.visible = true
 	#drawing.set_visible(true)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
