@@ -9,6 +9,8 @@ onready var world_node = get_tree().get_current_scene()
 var enemyName = ["shooter_move"]
 var sec = 0.0
 
+var speed = 90
+
 func _ready():
 	animated_sprite.play("run")
 	if world_node != null:
@@ -22,6 +24,8 @@ func _process(delta):
 	if sec >= 3: # Starts to attack
 		animated_sprite.play("shoot")
 		sec = 0.0
+	if $"../" != null:
+		$"../".offset += speed * delta
 
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "shoot":

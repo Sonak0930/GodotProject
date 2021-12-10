@@ -6,6 +6,8 @@ onready var _animated_sprite = $AnimatedSprite
 var player
 onready var world_node = get_tree().get_current_scene()
 
+var speed = 90
+
 var enemyName = ["bat"]
 
 func _ready():
@@ -16,3 +18,6 @@ func _ready():
 				player = child
 				connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
 
+func _process(delta):
+	if $"../" != null:
+		$"../".offset += speed * delta

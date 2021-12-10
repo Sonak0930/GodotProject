@@ -64,6 +64,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scenes/Levels/L1.gd"
 }, {
+"base": "Node2D",
+"class": "L4",
+"language": "GDScript",
+"path": "res://Scenes/Levels/L4.gd"
+}, {
 "base": "Sprite",
 "class": "Player",
 "language": "GDScript",
@@ -121,6 +126,7 @@ _global_script_class_icons={
 "GistItem": "",
 "InvitationItem": "",
 "L1": "",
+"L4": "",
 "Player": "",
 "Player_Dh": "",
 "Player_mj": "",
