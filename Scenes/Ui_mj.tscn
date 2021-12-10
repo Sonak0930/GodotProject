@@ -227,7 +227,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="UI_colorBucket_buttons" type="Node" parent="."]
+[node name="UI_colorBucket_buttons" type="Node2D" parent="."]
 
 [node name="colorBucket_red_button" type="TextureButton" parent="UI_colorBucket_buttons"]
 modulate = Color( 0.866667, 0.27451, 0.266667, 1 )

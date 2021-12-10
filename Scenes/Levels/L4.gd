@@ -1,7 +1,7 @@
 extends Node2D
 
 
-class_name L1
+class_name L4
 
 
 #player
@@ -19,24 +19,24 @@ var Waterbucket_num
 
 # var for UI
 # var contain UI color circle node
-onready var targetCol_cir = get_node("UI_mj/TargetColor_circle")
-onready var currentCol_cir = get_node("UI_mj/CurrentColor_circle")
+onready var targetCol_cir = get_node("CanvasLayer/UI_mj/TargetColor_circle")
+onready var currentCol_cir = get_node("CanvasLayer/UI_mj/CurrentColor_circle")
 # var contain UI label node 
-onready var targetCol_label = get_node("UI_mj/TargetColor_RGB")
-onready var currentCol_label = get_node("UI_mj/CurrentColor_RGB")
+onready var targetCol_label = get_node("CanvasLayer/UI_mj/TargetColor_RGB")
+onready var currentCol_label = get_node("CanvasLayer/UI_mj/CurrentColor_RGB")
 # colorbukkit button 
-onready var colorbucket_red_button = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_red_button")
-onready var colorbucket_green_button = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_green_button")
-onready var colorbucket_blue_button = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_blue_button")
-onready var Waterbucket_button = get_node("UI_mj/UI_colorBucket_buttons/waterBucket_button")
+onready var colorbucket_red_button = get_node("CanvasLayer/UI_mj/UI_colorBucket_buttons/colorBucket_red_button")
+onready var colorbucket_green_button = get_node("CanvasLayer/UI_mj/UI_colorBucket_buttons/colorBucket_green_button")
+onready var colorbucket_blue_button = get_node("CanvasLayer/UI_mj/UI_colorBucket_buttons/colorBucket_blue_button")
+onready var Waterbucket_button = get_node("CanvasLayer/UI_mj/UI_colorBucket_buttons/waterBucket_button")
 # colorbukkits_num_label
 
 
-onready var colorbucket_red_label = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_red_label")
-onready var colorbucket_green_label = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_green_label")
-onready var colorbucket_blue_label = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_blue_label")
-onready var Waterbucket_label = get_node("UI_mj/UI_colorBucket_buttons/waterBucket_label")
-onready var Waterbukkit_label = get_node("UI_mj/UI_bukkits/waterBukkit_label")
+onready var colorbucket_red_label = get_node("CanvasLayer/UI_mj/UI_colorBucket_buttons/colorBucket_red_label")
+onready var colorbucket_green_label = get_node("CanvasLayer/UI_mj/UI_colorBucket_buttons/colorBucket_green_label")
+onready var colorbucket_blue_label = get_node("CanvasLayer/UI_mj/UI_colorBucket_buttons/colorBucket_blue_label")
+onready var Waterbucket_label = get_node("CanvasLayer/UI_mj/UI_colorBucket_buttons/waterBucket_label")
+onready var Waterbukkit_label = get_node("CanvasLayer/UI_mj/UI_bukkits/waterBukkit_label")
 
 onready var GameManager = $"/root/GameManagerJm"
 # game judgement var
@@ -53,8 +53,8 @@ func _ready():
 	is_same = false
 	
 	#set TargetCol and  reset CurrentCol
-	TargetColor = Color(0,0,250,1)
-	CurrentColor = Color(50,50,50,1)
+	TargetColor = Color(250,100,150,1)
+	CurrentColor = Color(0,50,50,1)
 	
 	# set colorBukkit num
 	colorbucket_red_num = 1
@@ -79,6 +79,23 @@ func _ready():
 	update_ui()
 	
 
+var bat_speed = 90
+var melee_speed = 100
+var shooter_speed = 90
+
+# Enemy movment control
+func _process(delta):
+	pass
+	# Update bat offset
+
+	# Update Meleebot offset
+
+	# Update Shooter offset
+
+	
+
+
+
 # color calulation
 func compare_color():
 	if(Color(TargetColor) == Color(CurrentColor)):
@@ -97,18 +114,18 @@ func life_is_color():
 	var sum = colorbucket_red_num + colorbucket_green_num + colorbucket_blue_num
 	if(CurrentColor[0]+CurrentColor[1]+CurrentColor[2]==0):
 		print("you lose!")
-		$"./Panels/GameOverPanel".visible = true
+		$"CanvasLayer/Panels/GameOverPanel".visible = true
 		get_tree().paused = true
 		
 		
 	elif sum == 0 && !is_same && Waterbucket_num == 0:
 		print("Left color objs num", sum)
 		print("you lose!")
-		$"./Panels/GameOverPanel".visible = true
+		$"CanvasLayer/Panels/GameOverPanel".visible = true
 		get_tree().paused = true
 	elif (CurrentColor[0]<TargetColor[0]||CurrentColor[1]<TargetColor[1]||CurrentColor[2]<TargetColor[2])&& sum==0:
 		print("you lose")
-		$"./Panels/GameOverPanel".visible = true
+		$"CanvasLayer/Panels/GameOverPanel".visible = true
 		get_tree().paused = true
 
 
@@ -182,5 +199,9 @@ func _on_Waterbukkit_pressed():
 	""" Updated """
 	var sum = colorbucket_red_num + colorbucket_green_num + colorbucket_blue_num
 	if sum > 1 and Waterbucket_num > 0:
-		$"./Panels/WaterPanel".visible = true
+		$"CanvasLayer/Panels/WaterPanel".visible = true
 	
+
+
+
+

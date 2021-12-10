@@ -36,6 +36,8 @@ func _moveWithKeyboard():
 
 
 func _on_ColorObj_body_entered(body,colorObjName):
+	if body != self:
+		return
 	emit_signal("collected",colorObjName)
 	print("player said: I took ",colorObjName)
 
