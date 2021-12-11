@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=19 format=2]
+[gd_resource type="TileSet" load_steps=21 format=2]
 
 [ext_resource path="res://assets/Texture/TX Props.png" type="Texture" id=1]
 
@@ -40,6 +40,12 @@ points = PoolVector2Array( 0.338196, 21.8275, 3.12903, 18.7576, 28.2464, 18.4785
 
 [sub_resource type="ConvexPolygonShape2D" id=13]
 points = PoolVector2Array( 32, 9.375, 0, 9.375, 0, 1.375, 32, 1.375 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 1.69543, 26.8204, 30.999, 27.3785, 31.2781, 41.8908, 2.2536, 42.1699 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 0.687286, 23.777, 24.6883, 22.6607, 24.1302, 0.055069, 30.8281, 0.334152, 31.3863, 31.0331, 0.687286, 31.3122 )
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 15.2041, 13.1638, 18.553, 14.2801, 18.553, 10.652, 23.5765, 2.55869, 26.9255, 2.83775, 30.5536, 5.07042, 30.5536, 32.4204, 27.2046, 40.2347, 29.4373, 43.5837, 24.9719, 53.3515, 21.0648, 55.5842, 21.3439, 61.724, 7.66888, 60.8867, 4.87805, 55.5842, 3.76172, 15.9546, 4.87805, 12.6056 )
@@ -425,3 +431,45 @@ points = PoolVector2Array( 37.9239, 17.5476, 37.6448, 11.966, 58.576, 11.966, 59
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 24/z_index = 0
+25/name = "TX Props.png 25"
+25/texture = ExtResource( 1 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 447, 115, 34, 44 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 0, 0 )
+25/navigation_offset = Vector2( 0, 0 )
+25/shape_offset = Vector2( 0, 0 )
+25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+25/shape = SubResource( 18 )
+25/shape_one_way = false
+25/shape_one_way_margin = 1.0
+25/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+25/z_index = 0
+26/name = "TX Props.png 26"
+26/texture = ExtResource( 1 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 256, 192, 32, 32 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shape_offset = Vector2( 0, 0 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+26/shape = SubResource( 19 )
+26/shape_one_way = false
+26/shape_one_way_margin = 1.0
+26/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+26/z_index = 0
