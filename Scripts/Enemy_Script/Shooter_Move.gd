@@ -9,7 +9,6 @@ onready var world_node = get_tree().get_current_scene()
 var enemyName = ["shooter_move"]
 var sec = 0.0
 
-#var speed = 90
 
 func _ready():
 	animated_sprite.play("run")

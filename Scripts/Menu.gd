@@ -36,8 +36,7 @@ func _on_ExitButton_pressed():
 	get_tree().quit()
 
 func _on_CreditButton_pressed():
-	""" Menu credit button """
-	pass # Replace with function body.
+	get_tree().change_scene("res://Jaemin/ScenesJaemin/Credit.tscn")
 	
 func _on_HSlider_value_changed(value):
 	""" Options panel slider """

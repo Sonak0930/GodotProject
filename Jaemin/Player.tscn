@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Animation.gd" type="Script" id=1]
-[ext_resource path="res://pink_walk/Pink_Monster_Walk_6.png" type="Texture" id=2]
-[ext_resource path="res://pink_walk/walk Reverted.png" type="Texture" id=3]
+[ext_resource path="res://Jaemin/Animation.gd" type="Script" id=1]
+[ext_resource path="res://assets/pink_walk/Pink_Monster_Walk_6.png" type="Texture" id=2]
+[ext_resource path="res://assets/pink_walk/walk Reverted.png" type="Texture" id=3]
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
@@ -79,5 +79,4 @@ animations = [ {
 
 [node name="Player" type="AnimatedSprite"]
 frames = SubResource( 7 )
-animation = "New Anim"
 script = ExtResource( 1 )
