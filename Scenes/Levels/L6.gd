@@ -200,7 +200,8 @@ func _on_Waterbukkit_pressed():
 	var sum = colorbucket_red_num + colorbucket_green_num + colorbucket_blue_num
 	if sum > 1 and Waterbucket_num > 0:
 		$"CanvasLayer/Panels/WaterPanel".visible = true
-	
+
+
 
 
 
