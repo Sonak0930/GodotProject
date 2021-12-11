@@ -1,7 +1,7 @@
 extends Area2D
 
 export (PackedScene) var Bullet
-var speed = 100
+var speed = 90
 # get a reference to the sprite
 onready var animated_sprite = $AnimatedSprite # animation: run, shoot
 var player
@@ -9,7 +9,6 @@ onready var world_node = get_tree().get_current_scene()
 var enemyName = ["shooter_move"]
 var sec = 0.0
 
-#var speed = 90
 
 func _ready():
 	animated_sprite.play("run")

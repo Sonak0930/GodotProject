@@ -10,7 +10,9 @@ func _process(delta):
 	update_toggle_h(global_position - last_position)
 	last_position = global_position
 	
-	
+
+	#offset += mel_speed * delta
+
 func update_toggle_h(direction: Vector2):
 	# moving left
 	if direction.x < 0:

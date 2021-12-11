@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Jaemin/Fonts/AmaticBold.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Jaemin/ScenesJaemin/ExamplePlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Enemies/Shooter_Stop.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Jaemin/Fonts/AmaticSmallText.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Jaemin/Assets_Jaemin/CreditImage (2).png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Enemies/MeleeBot.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Jaemin/ScriptJaemin/NPCinCredits_jm.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Player_Dh.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Animation" id=3]
 resource_name = "Intro"
@@ -75,9 +76,8 @@ anims/CreditCharactersMove = SubResource( 5 )
 
 [node name="PlayerInCredit" type="Node2D" parent="NPCinCredits"]
 
-[node name="KinematicBody2D" parent="NPCinCredits/PlayerInCredit" instance=ExtResource( 2 )]
-position = Vector2( 109, -4 )
-scale = Vector2( 2, 2 )
+[node name="Player_Dh" parent="NPCinCredits/PlayerInCredit" instance=ExtResource( 8 )]
+position = Vector2( 103, -4 )
 
 [node name="TextEdit2" type="TextEdit" parent="NPCinCredits/PlayerInCredit"]
 material = SubResource( 1 )
@@ -170,3 +170,35 @@ text = "MeleeBot"
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
+[node name="ShooterInCredit" type="Node2D" parent="NPCinCredits"]
+position = Vector2( -549, -5 )
+
+[node name="TextEdit2" type="TextEdit" parent="NPCinCredits/ShooterInCredit"]
+material = SubResource( 1 )
+margin_left = 416.0
+margin_top = -86.0
+margin_right = 541.0
+margin_bottom = 2.0
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "Enemy"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextEdit3" type="TextEdit" parent="NPCinCredits/ShooterInCredit"]
+material = SubResource( 1 )
+margin_left = 413.0
+margin_top = 38.0
+margin_right = 538.0
+margin_bottom = 126.0
+custom_fonts/font = ExtResource( 3 )
+custom_styles/normal = SubResource( 2 )
+text = "Shooter"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Shooter_Stop" parent="NPCinCredits/ShooterInCredit" instance=ExtResource( 2 )]
+position = Vector2( 435, 2 )
