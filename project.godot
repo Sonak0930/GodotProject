@@ -65,9 +65,19 @@ _global_script_classes=[ {
 "path": "res://Scenes/Levels/L1.gd"
 }, {
 "base": "Node2D",
+"class": "L3",
+"language": "GDScript",
+"path": "res://Scenes/Levels/L3.gd"
+}, {
+"base": "Node2D",
 "class": "L4",
 "language": "GDScript",
 "path": "res://Scenes/Levels/L4.gd"
+}, {
+"base": "Node2D",
+"class": "L6",
+"language": "GDScript",
+"path": "res://Scenes/Levels/L6.gd"
 }, {
 "base": "Sprite",
 "class": "Player",
@@ -126,7 +136,9 @@ _global_script_class_icons={
 "GistItem": "",
 "InvitationItem": "",
 "L1": "",
+"L3": "",
 "L4": "",
+"L6": "",
 "Player": "",
 "Player_Dh": "",
 "Player_mj": "",
@@ -141,7 +153,7 @@ _global_script_class_icons={
 [application]
 
 config/name="20211124_CMPteam_01"
-run/main_scene="res://Scenes/World_mj.tscn"
+run/main_scene="res://Scenes/Levels/L6.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -166,22 +178,22 @@ enabled=PoolStringArray(  )
 
 right={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
  ]
 }
 left={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
  ]
 }
 up={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
  ]
 }
 down={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
  ]
 }
 

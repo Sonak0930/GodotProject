@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Jaemin/Assets_Jaemin/ConnectingSceneDrawings/L8.png" type="Texture" id=1]
 [ext_resource path="res://Jaemin/Assets_Jaemin/ConnectingSceneDrawings/L6.png" type="Texture" id=2]
@@ -12,18 +12,24 @@
 [ext_resource path="res://Jaemin/Assets_Jaemin/ConnectingSceneDrawings/L7.png" type="Texture" id=10]
 [ext_resource path="res://Jaemin/Assets_Jaemin/ConnectingSceneDrawings/L14.png" type="Texture" id=11]
 [ext_resource path="res://Jaemin/Assets_Jaemin/ConnectingSceneDrawings/L10.png" type="Texture" id=12]
+[ext_resource path="res://Jaemin/ScenesJaemin/ConnectingScene_jm.gd" type="Script" id=13]
 [ext_resource path="res://Jaemin/Assets_Jaemin/ConnectingSceneDrawings/L3.png" type="Texture" id=14]
 [ext_resource path="res://Jaemin/Assets_Jaemin/ConnectingSceneDrawings/L2.png" type="Texture" id=15]
 [ext_resource path="res://Jaemin/Assets_Jaemin/UI_Jm/HomeButton.png" type="Texture" id=16]
 
 [node name="ConnectingScene" type="Node2D"]
 
+script = ExtResource( 13 )
+
+
+
 [node name="TextureRect1" type="TextureRect" parent="."]
 visible = false
-margin_left = 159.999
-margin_top = 0.999817
-margin_right = 724.0
-margin_bottom = 565.0
+margin_left = 193.0
+margin_top = 6.0
+margin_right = 757.001
+margin_bottom = 570.0
+rect_scale = Vector2( 1.17676, 1.29377 )
 texture = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -173,10 +179,10 @@ __meta__ = {
 }
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 447.0
-margin_top = 626.0
-margin_right = 975.0
-margin_bottom = 1128.0
+margin_left = 476.0
+margin_top = 646.0
+margin_right = 1004.0
+margin_bottom = 1148.0
 rect_scale = Vector2( 0.148755, 0.143507 )
 texture_normal = ExtResource( 16 )
 __meta__ = {

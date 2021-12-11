@@ -1,6 +1,8 @@
 extends Node2D
 
-class_name world_mj
+
+class_name L3
+
 
 #player
 onready var player = $Player_mj
@@ -28,6 +30,8 @@ onready var colorbucket_green_button = get_node("UI_mj/UI_colorBucket_buttons/co
 onready var colorbucket_blue_button = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_blue_button")
 onready var Waterbucket_button = get_node("UI_mj/UI_colorBucket_buttons/waterBucket_button")
 # colorbukkits_num_label
+
+
 onready var colorbucket_red_label = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_red_label")
 onready var colorbucket_green_label = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_green_label")
 onready var colorbucket_blue_label = get_node("UI_mj/UI_colorBucket_buttons/colorBucket_blue_label")
@@ -40,14 +44,18 @@ var is_complited
 
 
 func _ready():
+	
 	#connect with player
 	player.connect("attacked",self,"_on_attacked")
 	player.connect("collected",self,"_on_collected")
+	
 	# reset game judgement var
 	is_same = false
+	
 	#set TargetCol and  reset CurrentCol
-	TargetColor = Color(200,150,150,1)
+	TargetColor = Color(0,200,250,1)
 	CurrentColor = Color(50,50,50,1)
+	
 	# set colorBukkit num
 	colorbucket_red_num = 1
 	colorbucket_green_num = 1
@@ -58,9 +66,11 @@ func _ready():
 	#reset UI circle color
 	targetCol_cir.set_color(TargetColor)
 	currentCol_cir.reset_color()
+	
 	# set UI CurrentColor_label and TargetColor_label
 	targetCol_label.text = str(TargetColor[0])+"\n"+str(TargetColor[1])+"\n"+str(TargetColor[2])
-	currentCol_label.text = str(CurrentColor[0])+"\n"+str(CurrentColor[1])+"\n"+str(CurrentColor[2])
+	currentCol_label.text = str(CurrentColor[0])+"\n"+str(CurrentColor[1])+"\n"+str(CurrentColor[2]
+	)
 	# connect colorbukkit_button
 	colorbucket_red_button.connect("pressed",self,"_on_colorBukkit_red_pressed")
 	colorbucket_green_button.connect("pressed",self,"_on_colorBukkit_green_pressed")
@@ -69,35 +79,12 @@ func _ready():
 	update_ui()
 	
 
-var bat_speed = 100
-var melee_speed = 100
-# Enemy movment control
-func _process(delta):
-	# Update bat offset
-	
-	
-	if $Enemies/BatPath/PathFollow2D != null:
-		$Enemies/BatPath/PathFollow2D.offset += bat_speed * delta
-	
-	# Update Meleebot offset
-	if $Enemies/MeleePath/MeleePathFollow2D != null:
-		$Enemies/MeleePath/MeleePathFollow2D.offset += melee_speed * delta
-	
-	if $Enemies/MeleePath2/MeleePathFollow2D != null:
-		$Enemies/MeleePath2/MeleePathFollow2D.offset += melee_speed * delta
-	# Update Shooter offset
-	if $Enemies/ShooterPath/ShooterPathFollow2D != null:
-		$Enemies/ShooterPath/ShooterPathFollow2D.offset += melee_speed * delta
-	
-
-
-
 # color calulation
 func compare_color():
 	if(Color(TargetColor) == Color(CurrentColor)):
 		is_same = true
 		print("congrates!! you win!!")
-
+		
 		get_tree().change_scene("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
 		GameManager.advanceStage()
 		
@@ -113,8 +100,9 @@ func life_is_color():
 		$"./Panels/GameOverPanel".visible = true
 		get_tree().paused = true
 		
-	elif sum==0 && (!is_same) && Waterbucket_num == 0:
-		print("Left color obj num:",sum)
+		
+	elif sum == 0 && !is_same && Waterbucket_num == 0:
+		print("Left color objs num", sum)
 		print("you lose!")
 		$"./Panels/GameOverPanel".visible = true
 		get_tree().paused = true
@@ -190,53 +178,9 @@ func update_ui():
 
 
 # reaction to button_pressed
-"""
-var is_Waterbucket_pressed = false
-func _on_colorBukkit_red_pressed():
-	if is_Waterbucket_pressed:
-		if colorbucket_red_num >0:
-			CurrentColor = Color(CurrentColor)-Color(50,0,0,0)
-			update_ui()
-			compare_color()
-			life_is_color()
-			is_Waterbucket_pressed = false
-
-func _on_colorBukkit_green_pressed():
-	if is_Waterbucket_pressed:
-		if colorbucket_green_num >0:
-			CurrentColor = Color(CurrentColor)-Color(0,50,0,0)
-			update_ui()
-			compare_color()
-			life_is_color()
-			is_Waterbucket_pressed = false
-
-func _on_colorBukkit_blue_pressed():
-	if is_Waterbucket_pressed:
-		if colorbucket_blue_num >0:
-			CurrentColor = Color(CurrentColor)-Color(0,0,50,0)
-			update_ui()
-			compare_color()
-			life_is_color()
-			is_Waterbucket_pressed = false
-
-func _on_Waterbukkit_pressed():
-	if is_Waterbucket_pressed:
-		pass
-	else:
-		if Waterbucket_num >0:
-			Waterbucket_num -= 1
-			update_ui()
-			compare_color()
-			life_is_color()
-			is_Waterbucket_pressed = true
-"""
-
 func _on_Waterbukkit_pressed():
 	""" Updated """
 	var sum = colorbucket_red_num + colorbucket_green_num + colorbucket_blue_num
 	if sum > 1 and Waterbucket_num > 0:
 		$"./Panels/WaterPanel".visible = true
 	
-
-
-
