@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/UI/TargetColor_circle_mj.gd" type="Script" id=1]
 [ext_resource path="res://assets/bucket.png" type="Texture" id=2]
@@ -11,9 +11,16 @@
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-189.png" type="Texture" id=9]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-188.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/Ui_mj.gd" type="Script" id=11]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-167.png" type="Texture" id=12]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-168.png" type="Texture" id=13]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-183.png" type="Texture" id=14]
 
-[sub_resource type="DynamicFont" id=1]
-size = 25
+[sub_resource type="DynamicFont" id=2]
+size = 21
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 21
 font_data = ExtResource( 6 )
 
 [node name="UI_mj" type="Node2D"]
@@ -329,11 +336,11 @@ __meta__ = {
 }
 
 [node name="ExitGameButton" type="TextureButton" parent="."]
-margin_left = 797.0
-margin_top = 31.0
-margin_right = 1054.0
-margin_bottom = 118.0
-rect_scale = Vector2( 0.7, 0.7 )
+margin_left = 848.0
+margin_top = 60.0
+margin_right = 1105.0
+margin_bottom = 147.0
+rect_scale = Vector2( 0.6, 0.6 )
 texture_normal = ExtResource( 10 )
 texture_hover = ExtResource( 9 )
 __meta__ = {
@@ -341,11 +348,11 @@ __meta__ = {
 }
 
 [node name="ExitToMain" type="Label" parent="."]
-margin_left = 766.0
-margin_top = 39.0
-margin_right = 1011.0
-margin_bottom = 80.0
-custom_fonts/font = SubResource( 1 )
+margin_left = 804.0
+margin_top = 65.0
+margin_right = 1049.0
+margin_bottom = 106.0
+custom_fonts/font = SubResource( 2 )
 text = "Exit To Menu"
 align = 1
 valign = 1
@@ -353,4 +360,50 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PlayAgainButton" type="TextureButton" parent="."]
+margin_left = 847.0
+margin_top = 8.0
+margin_right = 1104.0
+margin_bottom = 95.0
+rect_scale = Vector2( 0.6, 0.6 )
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayAgain" type="Label" parent="."]
+margin_left = 802.0
+margin_top = 14.0
+margin_right = 1047.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 2 )
+text = "Play Again"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LvSprite" type="Sprite" parent="."]
+modulate = Color( 0.537255, 0.435294, 0.435294, 1 )
+position = Vector2( 792, 61 )
+scale = Vector2( 0.289063, 0.395349 )
+texture = ExtResource( 14 )
+
+[node name="LvText" type="Label" parent="."]
+margin_left = 760.0
+margin_top = 44.0
+margin_right = 822.0
+margin_bottom = 85.0
+custom_colors/font_color = Color( 0.854902, 0, 0.164706, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Lv. 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="ExitGameButton" to="." method="_on_ExitGameButton_pressed"]
+[connection signal="pressed" from="PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
