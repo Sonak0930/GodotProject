@@ -1,7 +1,7 @@
 extends Area2D
 
 export (PackedScene) var Bullet
-var speed = 100
+var speed = 90
 # get a reference to the sprite
 onready var animated_sprite = $AnimatedSprite # animation: run, shoot
 var player
