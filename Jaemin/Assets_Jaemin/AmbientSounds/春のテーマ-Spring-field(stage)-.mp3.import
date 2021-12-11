@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/春のテーマ-Spring-field(stage)-.mp3-b38622511622a65af10279bcb90c0e2d.mp3str"
+
+[deps]
+
+source_file="res://Jaemin/Assets_Jaemin/AmbientSounds/春のテーマ-Spring-field(stage)-.mp3"
+dest_files=[ "res://.import/春のテーマ-Spring-field(stage)-.mp3-b38622511622a65af10279bcb90c0e2d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

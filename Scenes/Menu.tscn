@@ -1,8 +1,9 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/WallTileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://TileSets/StoneTileset.tres" type="TileSet" id=3]
+[ext_resource path="res://Jaemin/Assets_Jaemin/AmbientSounds/Adventure-320bit(menu).mp3" type="AudioStream" id=4]
 [ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=5]
 [ext_resource path="res://TileSets/PropsTileset.tres" type="TileSet" id=6]
 [ext_resource path="res://Scenes/Player_Dh.tscn" type="PackedScene" id=7]
@@ -148,8 +149,8 @@ margin_left = 230.0
 margin_top = 97.0
 margin_right = 794.0
 margin_bottom = 198.0
-custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.980392, 1, 0.337255, 1 )
+custom_fonts/font = SubResource( 4 )
 text = "MONO TO COLOR"
 align = 1
 valign = 1
@@ -309,8 +310,8 @@ margin_left = 637.0
 margin_top = 313.0
 margin_right = 805.0
 margin_bottom = 338.0
-custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 0.654902, 0.654902, 0.654902, 1 )
+custom_fonts/font = SubResource( 9 )
 text = "- Change keys -"
 align = 1
 valign = 1
@@ -519,6 +520,11 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 4 )
+volume_db = -6.638
 
 [connection signal="pressed" from="MenuItems/MenuItemContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="MenuItems/MenuItemContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
