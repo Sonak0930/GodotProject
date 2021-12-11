@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scenes/Ui_mj.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player_mj.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Scenes/waterObj_mj.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Enemies/Shooter_Move.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Jaemin/Assets_Jaemin/AmbientSounds/春のテーマ-Spring-field(stage)-.mp3" type="AudioStream" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
@@ -349,6 +350,9 @@ position = Vector2( -1, -1 )
 rotation = -0.0234332
 
 [node name="Shooter_Move" parent="Enemies/Path2D/PathFollow2D" instance=ExtResource( 15 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
 
 [connection signal="draw" from="Enemies/BatPath/PathFollow2D/Bat" to="." method="_on_Bat_draw"]
 [connection signal="draw" from="Enemies/BatPath/PathFollow2D/Bat" to="Enemies/BatPath/PathFollow2D/Bat" method="_on_Bat_draw"]
