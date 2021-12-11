@@ -1,6 +1,6 @@
 extends Area2D
 
-var bat_speed = 100
+var bat_speed = 90
 
 # get a reference to the sprite
 onready var _animated_sprite = $AnimatedSprite

@@ -12,7 +12,7 @@ func _process(delta):
 	
 	
 	
-	offset += mel_speed * delta
+	#offset += mel_speed * delta
 	
 func update_toggle_h(direction: Vector2):
 	# moving left
