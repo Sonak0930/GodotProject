@@ -8,7 +8,7 @@ onready var world_node = get_tree().get_current_scene()
 var sec = 0.0
 var enemyName = ["melee_move"]
 
-var speed = 100
+var speed = 200
 
 func _ready():
 	animated_sprite.play("run")
@@ -24,9 +24,9 @@ func _process(delta):
 		animated_sprite.play("attack")
 		$AttackArea/CollisionShape2D.disabled = false
 		sec = 0.0
-	if $"../" != null:
-		$"../".offset += speed * delta
-	
+
+	get_parent().offset += speed * delta
+
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "attack":
 		# disable attacking area collision

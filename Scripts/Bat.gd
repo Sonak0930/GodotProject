@@ -1,5 +1,6 @@
 extends Area2D
 
+var bat_speed = 100
 
 # get a reference to the sprite
 onready var _animated_sprite = $AnimatedSprite
@@ -18,6 +19,8 @@ func _ready():
 				player = child
 				connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
 
+
+
 func _process(delta):
-	if $"../" != null:
-		$"../".offset += speed * delta
+	get_parent().offset += bat_speed * delta
+

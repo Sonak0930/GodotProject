@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scenes/Ui_mj.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player_mj.tscn" type="PackedScene" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://assets/Texture/TX Struct.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/World_mj.gd" type="Script" id=12]
 [ext_resource path="res://Scenes/waterObj_mj.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Enemies/Shooter_Move.tscn" type="PackedScene" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 103.115, 27.3969, 103.394, 31.5831, 96.1378, 31.5831, 96.4168, 89.353, 80.5092, 90.7484, 80.7883, 53.9097, 75.7648, 46.6536, 62.9271, 45.2581, 55.1127, 45.8163, 48.973, 49.7234, 47.2985, 55.3051, 48.1357, 89.6321, 32.2281, 90.7484 )
@@ -82,6 +84,78 @@ points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 1
 3/shapes = [  ]
 3/z_index = 0
 
+[sub_resource type="GDScript" id=4]
+script/source = "extends Area2D
+
+class_name ColorObj_blue_mj
+
+onready var default_anim = $Animations/Item_default_anim
+onready var collect_anim = $Animations/Collect_anim
+onready var player = get_node(\"/root/World_mj/Player_mj\")
+var colorObjName = [\"blueBucket\"]
+
+func _ready():
+	connect(\"body_entered\",self,\"_on_ColorObj_body_entered\")
+	connect(\"body_entered\",player,\"_on_ColorObj_body_entered\",colorObjName)
+	default_anim.play(\"item_default_anim\")
+
+func _on_ColorObj_body_entered(body):
+	if body is Player_mj:
+		# Make sure to collect only once
+		disconnect(\"body_entered\", player, \"_on_ColorObj_body_entered\")
+		collect_anim.play(\"Collect_anim\")
+		
+
+func _on_Collect_anim_animation_finished(anim_name):
+	queue_free()
+"
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends Area2D
+
+class_name ColorObj_red_mj
+
+onready var default_anim = $Animations/Item_default_anim
+onready var collect_anim = $Animations/Collect_anim
+onready var player = get_node(\"/root/World_mj/Player_mj\")
+
+var colorObjName = [\"redBucket\"]
+
+func _ready():
+	connect(\"body_entered\",self,\"_on_ColorObj_body_entered\")
+	connect(\"body_entered\",player,\"_on_ColorObj_body_entered\",colorObjName)
+	default_anim.play(\"item_default_anim\")
+
+func _on_ColorObj_body_entered(body):
+	if body is Player_mj:
+		# Make sure to collect only once
+		disconnect(\"body_entered\", player, \"_on_ColorObj_body_entered\")
+		collect_anim.play(\"Collect_anim\")
+
+func _on_Collect_anim_animation_finished(anim_name):
+	queue_free()
+"
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 78, 35.592, 0, 0, 0, 0, 75, 145.592, 0, 0, 0, 0, 138, 36.592, 0, 0, 0, 0, 150, 130.592, 0, 0, 0, 0, 210, 34.592, 0, 0, 0, 0, 217, 140.592, 0, 0, 0, 0, 270, 40.592, 0, 0, 0, 0, 277, 135.592, 0, 0, 0, 0, 331, 40.592, 0, 0, 0, 0, 360, 127.592, 0, 0, 0, 0, 341, 89.592, 0, 0, 0, 0, 77, 76.592, 0, 0, 0, 0, 78, 33.592 )
+}
+
+[sub_resource type="Curve2D" id=6]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 113, 33, 0, 0, 0, 0, 197, 100, 0, 0, 0, 0, 95, 169, 0, 0, 0, 0, -13, 97, 0, 0, 0, 0, 113, 33 )
+}
+
+[sub_resource type="Curve2D" id=8]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 248, -34, 0, 0, 0, 0, 237, 19, 0, 0, 0, 0, 230, 73, 0, 0, 0, 0, 337, 73, 0, 0, 0, 0, 359, -38, 0, 0, 0, 0, 412, -104, 0, 0, 0, 0, 419, -159, 0, 0, 0, 0, 465, -158, 0, 0, 0, 0, 481, -119, 0, 0, 0, 0, 551, -116, 0, 0, 0, 0, 491, -84, 0, 0, 0, 0, 509, -35, 0, 0, 0, 0, 561, -33, 0, 0, 0, 0, 561, 32, 0, 0, 0, 0, 528, 68, 0, 0, 0, 0, 442, 62, 0, 0, 0, 0, 375, 63, 0, 0, 0, 0, 351, 35, 0, 0, 0, 0, 342, -84, 0, 0, 0, 0, 284, -85, 0, 0, 0, 0, 214, -97, 0, 0, 0, 0, 173, -122, 0, 0, 0, 0, 154, -151, 0, 0, 0, 0, 130, -65, 0, 0, 0, 0, 144, 8, 0, 0, 0, 0, 126, 9, 0, 0, 0, 0, 117, 19, 0, 0, 0, 0, 158, 52, 0, 0, 0, 0, 207, 38, 0, 0, 0, 0, 247, -35 )
+}
+
+[sub_resource type="Curve2D" id=7]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 9, -1, 0, 0, 0, 0, 95, -18, 0, 0, 0, 0, 190, 61, 0, 0, 0, 0, 290, 69, 0, 0, 0, 0, 347, -15, 0, 0, 0, 0, 331, -80, 0, 0, 0, 0, 237, -101, 0, 0, 0, 0, 161, -110, 0, 0, 0, 0, 106, -78, 0, 0, 0, 0, 28, -131, 0, 0, 0, 0, -20, -109, 0, 0, 0, 0, -47, -46, 0, 0, 0, 0, 9, -1 )
+}
+
 [node name="World_mj" type="Node2D"]
 position = Vector2( 0, 121.408 )
 script = ExtResource( 12 )
@@ -139,63 +213,143 @@ format = 1
 [node name="UI_mj" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -121.231 )
 
-[node name="colorObjs_mj" type="Node2D" parent="."]
+[node name="Buckets" type="Node2D" parent="."]
 
-[node name="ColorObj_blue_mj" parent="colorObjs_mj" instance=ExtResource( 3 )]
-position = Vector2( 239, 424.592 )
+[node name="colorObjs_mj" type="Node2D" parent="Buckets"]
 
-[node name="ColorObj_blue_mj2" parent="colorObjs_mj" instance=ExtResource( 3 )]
-position = Vector2( 145, 139.592 )
+[node name="Node2D" type="Node2D" parent="Buckets/colorObjs_mj"]
+position = Vector2( 276, 468.592 )
 
-[node name="ColorObj_blue_mj3" parent="colorObjs_mj" instance=ExtResource( 3 )]
-position = Vector2( 534, 523.592 )
+[node name="ColorObj_blue_mj" parent="Buckets/colorObjs_mj/Node2D" instance=ExtResource( 3 )]
+script = SubResource( 4 )
 
-[node name="ColorObj_blue_mj4" parent="colorObjs_mj" instance=ExtResource( 3 )]
-position = Vector2( 113, 405.592 )
+[node name="Node2D2" type="Node2D" parent="Buckets/colorObjs_mj"]
+position = Vector2( 979, 449.592 )
 
-[node name="ColorObj_green_mj" parent="colorObjs_mj" instance=ExtResource( 4 )]
-position = Vector2( 785, 374.592 )
+[node name="ColorObj_blue_mj4" parent="Buckets/colorObjs_mj/Node2D2" instance=ExtResource( 3 )]
 
-[node name="ColorObj_green_mj2" parent="colorObjs_mj" instance=ExtResource( 4 )]
-position = Vector2( 209, 18.592 )
+[node name="Node2D3" type="Node2D" parent="Buckets/colorObjs_mj"]
+position = Vector2( 882, 386.592 )
 
-[node name="ColorObj_green_mj3" parent="colorObjs_mj" instance=ExtResource( 4 )]
-position = Vector2( 988, 401.592 )
+[node name="ColorObj_blue_mj3" parent="Buckets/colorObjs_mj/Node2D3" instance=ExtResource( 3 )]
 
-[node name="ColorObj_red" parent="colorObjs_mj" instance=ExtResource( 5 )]
-position = Vector2( 597, 368.592 )
+[node name="Node2D4" type="Node2D" parent="Buckets/colorObjs_mj"]
+position = Vector2( 753, 482.592 )
 
-[node name="ColorObj_red2" parent="colorObjs_mj" instance=ExtResource( 5 )]
-position = Vector2( 990, 570.592 )
+[node name="ColorObj_blue_mj2" parent="Buckets/colorObjs_mj/Node2D4" instance=ExtResource( 3 )]
 
-[node name="ColorObj_red3" parent="colorObjs_mj" instance=ExtResource( 5 )]
-position = Vector2( 311, 571.592 )
+[node name="Node2D5" type="Node2D" parent="Buckets/colorObjs_mj"]
+position = Vector2( 627, 447.592 )
 
-[node name="ColorObj_red4" parent="colorObjs_mj" instance=ExtResource( 5 )]
-position = Vector2( 210, 150.592 )
+[node name="ColorObj_red4" parent="Buckets/colorObjs_mj/Node2D5" instance=ExtResource( 5 )]
 
-[node name="waterObjs_mj" type="Node2D" parent="."]
+[node name="Node2D6" type="Node2D" parent="Buckets/colorObjs_mj"]
+position = Vector2( 468, 417.592 )
 
-[node name="WaterObj_mj" parent="waterObjs_mj" instance=ExtResource( 13 )]
-position = Vector2( 620, 75.5919 )
+[node name="ColorObj_green_mj" parent="Buckets/colorObjs_mj/Node2D6" instance=ExtResource( 4 )]
+
+[node name="Node2D7" type="Node2D" parent="Buckets/colorObjs_mj"]
+position = Vector2( 306, 139.592 )
+
+[node name="ColorObj_green_mj2" parent="Buckets/colorObjs_mj/Node2D7" instance=ExtResource( 4 )]
+
+[node name="Node2D8" type="Node2D" parent="Buckets/colorObjs_mj"]
+position = Vector2( 242, 136.592 )
+
+[node name="ColorObj_green_mj3" parent="Buckets/colorObjs_mj/Node2D8" instance=ExtResource( 4 )]
+
+[node name="Node2D9" type="Node2D" parent="Buckets/colorObjs_mj"]
+position = Vector2( 176, 135.592 )
+
+[node name="ColorObj_red2" parent="Buckets/colorObjs_mj/Node2D9" instance=ExtResource( 5 )]
+script = SubResource( 5 )
+
+[node name="Node2D10" type="Node2D" parent="Buckets/colorObjs_mj"]
+position = Vector2( 113, 135.592 )
+
+[node name="ColorObj_red" parent="Buckets/colorObjs_mj/Node2D10" instance=ExtResource( 5 )]
+
+[node name="Node2D11" type="Node2D" parent="Buckets/colorObjs_mj"]
+position = Vector2( 50, 136.592 )
+
+[node name="ColorObj_red3" parent="Buckets/colorObjs_mj/Node2D11" instance=ExtResource( 5 )]
+
+[node name="waterObjs_mj" type="Node2D" parent="Buckets"]
+
+[node name="Node2D" type="Node2D" parent="Buckets/waterObjs_mj"]
+position = Vector2( 953, 114.592 )
+
+[node name="WaterObj_mj" parent="Buckets/waterObjs_mj/Node2D" instance=ExtResource( 13 )]
 scale = Vector2( 0.163015, 0.163015 )
 
-[node name="WaterObj_mj2" parent="waterObjs_mj" instance=ExtResource( 13 )]
-position = Vector2( 940, 73.5919 )
+[node name="Node2D2" type="Node2D" parent="Buckets/waterObjs_mj"]
+position = Vector2( 948, 61.592 )
+
+[node name="WaterObj_mj" parent="Buckets/waterObjs_mj/Node2D2" instance=ExtResource( 13 )]
 scale = Vector2( 0.163015, 0.163015 )
 
-[node name="WaterObj_mj3" parent="waterObjs_mj" instance=ExtResource( 13 )]
-position = Vector2( 619, 106.592 )
+[node name="Node2D3" type="Node2D" parent="Buckets/waterObjs_mj"]
+position = Vector2( 623, 173.592 )
+
+[node name="WaterObj_mj" parent="Buckets/waterObjs_mj/Node2D3" instance=ExtResource( 13 )]
 scale = Vector2( 0.163015, 0.163015 )
 
-[node name="WaterObj_mj4" parent="waterObjs_mj" instance=ExtResource( 13 )]
-position = Vector2( 621, 143.592 )
+[node name="Node2D4" type="Node2D" parent="Buckets/waterObjs_mj"]
+position = Vector2( 619, 58.592 )
+
+[node name="WaterObj_mj" parent="Buckets/waterObjs_mj/Node2D4" instance=ExtResource( 13 )]
 scale = Vector2( 0.163015, 0.163015 )
 
-[node name="WaterObj_mj5" parent="waterObjs_mj" instance=ExtResource( 13 )]
-position = Vector2( 943, 108.592 )
+[node name="Node2D5" type="Node2D" parent="Buckets/waterObjs_mj"]
+position = Vector2( 624, 116.592 )
+
+[node name="WaterObj_mj" parent="Buckets/waterObjs_mj/Node2D5" instance=ExtResource( 13 )]
 scale = Vector2( 0.163015, 0.163015 )
 
-[node name="WaterObj_mj6" parent="waterObjs_mj" instance=ExtResource( 13 )]
-position = Vector2( 941, 148.592 )
-scale = Vector2( 0.163015, 0.163015 )
+[node name="Enemies" type="Node2D" parent="."]
+position = Vector2( 10, 6.592 )
+
+[node name="BatPath" type="Path2D" parent="Enemies"]
+curve = SubResource( 3 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/BatPath"]
+position = Vector2( 77.4112, 57.1819 )
+offset = 21.56
+rotate = false
+
+[node name="Bat" parent="Enemies/BatPath/PathFollow2D" instance=ExtResource( 14 )]
+
+[node name="BatPath2" type="Path2D" parent="Enemies"]
+position = Vector2( 90, 345 )
+curve = SubResource( 6 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/BatPath2"]
+position = Vector2( 125.39, 42.8827 )
+offset = 15.84
+rotate = false
+
+[node name="Bat" parent="Enemies/BatPath2/PathFollow2D" instance=ExtResource( 14 )]
+
+[node name="Path2D2" type="Path2D" parent="Enemies"]
+position = Vector2( 428, 515 )
+curve = SubResource( 8 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D2"]
+position = Vector2( 248, -34 )
+rotation = 1.77544
+
+[node name="Shooter_Move" parent="Enemies/Path2D2/PathFollow2D" instance=ExtResource( 15 )]
+
+[node name="Path2D" type="Path2D" parent="Enemies"]
+position = Vector2( 428, 515 )
+curve = SubResource( 7 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D"]
+position = Vector2( 9, -1 )
+rotation = -0.195158
+
+[node name="Shooter_Move" parent="Enemies/Path2D/PathFollow2D" instance=ExtResource( 15 )]
+position = Vector2( 240, -31 )
+
+[connection signal="draw" from="Enemies/BatPath/PathFollow2D/Bat" to="." method="_on_Bat_draw"]
+[connection signal="draw" from="Enemies/BatPath/PathFollow2D/Bat" to="Enemies/BatPath/PathFollow2D/Bat" method="_on_Bat_draw"]
