@@ -22,5 +22,6 @@ func _ready():
 
 
 func _process(delta):
-	get_parent().offset += bat_speed * delta
+	if get_parent() is PathFollow2D:
+		get_parent().offset += bat_speed * delta
 
