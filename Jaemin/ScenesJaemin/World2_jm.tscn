@@ -11,7 +11,7 @@
 [ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=9]
 [ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=10]
 [ext_resource path="res://assets/Texture/TX Struct.png" type="Texture" id=11]
-[ext_resource path="res://Scripts/World_mj.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/World_mj2.gd" type="Script" id=12]
 [ext_resource path="res://Scenes/waterObj_mj.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Enemies/MeleeBot_Move.tscn" type="PackedScene" id=15]
@@ -84,7 +84,7 @@ points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 1
 3/shapes = [  ]
 3/z_index = 0
 
-[sub_resource type="GDScript" id=4]
+[sub_resource type="GDScript" id=3]
 script/source = "extends Area2D
 
 class_name ColorObj_blue_mj
@@ -110,7 +110,7 @@ func _on_Collect_anim_animation_finished(anim_name):
 	queue_free()
 "
 
-[sub_resource type="GDScript" id=5]
+[sub_resource type="GDScript" id=4]
 script/source = "extends Area2D
 
 class_name ColorObj_red_mj
@@ -136,17 +136,17 @@ func _on_Collect_anim_animation_finished(anim_name):
 	queue_free()
 "
 
-[sub_resource type="Curve2D" id=6]
+[sub_resource type="Curve2D" id=5]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 78, -3, 0, 0, 0, 0, 37, 3, 0, 0, 0, 0, 7, 32, 0, 0, 0, 0, -4, 84, 0, 0, 0, 0, 5, 125, 0, 0, 0, 0, 27, 149, 0, 0, 0, 0, 72, 175, 0, 0, 0, 0, 107, 170, 0, 0, 0, 0, 137, 149, 0, 0, 0, 0, 155, 118, 0, 0, 0, 0, 156, 87, 0, 0, 0, 0, 153, 58, 0, 0, 0, 0, 139, 29, 0, 0, 0, 0, 107, 7, 0, 0, 0, 0, 78, -4 )
 }
 
-[sub_resource type="Curve2D" id=7]
+[sub_resource type="Curve2D" id=6]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -36, -19, 0, 0, 0, 0, -80, -15, 0, 0, 0, 0, -113, 12, 0, 0, 0, 0, -124, 62, 0, 0, 0, 0, -116, 105, 0, 0, 0, 0, -91, 135, 0, 0, 0, 0, -47, 155, 0, 0, 0, 0, -10, 147, 0, 0, 0, 0, 22, 128, 0, 0, 0, 0, 35, 96, 0, 0, 0, 0, 32, 48, 0, 0, 0, 0, 18, 14, 0, 0, 0, 0, -1, -2, 0, 0, 0, 0, -5, -3 )
 }
 
-[sub_resource type="Curve2D" id=8]
+[sub_resource type="Curve2D" id=7]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -173, 173, 0, 0, 0, 0, 2, 4, 0, 0, 0, 0, 175, 166, 0, 0, 0, 0, -4, 316, 0, 0, 0, 0, -174, 174 )
 }
@@ -215,7 +215,7 @@ position = Vector2( 0, -121.231 )
 position = Vector2( 276, 468.592 )
 
 [node name="ColorObj_blue_mj" parent="Buckets/colorObjs_mj/Node2D" instance=ExtResource( 3 )]
-script = SubResource( 4 )
+script = SubResource( 3 )
 
 [node name="Node2D2" type="Node2D" parent="Buckets/colorObjs_mj"]
 position = Vector2( 665, 458.592 )
@@ -256,7 +256,7 @@ position = Vector2( 319, 133.592 )
 position = Vector2( 311, 299.592 )
 
 [node name="ColorObj_red2" parent="Buckets/colorObjs_mj/Node2D9" instance=ExtResource( 5 )]
-script = SubResource( 5 )
+script = SubResource( 4 )
 
 [node name="Node2D10" type="Node2D" parent="Buckets/colorObjs_mj"]
 position = Vector2( 656, 290.592 )
@@ -305,7 +305,7 @@ position = Vector2( 10, 6.592 )
 
 [node name="Path2D" type="Path2D" parent="Enemies"]
 position = Vector2( 389, 195 )
-curve = SubResource( 6 )
+curve = SubResource( 5 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D"]
 position = Vector2( 77.3269, -2.9015 )
@@ -316,7 +316,7 @@ offset = 1.0
 
 [node name="Path2D2" type="Path2D" parent="Enemies"]
 position = Vector2( 509, 213 )
-curve = SubResource( 7 )
+curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D2"]
 position = Vector2( -0.601815, -0.317625 )
@@ -328,7 +328,7 @@ offset = 1.0
 [node name="Path2D3" type="Path2D" parent="Enemies"]
 position = Vector2( 542, 262 )
 rotation = 0.714854
-curve = SubResource( 7 )
+curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D3"]
 position = Vector2( -0.601815, -0.317625 )
@@ -340,7 +340,7 @@ offset = 1.0
 [node name="Path2D4" type="Path2D" parent="Enemies"]
 position = Vector2( 542, 262 )
 rotation = 0.714854
-curve = SubResource( 7 )
+curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D4"]
 position = Vector2( -0.601815, -0.317625 )
@@ -352,7 +352,7 @@ offset = 1.0
 [node name="Path2D5" type="Path2D" parent="Enemies"]
 position = Vector2( 532, 323 )
 rotation = 1.42748
-curve = SubResource( 7 )
+curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D5"]
 position = Vector2( -0.601815, -0.317625 )
@@ -364,7 +364,7 @@ offset = 1.0
 [node name="Path2D6" type="Path2D" parent="Enemies"]
 position = Vector2( 474, 369 )
 rotation = 2.42359
-curve = SubResource( 7 )
+curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D6"]
 position = Vector2( -0.601815, -0.317625 )
@@ -376,7 +376,7 @@ offset = 1.0
 [node name="Path2D7" type="Path2D" parent="Enemies"]
 position = Vector2( 425, 358 )
 rotation = 3.06886
-curve = SubResource( 7 )
+curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D7"]
 position = Vector2( -0.601815, -0.317625 )
@@ -388,7 +388,7 @@ offset = 1.0
 [node name="Path2D8" type="Path2D" parent="Enemies"]
 position = Vector2( 384, 292 )
 rotation = 4.04861
-curve = SubResource( 7 )
+curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D8"]
 position = Vector2( -0.601815, -0.317625 )
@@ -400,7 +400,7 @@ offset = 1.0
 [node name="Path2D9" type="Path2D" parent="Enemies"]
 position = Vector2( 403, 236 )
 rotation = 4.72401
-curve = SubResource( 7 )
+curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D9"]
 position = Vector2( -0.601815, -0.317625 )
@@ -413,7 +413,7 @@ offset = 1.0
 position = Vector2( 539, 238 )
 rotation = 4.72401
 scale = Vector2( 1.1741, -0.965419 )
-curve = SubResource( 7 )
+curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D10"]
 position = Vector2( -0.601815, -0.317625 )
@@ -424,7 +424,7 @@ offset = 1.0
 
 [node name="Path2D11" type="Path2D" parent="Enemies"]
 position = Vector2( 468, 121 )
-curve = SubResource( 8 )
+curve = SubResource( 7 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D11"]
 position = Vector2( -172.511, 172.527 )
@@ -436,7 +436,7 @@ offset = 1.0
 [node name="Path2D12" type="Path2D" parent="Enemies"]
 position = Vector2( 602, 185 )
 rotation = 0.849226
-curve = SubResource( 8 )
+curve = SubResource( 7 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D12"]
 position = Vector2( -172.511, 172.527 )
@@ -448,7 +448,7 @@ offset = 1.0
 [node name="Path2D13" type="Path2D" parent="Enemies"]
 position = Vector2( 373, 169 )
 rotation = -0.68585
-curve = SubResource( 8 )
+curve = SubResource( 7 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D13"]
 position = Vector2( -172.511, 172.527 )
@@ -460,7 +460,7 @@ offset = 1.0
 [node name="Path2D14" type="Path2D" parent="Enemies"]
 position = Vector2( 309, 309 )
 rotation = -1.67879
-curve = SubResource( 8 )
+curve = SubResource( 7 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D14"]
 position = Vector2( -172.511, 172.527 )
@@ -472,7 +472,7 @@ offset = 1.0
 [node name="Path2D15" type="Path2D" parent="Enemies"]
 position = Vector2( 359, 412 )
 rotation = -2.33378
-curve = SubResource( 8 )
+curve = SubResource( 7 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D15"]
 position = Vector2( -172.511, 172.527 )
@@ -484,7 +484,7 @@ offset = 1.0
 [node name="Path2D16" type="Path2D" parent="Enemies"]
 position = Vector2( 466, 462 )
 rotation = -3.14734
-curve = SubResource( 8 )
+curve = SubResource( 7 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D16"]
 position = Vector2( -172.511, 172.527 )
@@ -496,7 +496,7 @@ offset = 1.0
 [node name="Path2D17" type="Path2D" parent="Enemies"]
 position = Vector2( 587, 411 )
 rotation = -3.9478
-curve = SubResource( 8 )
+curve = SubResource( 7 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D17"]
 position = Vector2( -172.511, 172.527 )
@@ -508,7 +508,7 @@ offset = 1.0
 [node name="Path2D18" type="Path2D" parent="Enemies"]
 position = Vector2( 628, 280 )
 rotation = -4.69935
-curve = SubResource( 8 )
+curve = SubResource( 7 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D18"]
 position = Vector2( -172.511, 172.527 )
