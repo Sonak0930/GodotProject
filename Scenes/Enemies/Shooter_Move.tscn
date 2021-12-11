@@ -29,6 +29,7 @@ animations = [ {
 } ]
 
 [node name="Shooter_Move" type="Area2D"]
+pause_mode = 2
 collision_layer = 2
 script = ExtResource( 11 )
 Bullet = ExtResource( 12 )

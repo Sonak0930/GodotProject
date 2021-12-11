@@ -105,6 +105,7 @@ volume_db = -15.0
 
 [node name="button_sound" type="AudioStreamPlayer2D" parent="."]
 pause_mode = 2
+process_priority = 1
 stream = ExtResource( 10 )
 volume_db = -15.0
 

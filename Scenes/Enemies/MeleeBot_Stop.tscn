@@ -118,6 +118,7 @@ animations = [ {
 extents = Vector2( 22.5, 9 )
 
 [node name="MeleeBot_Stop" type="Area2D"]
+pause_mode = 2
 collision_layer = 2
 script = ExtResource( 3 )
 
