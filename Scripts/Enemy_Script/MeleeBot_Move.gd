@@ -8,7 +8,7 @@ onready var world_node = get_tree().get_current_scene()
 var sec = 0.0
 var enemyName = ["melee_move"]
 
-var speed = 200
+var speed = 100
 
 func _ready():
 	animated_sprite.play("run")

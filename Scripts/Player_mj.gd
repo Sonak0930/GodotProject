@@ -3,8 +3,9 @@ extends KinematicBody2D
 class_name Player_mj
 
 onready var anima = $AnimatedSprite
-var speed = 120.0
-#var speed = 300
+onready var animaPlayer = $AnimationPlayer
+#var speed = 120.0
+var speed = 150
 
 signal attacked(body, enemyName)
 signal collected(colorObjName)
@@ -45,4 +46,5 @@ func _on_Enemies_body_entered(body, enemyName):
 	if body != self:
 		return
 	emit_signal("attacked",enemyName)
+	animaPlayer.play("ouch")
 	print("player said: I've just attacked by ",enemyName)

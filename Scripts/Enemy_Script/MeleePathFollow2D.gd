@@ -2,7 +2,7 @@ extends PathFollow2D
 
 var last_position
 var direction_flag = true  # F = left / T = right
-var mel_speed = 100
+
 func _ready():
 	last_position = global_position
 	
@@ -10,10 +10,9 @@ func _process(delta):
 	update_toggle_h(global_position - last_position)
 	last_position = global_position
 	
-	
-	
-	offset += mel_speed * delta
-	
+
+	#offset += mel_speed * delta
+
 func update_toggle_h(direction: Vector2):
 	# moving left
 	if direction.x < 0:

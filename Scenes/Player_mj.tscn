@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/pink_walk/Pink_Monster_Walk_6.png" type="Texture" id=1]
 [ext_resource path="res://assets/pink_walk/walk Reverted.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Player_mj.gd" type="Script" id=3]
+[ext_resource path="res://assets/Animations/player_ouch.tres" type="Animation" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -88,4 +89,8 @@ frames = SubResource( 13 )
 animation = "Right"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, -0.10511 )
 polygon = PoolVector2Array( 6.68025, 4.14724, 5, 9, 6.97789, 15.5567, -8.10242, 15.3583, -6.61423, 9.00865, -8.30085, 2.95669, -8.79691, -1.30945, -6.81266, -5.37717, -6.3166, -11.2307, -3.34022, -11.2307, -2.34809, -7.163, 0.628284, -7.06378, 0.925922, -11.1315, 3.80309, -11.2307, 5.39049, -4.58347, 7.57317, -0.813391 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/ouch = ExtResource( 4 )
