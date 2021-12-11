@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/389634__stubb__wing-flap-1.wav-37919372aaa3ebf135c60398d4c7601e.sample"
+
+[deps]
+
+source_file="res://sounds/bat_soundeffect/389634__stubb__wing-flap-1.wav"
+dest_files=[ "res://.import/389634__stubb__wing-flap-1.wav-37919372aaa3ebf135c60398d4c7601e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

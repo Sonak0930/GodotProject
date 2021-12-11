@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scenes/Ui_mj.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player_mj.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Scenes/waterObj_mj.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Enemies/MeleePathFollow2D.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/wall_mj.tscn" type="PackedScene" id=15]
+[ext_resource path="res://sounds/UIbutton_soundeffect/Blop Sound.mp3" type="AudioStream" id=16]
 [ext_resource path="res://Scenes/Enemies/MeleeBot_Stop.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Enemies/Shooter_Stop.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=19]
@@ -281,3 +282,7 @@ position = Vector2( 23, -76.408 )
 
 [node name="Wall_mj" parent="." instance=ExtResource( 15 )]
 position = Vector2( -2.5199, -119.692 )
+
+[node name="waterBucket_buttonSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 16 )
+volume_db = -15.0

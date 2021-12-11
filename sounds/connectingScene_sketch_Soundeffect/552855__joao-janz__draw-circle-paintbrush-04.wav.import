@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/552855__joao-janz__draw-circle-paintbrush-04.wav-fbee6ccff81c3173601a7b4b5227fbea.sample"
+
+[deps]
+
+source_file="res://sounds/connectingScene_sketch_Soundeffect/552855__joao-janz__draw-circle-paintbrush-04.wav"
+dest_files=[ "res://.import/552855__joao-janz__draw-circle-paintbrush-04.wav-fbee6ccff81c3173601a7b4b5227fbea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

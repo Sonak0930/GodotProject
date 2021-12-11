@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Panel/GameOverPanel.gd" type="Script" id=1]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-185.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-188.png" type="Texture" id=6]
 [ext_resource path="res://assets/Font Colby/Colby-StBlk.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/font/Colby-StBlk.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://sounds/mixkit-player-losing-or-failing-2042.wav" type="AudioStream" id=9]
+[ext_resource path="res://sounds/UIbutton_soundeffect/Blop Sound.mp3" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 54
@@ -39,8 +41,8 @@ margin_left = 513.0
 margin_top = 136.0
 margin_right = 844.0
 margin_bottom = 191.0
-custom_colors/font_color = Color( 0.831373, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.831373, 0, 0, 1 )
 text = "Game Over!"
 align = 1
 valign = 1
@@ -95,6 +97,16 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="gameover_sound" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 9 )
+volume_db = -15.0
+
+[node name="button_sound" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 10 )
+volume_db = -15.0
 
 [connection signal="pressed" from="PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
 [connection signal="pressed" from="ExitGameButton" to="." method="_on_ExitGameButton_pressed"]
