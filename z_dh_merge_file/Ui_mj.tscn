@@ -15,11 +15,11 @@
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-168.png" type="Texture" id=13]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-183.png" type="Texture" id=14]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 21
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 21
 font_data = ExtResource( 6 )
 
@@ -352,7 +352,7 @@ margin_left = 804.0
 margin_top = 65.0
 margin_right = 1049.0
 margin_bottom = 106.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Exit To Menu"
 align = 1
 valign = 1
@@ -377,7 +377,7 @@ margin_left = 802.0
 margin_top = 14.0
 margin_right = 1047.0
 margin_bottom = 55.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Play Again"
 align = 1
 valign = 1
@@ -396,8 +396,8 @@ margin_left = 760.0
 margin_top = 44.0
 margin_right = 822.0
 margin_bottom = 85.0
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.854902, 0, 0.164706, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Lv."
 align = 1
 valign = 1
