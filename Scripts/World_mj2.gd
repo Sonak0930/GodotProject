@@ -1,6 +1,6 @@
 extends Node2D
 
-class_name world_mj
+class_name world_mj2
 
 #player
 onready var player = $Player_mj
@@ -40,8 +40,8 @@ var is_complited
 
 
 func _ready():
-	GameManager.stage = 2
-	get_node("UI_mj/LvText").text = "Lv. 2"
+	GameManager.stage = 5
+	get_node("UI_mj/LvText").text = "Lv. 5"
 	#connect with player
 	player.connect("attacked",self,"_on_attacked")
 	player.connect("collected",self,"_on_collected")

@@ -345,7 +345,8 @@ position = Vector2( 412, 498 )
 curve = SubResource( 7 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D"]
-rotation = -0.195158
+position = Vector2( -1, -1 )
+rotation = -0.0234332
 
 [node name="Shooter_Move" parent="Enemies/Path2D/PathFollow2D" instance=ExtResource( 15 )]
 

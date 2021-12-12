@@ -11,7 +11,7 @@
 [ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=9]
 [ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=10]
 [ext_resource path="res://assets/Texture/TX Struct.png" type="Texture" id=11]
-[ext_resource path="res://Scripts/World_mj.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/World_mj2.gd" type="Script" id=12]
 [ext_resource path="res://Scenes/waterObj_mj.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Enemies/MeleeBot_Move.tscn" type="PackedScene" id=15]

@@ -149,8 +149,52 @@ func _unhandled_input(event):
 			update_action_key("ui_right", event)
 			return
 
-
+""" Play Panel buttons """
 func _on_BackButton_pressed():
-	""" Play panel back button """
 	$MenuItems.visible = true
 	$PlayPanel.visible = false
+
+
+func _on_NewGameButton_pressed():
+	# save level data to level 1
+	GameManagerJm.stage = 1
+	GameManagerJm.save_game()
+	get_tree().change_scene("res://Scenes/Levels/L1.tscn")
+
+
+func _on_LoadGameButton_pressed():
+	# Stage already loaded in GameManager
+	print(GameManagerJm.stage)
+	"""
+	I don't know why this isn't working...
+	match GameManagerJm.stage:
+		1: # go to lv 1...
+			get_tree().change_scene("res://Scenes/Levels/L1.tscn")
+		2:
+			get_tree().change_scene("res://Jaemin/ScenesJaemin/World1_jm.tscn")
+		3:
+			print("wow")
+			get_tree().change_scene("res://Scenes/Levels/L3.tscn")
+		4:
+			get_tree().change_scene("res://Scenes/Levels/L4.tscn")
+		5:
+			get_tree().change_scene("res://Jaemin/ScenesJaemin/World2_jm.tscn")
+		6:  
+			get_tree().change_scene("res://Scenes/Levels/L6.tscn")
+		7:
+			get_tree().change_scene("res://Scenes/Levels/L6.tscn")
+	"""
+	if GameManagerJm.stage == 1:
+		get_tree().change_scene("res://Scenes/Levels/L1.tscn")
+	elif GameManagerJm.stage == 2:
+		get_tree().change_scene("res://Jaemin/ScenesJaemin/World1_jm.tscn")
+	elif GameManagerJm.stage == 3:
+		get_tree().change_scene("res://Scenes/Levels/L3.tscn")
+	elif GameManagerJm.stage == 4:
+		get_tree().change_scene("res://Scenes/Levels/L4.tscn")
+	elif GameManagerJm.stage == 5:
+		get_tree().change_scene("res://Jaemin/ScenesJaemin/World2_jm.tscn")
+	elif GameManagerJm.stage == 6:
+		get_tree().change_scene("res://Scenes/Levels/L6.tscn")
+	elif GameManagerJm.stage == 7:
+		get_tree().change_scene("res://Scenes/Levels/L6.tscn")
