@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/539917__cmoki__ow-sound.mp3-e098d692ab0b727b547665a7a5fa0922.mp3str"
+
+[deps]
+
+source_file="res://sounds/Player_Soundeffect/539917__cmoki__ow-sound.mp3"
+dest_files=[ "res://.import/539917__cmoki__ow-sound.mp3-e098d692ab0b727b547665a7a5fa0922.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

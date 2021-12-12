@@ -115,6 +115,7 @@ func life_is_color():
 	if(CurrentColor[0]+CurrentColor[1]+CurrentColor[2]==0):
 		print("you lose!")
 		$"CanvasLayer/Panels/GameOverPanel".visible = true
+		$"CanvasLayer/Panels/GameOverPanel/gameover_sound".play()
 		get_tree().paused = true
 
 
@@ -122,10 +123,12 @@ func life_is_color():
 		print("Left color objs num", sum)
 		print("you lose!")
 		$"CanvasLayer/Panels/GameOverPanel".visible = true
+		$"CanvasLayer/Panels/GameOverPanel/gameover_sound".play()
 		get_tree().paused = true
 	elif (CurrentColor[0]<TargetColor[0]||CurrentColor[1]<TargetColor[1]||CurrentColor[2]<TargetColor[2])&& sum==0:
 		print("you lose")
 		$"CanvasLayer/Panels/GameOverPanel".visible = true
+		$"CanvasLayer/Panels/GameOverPanel/gameover_sound".play()
 		get_tree().paused = true
 
 
@@ -197,6 +200,7 @@ func update_ui():
 # reaction to button_pressed
 func _on_Waterbukkit_pressed():
 	""" Updated """
+	$waterBucket_buttonSound.play()
 	var sum = colorbucket_red_num + colorbucket_green_num + colorbucket_blue_num
 	if sum > 1 and Waterbucket_num > 0:
 		$"CanvasLayer/Panels/WaterPanel".visible = true

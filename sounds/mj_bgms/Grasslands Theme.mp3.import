@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Grasslands Theme.mp3-b87bc105a655496f4705235033626ed6.mp3str"
+
+[deps]
+
+source_file="res://sounds/mj_bgms/Grasslands Theme.mp3"
+dest_files=[ "res://.import/Grasslands Theme.mp3-b87bc105a655496f4705235033626ed6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

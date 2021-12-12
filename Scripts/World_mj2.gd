@@ -46,7 +46,9 @@ func _ready():
 	# reset game judgement var
 	is_same = false
 	#set TargetCol and  reset CurrentCol
+
 	TargetColor = Color(250,200,100,1)
+
 	CurrentColor = Color(50,50,50,1)
 	# set colorBukkit num
 	colorbucket_red_num = 1

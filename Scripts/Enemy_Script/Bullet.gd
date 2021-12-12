@@ -31,6 +31,6 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 
 func _on_Enemies_body_entered(body):
-	#if body is Player_Dh:
-	#print("Hits player")
+	if body is Player_mj:
+		$bullet_attackSound.play()
 	queue_free()

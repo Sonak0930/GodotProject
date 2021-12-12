@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/scott-buckley-felicity.mp3-2886bf3fd254fa488b807b64eac5cdb6.mp3str"
+
+[deps]
+
+source_file="res://sounds/mj_bgms/scott-buckley-felicity.mp3"
+dest_files=[ "res://.import/scott-buckley-felicity.mp3-2886bf3fd254fa488b807b64eac5cdb6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

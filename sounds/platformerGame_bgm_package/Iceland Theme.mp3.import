@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Iceland Theme.mp3-01bf23735c5942b9379ef52cfe9c4cb4.mp3str"
+
+[deps]
+
+source_file="res://sounds/platformerGame_bgm_package/Iceland Theme.mp3"
+dest_files=[ "res://.import/Iceland Theme.mp3-01bf23735c5942b9379ef52cfe9c4cb4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
