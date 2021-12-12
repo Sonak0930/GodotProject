@@ -17,11 +17,13 @@ func _ready():
 			if child is Player_mj:
 				player = child
 				connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
+				connect("body_entered",self,"_on_Enemies_body_entered",enemyName)
 
 func _process(delta):
 	sec += delta
 	if sec >= 3: # Starts to attack
 		animated_sprite.play("attack")
+		$melee_swordSound.play()
 		$AttackArea/CollisionShape2D.disabled = false
 		sec = 0.0
 
@@ -35,3 +37,7 @@ func _on_AnimatedSprite_animation_finished():
 
 func toggle_h():
 	scale.x = -1 * scale.x
+
+func _on_Enemies_body_entered(body,enemyName):
+	if body is Player_mj:
+		$melee_attackSound.play()

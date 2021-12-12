@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/UI/TargetColor_circle_mj.gd" type="Script" id=1]
 [ext_resource path="res://assets/bucket.png" type="Texture" id=2]
@@ -16,10 +16,6 @@
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-183.png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=2]
-size = 21
-font_data = ExtResource( 6 )
-
-[sub_resource type="DynamicFont" id=3]
 size = 21
 font_data = ExtResource( 6 )
 
@@ -397,8 +393,8 @@ margin_top = 44.0
 margin_right = 822.0
 margin_bottom = 85.0
 custom_colors/font_color = Color( 0.854902, 0, 0.164706, 1 )
-custom_fonts/font = SubResource( 3 )
-text = "Lv. 1"
+custom_fonts/font = SubResource( 2 )
+text = "Lv."
 align = 1
 valign = 1
 __meta__ = {

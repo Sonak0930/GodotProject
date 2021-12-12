@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://TileSets/StoneTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://Scenes/Enemies/ShooterPathFollow2D.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Scenes/Enemies/MeleePathFollow2D.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scenes/wall_mj.tscn" type="PackedScene" id=21]
+[ext_resource path="res://sounds/UIbutton_soundeffect/Blop Sound.mp3" type="AudioStream" id=22]
+[ext_resource path="res://sounds/mj_bgms/Komiku_-_02_-_Home.mp3" type="AudioStream" id=23]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -318,3 +320,14 @@ position = Vector2( 23, -76.408 )
 
 [node name="Wall_mj" parent="." instance=ExtResource( 21 )]
 position = Vector2( -2.5199, -119.692 )
+
+[node name="waterBucket_buttonSound" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 22 )
+volume_db = -15.0
+
+[node name="lv1backgroundmusic" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 23 )
+volume_db = -15.0
+autoplay = true

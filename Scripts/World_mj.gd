@@ -40,6 +40,8 @@ var is_complited
 
 
 func _ready():
+	GameManager.stage = 2
+	get_node("UI_mj/LvText").text = "Lv. 2"
 	#connect with player
 	player.connect("attacked",self,"_on_attacked")
 	player.connect("collected",self,"_on_collected")
@@ -73,9 +75,12 @@ var bat_speed = 100
 var melee_speed = 100
 # Enemy movment control
 func _process(delta):
+	"""Just for test"""
+	if Input.is_action_pressed("ui_accept"):
+		CurrentColor = TargetColor
+		compare_color()
+	
 	# Update bat offset
-	
-	
 	if $Enemies/BatPath/PathFollow2D != null:
 		$Enemies/BatPath/PathFollow2D.offset += bat_speed * delta
 	
@@ -98,10 +103,9 @@ func compare_color():
 		is_same = true
 		print("congrates!! you win!!")
 
-		get_tree().change_scene("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
 		GameManager.advanceStage()
-		
-		print_tree_pretty()
+		get_tree().change_scene("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
+
 
 	else:
 		print("cheer up!!")
@@ -136,18 +140,24 @@ func _on_attacked(enemyName):
 func set_random_color(colBitrange)->Color:
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	var rnum = rng.randi_range(0,255)
-	var rnum2 = rng.randi_range(1,colBitrange)
+	
+	var rnum = rng.randi_range(0,2)
 	var resultColor = Color(0,0,0,0)
-	if 0 <= rnum  && rnum < 85:
-		resultColor = Color(50*rnum2,0,0,0)
-	elif 85 <= rnum && rnum < 170:
-		resultColor = Color(0,50*rnum2,0,0)
-	elif 170 <= rnum && rnum <= 255:
-		resultColor = Color(0,0,50*rnum2,0)
+	
 	if CurrentColor[0]+CurrentColor[1]+CurrentColor[2]==50:
-		resultColor = CurrentColor
-	return resultColor
+		return CurrentColor
+	
+	while true:
+		if rnum == 0 and CurrentColor[0] != 0:
+			return Color(50, 0, 0, 0)
+		elif rnum == 1 and CurrentColor[1] != 0:
+			return Color(0, 50, 0, 0)
+		elif rnum == 2 and CurrentColor[2] != 0:
+			return Color(0, 0, 50, 0)
+		else:
+			rnum = rng.randi_range(0, 2)
+	
+	return resultColor # Dummy return
 
 
 

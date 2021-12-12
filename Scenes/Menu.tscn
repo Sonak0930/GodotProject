@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/WallTileSet.tres" type="TileSet" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://Jaemin/Assets_Jaemin/AmbientSounds/Adventure-320bit(menu).mp3" type="AudioStream" id=4]
 [ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=5]
 [ext_resource path="res://TileSets/PropsTileset.tres" type="TileSet" id=6]
-[ext_resource path="res://Scenes/Player_Dh.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Player_mj.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-167.png" type="Texture" id=8]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-184.png" type="Texture" id=9]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-168.png" type="Texture" id=10]
@@ -37,6 +37,11 @@
 [ext_resource path="res://assets/UIButtonsVideogames/arrows/Icon44.png" type="Texture" id=35]
 [ext_resource path="res://assets/UIButtonsVideogames/arrows/Icon45.png" type="Texture" id=36]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-165.png" type="Texture" id=37]
+[ext_resource path="res://Scenes/Panel/PaintPanel.tscn" type="PackedScene" id=38]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-186.png" type="Texture" id=39]
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 34, 11 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 40
@@ -46,7 +51,14 @@ font_data = ExtResource( 15 )
 size = 40
 font_data = ExtResource( 15 )
 
+[sub_resource type="DynamicFont" id=16]
+size = 40
+font_data = ExtResource( 28 )
+
 [sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 0.517647, 0.517647, 1 )
+
+[sub_resource type="StyleBoxFlat" id=18]
 bg_color = Color( 1, 0.517647, 0.517647, 1 )
 
 [sub_resource type="DynamicFontData" id=8]
@@ -60,12 +72,19 @@ font_data = SubResource( 8 )
 size = 40
 font_data = ExtResource( 28 )
 
+[sub_resource type="DynamicFont" id=17]
+size = 40
+font_data = ExtResource( 28 )
+
 [sub_resource type="DynamicFont" id=12]
 size = 40
 font_data = ExtResource( 28 )
 
 [sub_resource type="DynamicFont" id=14]
 size = 40
+font_data = ExtResource( 28 )
+
+[sub_resource type="DynamicFont" id=20]
 font_data = ExtResource( 28 )
 
 [node name="MenuScene" type="Node2D"]
@@ -108,8 +127,20 @@ show_collision = true
 collision_layer = 8
 format = 1
 
-[node name="Player_Dh" parent="." instance=ExtResource( 7 )]
-position = Vector2( 115, 339 )
+[node name="PaintingArea" type="Area2D" parent="."]
+position = Vector2( 795, 212 )
+collision_layer = 32
+
+[node name="Sprite" type="Sprite" parent="PaintingArea"]
+scale = Vector2( 0.267442, 0.267442 )
+texture = ExtResource( 39 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PaintingArea"]
+visible = false
+shape = SubResource( 19 )
+
+[node name="Player_mj" parent="." instance=ExtResource( 7 )]
+position = Vector2( 859, 364 )
 
 [node name="PlantTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 5 )
@@ -277,6 +308,7 @@ margin_left = 634.0
 margin_top = 163.0
 margin_right = 803.0
 margin_bottom = 204.0
+custom_fonts/font = SubResource( 16 )
 text = "Options"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -296,7 +328,8 @@ margin_top = 254.0
 margin_right = 855.0
 margin_bottom = 283.0
 custom_styles/grabber_area_highlight = SubResource( 7 )
-min_value = -80.0
+custom_styles/grabber_area = SubResource( 18 )
+min_value = -20.0
 max_value = 0.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -437,6 +470,7 @@ margin_left = 610.0
 margin_top = 155.0
 margin_right = 779.0
 margin_bottom = 196.0
+custom_fonts/font = SubResource( 17 )
 text = "Play"
 align = 1
 valign = 1
@@ -521,11 +555,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PaintPanel" parent="." instance=ExtResource( 38 )]
+visible = true
+position = Vector2( 794, 381 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
 stream = ExtResource( 4 )
 volume_db = -6.638
+autoplay = true
 
+[node name="Instruction" type="Label" parent="."]
+margin_left = 669.0
+margin_top = 153.0
+margin_right = 923.0
+margin_bottom = 190.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 20 )
+text = "Stand here to view
+ the current painting"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="PaintingArea" to="." method="_on_PaintingArea_body_entered"]
+[connection signal="body_exited" from="PaintingArea" to="." method="_on_PaintingArea_body_exited"]
 [connection signal="pressed" from="MenuItems/MenuItemContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="MenuItems/MenuItemContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="MenuItems/MenuItemContainer/CreditButton" to="." method="_on_CreditButton_pressed"]
@@ -537,4 +593,6 @@ volume_db = -6.638
 [connection signal="pressed" from="OptionsPanel/KeyOptions/HBoxContainer/RightBtn" to="." method="_on_RightBtn_pressed"]
 [connection signal="pressed" from="OptionsPanel/AcceptBtn" to="." method="_on_AcceptBtn_pressed"]
 [connection signal="pressed" from="OptionsPanel/ExitBtn" to="." method="_on_ExitBtn_pressed"]
+[connection signal="pressed" from="PlayPanel/VBoxContainer/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="PlayPanel/VBoxContainer/LoadGameButton" to="." method="_on_LoadGameButton_pressed"]
 [connection signal="pressed" from="PlayPanel/VBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]

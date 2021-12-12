@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Water Droplet Sound.mp3-5991d6a29241c6c065edadc974998fa4.mp3str"
+
+[deps]
+
+source_file="res://Sounds/collectables_Soundeffect/Water Droplet Sound.mp3"
+dest_files=[ "res://.import/Water Droplet Sound.mp3-5991d6a29241c6c065edadc974998fa4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

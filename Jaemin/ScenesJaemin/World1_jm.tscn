@@ -355,6 +355,8 @@ rotation = -0.0234332
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
+volume_db = -16.576
+autoplay = true
 
 [node name="Panels" type="Node2D" parent="."]
 

@@ -526,6 +526,9 @@ pause_mode = 2
 stream = ExtResource( 4 )
 volume_db = -6.638
 
+autoplay = true
+
+
 [connection signal="pressed" from="MenuItems/MenuItemContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="MenuItems/MenuItemContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="MenuItems/MenuItemContainer/CreditButton" to="." method="_on_CreditButton_pressed"]

@@ -23,6 +23,7 @@ func _on_ColorObj_body_entered(body):
 		# Make sure to collect only once
 		disconnect("body_entered", player, "_on_ColorObj_body_entered")
 		collect_anim.play("Collect_anim")
+		$collectable_takenSound.play()
 		
 
 func _on_Collect_anim_animation_finished(anim_name):

@@ -159,7 +159,7 @@ _global_script_class_icons={
 [application]
 
 config/name="20211124_CMPteam_01"
-run/main_scene="res://Scenes/Level3.tscn"
+run/main_scene="res://Scenes/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/442602__topschool__ow-sound (1).mp3-750051c8c883892b05250bc3c072c4ae.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Player_Soundeffect/442602__topschool__ow-sound (1).mp3"
+dest_files=[ "res://.import/442602__topschool__ow-sound (1).mp3-750051c8c883892b05250bc3c072c4ae.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
