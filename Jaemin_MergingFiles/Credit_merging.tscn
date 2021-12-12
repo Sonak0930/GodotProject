@@ -1,0 +1,314 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Jaemin/Fonts/AmaticBold.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/Enemies/Shooter_Stop.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Jaemin/Fonts/AmaticSmallText.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Scenes/Enemies/Bat.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Jaemin/Assets_Jaemin/CreditImage (2).png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Enemies/MeleeBot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Jaemin/ScriptJaemin/NPCinCredits_jm.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Player_Dh.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Jaemin/Assets_Jaemin/AmbientSounds/For River - Piano (Johnny's Version).mp3" type="AudioStream" id=9]
+
+[sub_resource type="Animation" id=3]
+resource_name = "Intro"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 524, 246 ), Vector2( 515, 392 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 405, 107 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "CreditCharactersMove"
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0 )
+
+[node name="Credit" type="Node"]
+
+[node name="CreditNode" type="Node" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="CreditNode"]
+position = Vector2( 5, -2.38419e-07 )
+scale = Vector2( 1.00885, 1.00885 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 1, -2, 4.76837e-07, 736.482, 1014.03, 731.526, 1012.04, 0.991228 )
+
+[node name="Sprite" type="Sprite" parent="CreditNode"]
+position = Vector2( 405, 107 )
+scale = Vector2( 1.30375, 1.24752 )
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CreditNode"]
+autoplay = "Intro"
+anims/Intro = SubResource( 3 )
+anims/RESET = SubResource( 4 )
+
+[node name="NPCinCredits" type="Node2D" parent="."]
+position = Vector2( -845, 366 )
+script = ExtResource( 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NPCinCredits"]
+anims/CreditCharactersMove = SubResource( 5 )
+
+[node name="PlayerInCredit" type="Node2D" parent="NPCinCredits"]
+
+[node name="Player_Dh" parent="NPCinCredits/PlayerInCredit" instance=ExtResource( 8 )]
+position = Vector2( 103, -4 )
+
+[node name="TextEdit2" type="TextEdit" parent="NPCinCredits/PlayerInCredit"]
+material = SubResource( 1 )
+margin_left = 80.0
+margin_top = -85.0
+margin_right = 184.0
+margin_bottom = -27.0
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "Player"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextEdit3" type="TextEdit" parent="NPCinCredits/PlayerInCredit"]
+material = SubResource( 1 )
+margin_left = 37.0
+margin_top = 41.0
+margin_right = 198.0
+margin_bottom = 145.0
+custom_colors/member_variable_color = Color( 0, 0, 0, 0 )
+custom_fonts/font = ExtResource( 3 )
+custom_styles/normal = SubResource( 2 )
+text = "Main character
+"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="PlayerInCredit2" type="Node2D" parent="NPCinCredits"]
+position = Vector2( -853, 3 )
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="NPCinCredits/PlayerInCredit2"]
+margin_left = 491.0
+margin_top = 40.0
+margin_right = 670.0
+margin_bottom = 310.0
+rect_scale = Vector2( 0.998385, 1.12982 )
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Level 3,6
+General Map Design
+Stage UI Design
+Game system development
+Idea designer of this game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="NPCinCredits/PlayerInCredit2"]
+margin_left = 513.0
+margin_top = -89.0
+margin_right = 680.0
+margin_bottom = -44.0
+rect_scale = Vector2( 0.998385, 1.12982 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "MyungJi"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player_Dh" parent="NPCinCredits/PlayerInCredit2" instance=ExtResource( 8 )]
+position = Vector2( 103, -4 )
+
+[node name="BatInCredit" type="Node2D" parent="NPCinCredits"]
+
+[node name="Bat" parent="NPCinCredits/BatInCredit" instance=ExtResource( 4 )]
+position = Vector2( 268, -6 )
+scale = Vector2( 3, 3 )
+
+[node name="TextEdit2" type="TextEdit" parent="NPCinCredits/BatInCredit"]
+material = SubResource( 1 )
+margin_left = 257.0
+margin_top = -83.0
+margin_right = 382.0
+margin_bottom = 5.0
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "Enemy"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextEdit3" type="TextEdit" parent="NPCinCredits/BatInCredit"]
+material = SubResource( 1 )
+margin_left = 254.0
+margin_top = 41.0
+margin_right = 379.0
+margin_bottom = 129.0
+custom_fonts/font = ExtResource( 3 )
+custom_styles/normal = SubResource( 2 )
+text = "Bat"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="MeleeBotInCredit" type="Node2D" parent="NPCinCredits"]
+position = Vector2( -6, 4 )
+
+[node name="MeleeBot" parent="NPCinCredits/MeleeBotInCredit" instance=ExtResource( 6 )]
+position = Vector2( 436, 3 )
+scale = Vector2( 2, 2 )
+
+[node name="TextEdit2" type="TextEdit" parent="NPCinCredits/MeleeBotInCredit"]
+material = SubResource( 1 )
+margin_left = 416.0
+margin_top = -86.0
+margin_right = 541.0
+margin_bottom = 2.0
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "Enemy"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextEdit3" type="TextEdit" parent="NPCinCredits/MeleeBotInCredit"]
+material = SubResource( 1 )
+margin_left = 413.0
+margin_top = 38.0
+margin_right = 538.0
+margin_bottom = 126.0
+custom_fonts/font = ExtResource( 3 )
+custom_styles/normal = SubResource( 2 )
+text = "MeleeBot"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="MeleeBotInCredit2" type="Node2D" parent="NPCinCredits"]
+position = Vector2( -756, -2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NPCinCredits/MeleeBotInCredit2"]
+margin_left = -70.0
+margin_top = 37.0
+margin_right = 97.0
+margin_bottom = 381.0
+rect_scale = Vector2( 0.998385, 1.12982 )
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Level 2,5
+Credit
+Connecting scene
+Player Design
+Trouble maker for advance
+
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="NPCinCredits/MeleeBotInCredit2"]
+margin_left = -48.0
+margin_top = -81.0
+margin_right = 119.0
+margin_bottom = -36.0
+rect_scale = Vector2( 0.998385, 1.12982 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Jaemin"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MeleeBot" parent="NPCinCredits/MeleeBotInCredit2" instance=ExtResource( 6 )]
+position = Vector2( 436, 3 )
+scale = Vector2( 2, 2 )
+
+[node name="ShooterInCredit" type="Node2D" parent="NPCinCredits"]
+position = Vector2( -549, -5 )
+
+[node name="TextEdit2" type="TextEdit" parent="NPCinCredits/ShooterInCredit"]
+material = SubResource( 1 )
+margin_left = 416.0
+margin_top = -86.0
+margin_right = 541.0
+margin_bottom = 2.0
+custom_fonts/font = ExtResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "Enemy"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextEdit3" type="TextEdit" parent="NPCinCredits/ShooterInCredit"]
+material = SubResource( 1 )
+margin_left = 400.0
+margin_top = 47.0
+margin_right = 525.0
+margin_bottom = 135.0
+custom_fonts/font = ExtResource( 3 )
+custom_styles/normal = SubResource( 2 )
+text = "Shooter"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Shooter_Stop" parent="NPCinCredits/ShooterInCredit" instance=ExtResource( 2 )]
+position = Vector2( 435, 2 )
+
+[node name="ShooterInCredit2" type="Node2D" parent="NPCinCredits"]
+position = Vector2( -969, 2 )
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="NPCinCredits/ShooterInCredit2"]
+margin_left = 384.0
+margin_top = 44.0
+margin_right = 551.0
+margin_bottom = 313.0
+rect_scale = Vector2( 0.998385, 1.12982 )
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Level 1,4
+Main Menu / Interactive Design
+Enemy Design
+consultant for this team"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="NPCinCredits/ShooterInCredit2"]
+margin_left = 378.0
+margin_top = -92.0
+margin_right = 545.0
+margin_bottom = -47.0
+rect_scale = Vector2( 0.998385, 1.12982 )
+custom_fonts/normal_font = ExtResource( 1 )
+text = "DongHyun"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shooter_Stop" parent="NPCinCredits/ShooterInCredit2" instance=ExtResource( 2 )]
+position = Vector2( 434, 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
