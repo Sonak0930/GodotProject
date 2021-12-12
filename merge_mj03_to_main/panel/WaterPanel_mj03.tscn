@@ -1,0 +1,163 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-179.png" type="Texture" id=1]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-165.png" type="Texture" id=2]
+[ext_resource path="res://assets/Font Colby/Colby-StBlk.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/painting-bucket.png" type="Texture" id=4]
+[ext_resource path="res://assets/painting-bucket_small.png" type="Texture" id=5]
+[ext_resource path="res://assets/bucket_small.png" type="Texture" id=6]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-177.png" type="Texture" id=7]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-176.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Panel/WaterPanel.gd" type="Script" id=9]
+[ext_resource path="res://sounds/UIbutton_soundeffect/110393__soundscalpel-com__water-splash.wav" type="AudioStream" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 3 )
+
+[node name="WaterPanel" type="Node2D"]
+scale = Vector2( 0.7, 0.7 )
+script = ExtResource( 9 )
+
+[node name="mainSprite" type="Sprite" parent="."]
+position = Vector2( 720.429, 502.973 )
+scale = Vector2( 0.748744, 0.969841 )
+texture = ExtResource( 1 )
+
+[node name="Title" type="Node2D" parent="."]
+position = Vector2( -225, 68 )
+
+[node name="TitleSprite" type="Sprite" parent="Title"]
+position = Vector2( 943.428, 344.786 )
+scale = Vector2( 1.08949, 0.662791 )
+texture = ExtResource( 2 )
+
+[node name="SelectColor" type="Label" parent="Title"]
+margin_left = 812.428
+margin_top = 325.286
+margin_right = 1078.43
+margin_bottom = 366.286
+custom_fonts/font = SubResource( 1 )
+text = "Select Color"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI_colorBucket_buttons" type="Node2D" parent="."]
+
+[node name="colorBucket_red_button" type="TextureButton" parent="UI_colorBucket_buttons"]
+modulate = Color( 0.866667, 0.27451, 0.266667, 1 )
+margin_left = 590.428
+margin_top = 464.286
+margin_right = 861.428
+margin_bottom = 725.286
+rect_scale = Vector2( 0.206366, 0.206366 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colorBucket_red_label" type="Label" parent="UI_colorBucket_buttons"]
+margin_left = 647.269
+margin_top = 505.707
+margin_right = 687.269
+margin_bottom = 519.707
+rect_scale = Vector2( 1.128, 1.128 )
+custom_colors/font_color = Color( 0.258824, 0.188235, 0.0509804, 1 )
+text = "X 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colorBucket_green_button" type="TextureButton" parent="UI_colorBucket_buttons"]
+modulate = Color( 0.0784314, 0.701961, 0.0823529, 1 )
+margin_left = 682.042
+margin_top = 464.847
+margin_right = 953.042
+margin_bottom = 725.847
+rect_scale = Vector2( 0.206366, 0.206366 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colorBucket_green_label" type="Label" parent="UI_colorBucket_buttons"]
+margin_left = 739.045
+margin_top = 505.707
+margin_right = 779.045
+margin_bottom = 519.707
+rect_scale = Vector2( 1.128, 1.128 )
+custom_colors/font_color = Color( 0.258824, 0.188235, 0.0509804, 1 )
+text = "X 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colorBucket_blue_button" type="TextureButton" parent="UI_colorBucket_buttons"]
+modulate = Color( 0.243137, 0.278431, 0.560784, 1 )
+margin_left = 780.77
+margin_top = 464.286
+margin_right = 1051.77
+margin_bottom = 725.286
+rect_scale = Vector2( 0.206366, 0.206366 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colorBucket_blue_label" type="Label" parent="UI_colorBucket_buttons"]
+margin_left = 836.956
+margin_top = 505.707
+margin_right = 876.956
+margin_bottom = 519.707
+rect_scale = Vector2( 1.128, 1.128 )
+custom_colors/font_color = Color( 0.258824, 0.188235, 0.0509804, 1 )
+text = "X 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="waterBucket_button" type="Sprite" parent="UI_colorBucket_buttons"]
+position = Vector2( 701.083, 548.911 )
+scale = Vector2( 0.0582708, 0.0582708 )
+texture = ExtResource( 6 )
+
+[node name="waterBucket_label" type="Label" parent="UI_colorBucket_buttons"]
+margin_left = 715.083
+margin_top = 544.911
+margin_right = 755.083
+margin_bottom = 558.911
+rect_scale = Vector2( 1.128, 1.128 )
+custom_colors/font_color = Color( 0.258824, 0.188235, 0.0509804, 1 )
+text = "X 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitBtn" type="TextureButton" parent="."]
+margin_left = 654.429
+margin_top = 577.286
+margin_right = 910.429
+margin_bottom = 664.286
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 8 )
+texture_hover = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="deleteBucket_sound" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 10 )
+volume_db = -15.0
+
+[connection signal="visibility_changed" from="." to="." method="_on_WaterPanel_visibility_changed"]
+[connection signal="pressed" from="UI_colorBucket_buttons/colorBucket_red_button" to="." method="_on_colorBucket_red_button_pressed"]
+[connection signal="pressed" from="UI_colorBucket_buttons/colorBucket_green_button" to="." method="_on_colorBucket_green_button_pressed"]
+[connection signal="pressed" from="UI_colorBucket_buttons/colorBucket_blue_button" to="." method="_on_colorBucket_blue_button_pressed"]
+[connection signal="pressed" from="ExitBtn" to="." method="_on_ExitBtn_pressed"]
