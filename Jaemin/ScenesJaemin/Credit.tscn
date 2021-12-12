@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Jaemin/Fonts/AmaticBold.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scenes/Enemies/Shooter_Stop.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Jaemin/ScriptJaemin/NPCinCredits_jm.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Player_Dh.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Jaemin/Assets_Jaemin/AmbientSounds/For River - Piano (Johnny's Version).mp3" type="AudioStream" id=9]
+[ext_resource path="res://assets/UIButtonsVideogames/72ppp/font/Colby-StBlk.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Jaemin/ScenesJaemin/Credit.gd" type="Script" id=11]
 
 [sub_resource type="Animation" id=3]
 resource_name = "Intro"
@@ -48,7 +50,11 @@ resource_name = "CreditCharactersMove"
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0, 0, 0 )
 
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 10 )
+
 [node name="Credit" type="Node"]
+script = ExtResource( 11 )
 
 [node name="CreditNode" type="Node" parent="."]
 
@@ -76,6 +82,7 @@ script = ExtResource( 7 )
 anims/CreditCharactersMove = SubResource( 5 )
 
 [node name="PlayerInCredit" type="Node2D" parent="NPCinCredits"]
+position = Vector2( 204, -4 )
 
 [node name="Player_Dh" parent="NPCinCredits/PlayerInCredit" instance=ExtResource( 8 )]
 position = Vector2( 103, -4 )
@@ -109,7 +116,7 @@ __meta__ = {
 }
 
 [node name="PlayerInCredit2" type="Node2D" parent="NPCinCredits"]
-position = Vector2( -853, 3 )
+position = Vector2( -649, -1 )
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="NPCinCredits/PlayerInCredit2"]
 margin_left = 491.0
@@ -143,6 +150,7 @@ __meta__ = {
 position = Vector2( 103, -4 )
 
 [node name="BatInCredit" type="Node2D" parent="NPCinCredits"]
+position = Vector2( 204, -4 )
 
 [node name="Bat" parent="NPCinCredits/BatInCredit" instance=ExtResource( 4 )]
 position = Vector2( 268, -6 )
@@ -175,7 +183,7 @@ __meta__ = {
 }
 
 [node name="MeleeBotInCredit" type="Node2D" parent="NPCinCredits"]
-position = Vector2( -6, 4 )
+position = Vector2( 198, 0 )
 
 [node name="MeleeBot" parent="NPCinCredits/MeleeBotInCredit" instance=ExtResource( 6 )]
 position = Vector2( 436, 3 )
@@ -208,7 +216,7 @@ __meta__ = {
 }
 
 [node name="MeleeBotInCredit2" type="Node2D" parent="NPCinCredits"]
-position = Vector2( -756, -2 )
+position = Vector2( -552, -6 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="NPCinCredits/MeleeBotInCredit2"]
 margin_left = -70.0
@@ -246,7 +254,7 @@ position = Vector2( 436, 3 )
 scale = Vector2( 2, 2 )
 
 [node name="ShooterInCredit" type="Node2D" parent="NPCinCredits"]
-position = Vector2( -549, -5 )
+position = Vector2( -345, -9 )
 
 [node name="TextEdit2" type="TextEdit" parent="NPCinCredits/ShooterInCredit"]
 material = SubResource( 1 )
@@ -278,7 +286,7 @@ __meta__ = {
 position = Vector2( 435, 2 )
 
 [node name="ShooterInCredit2" type="Node2D" parent="NPCinCredits"]
-position = Vector2( -969, 2 )
+position = Vector2( -765, -2 )
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="NPCinCredits/ShooterInCredit2"]
 margin_left = 384.0
@@ -310,5 +318,20 @@ __meta__ = {
 [node name="Shooter_Stop" parent="NPCinCredits/ShooterInCredit2" instance=ExtResource( 2 )]
 position = Vector2( 434, 3 )
 
+[node name="Text" type="Label" parent="."]
+margin_left = 437.0
+margin_top = 705.0
+margin_right = 587.0
+margin_bottom = 722.0
+custom_fonts/font = SubResource( 6 )
+text = "Press ESC to exit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
+volume_db = -14.182
+autoplay = true
