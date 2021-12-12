@@ -128,20 +128,24 @@ func _on_attacked(enemyName):
 func set_random_color(colBitrange)->Color:
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	var rnum = rng.randi_range(0,255)
-	var rnum2 = rng.randi_range(1,colBitrange)
+	
+	var rnum = rng.randi_range(0,2)
 	var resultColor = Color(0,0,0,0)
 	
-	if 0 <= rnum  && rnum < 85 && CurrentColor[0] != 0:
-		resultColor = Color(50*rnum2,0,0,0)
-	elif 85 <= rnum && rnum < 170 && CurrentColor[1] != 0:
-		resultColor = Color(0,50*rnum2,0,0)
-	elif 170 <= rnum && rnum <= 255 && CurrentColor[2] != 0:
-		resultColor = Color(0,0,50*rnum2,0)
-	
 	if CurrentColor[0]+CurrentColor[1]+CurrentColor[2]==50:
-		resultColor = CurrentColor
-	return resultColor
+		return CurrentColor
+	
+	while true:
+		if rnum == 0 and CurrentColor[0] != 0:
+			return Color(50, 0, 0, 0)
+		elif rnum == 1 and CurrentColor[1] != 0:
+			return Color(0, 50, 0, 0)
+		elif rnum == 2 and CurrentColor[2] != 0:
+			return Color(0, 0, 50, 0)
+		else:
+			rnum = rng.randi_range(0, 2)
+	
+	return resultColor # Dummy return
 
 
 
