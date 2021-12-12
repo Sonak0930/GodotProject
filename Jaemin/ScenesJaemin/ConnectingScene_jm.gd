@@ -37,6 +37,7 @@ func _on_ExitGameButton_pressed():
 
 
 
+
 func _on_NextLevelButton_pressed():
 	match GameManagerJm.stage:
 		2: # go to lv 2...

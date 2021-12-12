@@ -18,13 +18,8 @@ func _ready():
 			if child is Player_mj:
 				player = child
 				connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
-				connect("body_entered",self,"_on_Enemies_body_entered")
 
-func _on_Enemies_body_entered(body):
-	if body is Player_mj:
-		$bat_wingSound.stop()
-		$bat_attackSound.play()
-		$bat_wingSound.play()
+
 
 func _process(delta):
 	if get_parent() is PathFollow2D:

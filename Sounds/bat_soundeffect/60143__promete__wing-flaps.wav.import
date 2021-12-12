@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/60143__promete__wing-flaps.wav-9d5ad521e8552275f0ce80f3f97a9c3c.sample"
+
+[deps]
+
+source_file="res://Sounds/bat_soundeffect/60143__promete__wing-flaps.wav"
+dest_files=[ "res://.import/60143__promete__wing-flaps.wav-9d5ad521e8552275f0ce80f3f97a9c3c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

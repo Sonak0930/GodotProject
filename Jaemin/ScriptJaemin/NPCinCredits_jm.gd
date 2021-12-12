@@ -1,6 +1,6 @@
 extends Node2D
 
-export var speed = 5
+export var speed = 0.5
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"

@@ -1,6 +1,4 @@
-
-[gd_scene load_steps=18 format=2]
-
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-164.png" type="Texture" id=1]
 [ext_resource path="res://Jaemin/Assets_Jaemin/ConnectingSceneDrawings/L6.png" type="Texture" id=2]
@@ -12,13 +10,18 @@
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-188.png" type="Texture" id=8]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-189.png" type="Texture" id=9]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/font/Colby-StBlk.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Jaemin/Assets_Jaemin/AmbientSounds/Solemnis.mp3" type="AudioStream" id=11]
 [ext_resource path="res://Jaemin/ScenesJaemin/ConnectingScene_jm.gd" type="Script" id=13]
 [ext_resource path="res://Jaemin/Assets_Jaemin/ConnectingSceneDrawings/L3.png" type="Texture" id=14]
 [ext_resource path="res://Jaemin/Assets_Jaemin/ConnectingSceneDrawings/L2.png" type="Texture" id=15]
 
-[ext_resource path="res://Jaemin/Assets_Jaemin/UI_Jm/HomeButton.png" type="Texture" id=16]
-[ext_resource path="res://sounds/mixkit-game-experience-level-increased-2062.wav" type="AudioStream" id=17]
+[sub_resource type="DynamicFont" id=1]
+size = 21
+font_data = ExtResource( 10 )
 
+[sub_resource type="DynamicFont" id=2]
+size = 21
+font_data = ExtResource( 10 )
 
 [node name="ConnectingScene" type="Node2D"]
 script = ExtResource( 13 )
@@ -362,9 +365,50 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="L5Color" type="ColorRect" parent="L6AllColors"]
+margin_left = 706.0
+margin_top = 150.0
+margin_right = 732.0
+margin_bottom = 175.0
+color = Color( 0.980392, 0.784314, 0.392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="connectingScene_sound" type="AudioStreamPlayer2D" parent="."]
-pause_mode = 2
-stream = ExtResource( 17 )
-volume_db = -15.0
+[node name="L4Color" type="ColorRect" parent="L6AllColors"]
+margin_left = 680.0
+margin_top = 150.0
+margin_right = 706.0
+margin_bottom = 175.0
+color = Color( 0.980392, 0.392157, 0.588235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
+[node name="L3Color" type="ColorRect" parent="L6AllColors"]
+margin_left = 654.0
+margin_top = 150.0
+margin_right = 680.0
+margin_bottom = 175.0
+color = Color( 0, 0.784314, 0.980392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L2Color" type="ColorRect" parent="L6AllColors"]
+margin_left = 628.0
+margin_top = 150.0
+margin_right = 654.0
+margin_bottom = 175.0
+color = Color( 0.196078, 0, 0.588235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -6.18
+autoplay = true
+
+[connection signal="pressed" from="ExitGameButton" to="." method="_on_ExitGameButton_pressed"]
+[connection signal="pressed" from="NextLevelButton" to="." method="_on_NextLevelButton_pressed"]

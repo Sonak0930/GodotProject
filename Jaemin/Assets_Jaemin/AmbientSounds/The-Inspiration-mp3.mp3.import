@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The-Inspiration-mp3.mp3-3ee9b8e15decec7b30f20d16a040343f.mp3str"
+
+[deps]
+
+source_file="res://Jaemin/Assets_Jaemin/AmbientSounds/The-Inspiration-mp3.mp3"
+dest_files=[ "res://.import/The-Inspiration-mp3.mp3-3ee9b8e15decec7b30f20d16a040343f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

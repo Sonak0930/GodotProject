@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Loyalty_Freak_Music_-_01_-_Go_to_the_Picnic.mp3-bf98c0c46e072f331690a5954054c6a7.mp3str"
+
+[deps]
+
+source_file="res://Sounds/mj_bgms/Loyalty_Freak_Music_-_01_-_Go_to_the_Picnic.mp3"
+dest_files=[ "res://.import/Loyalty_Freak_Music_-_01_-_Go_to_the_Picnic.mp3-bf98c0c46e072f331690a5954054c6a7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
