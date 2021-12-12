@@ -1,8 +1,11 @@
-[gd_scene load_steps=48 format=2]
+
+[gd_scene load_steps=46 format=2]
+
 
 [ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://TileSets/WallTileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://TileSets/StoneTileset.tres" type="TileSet" id=3]
+[ext_resource path="res://Jaemin/Assets_Jaemin/AmbientSounds/Adventure-320bit(menu).mp3" type="AudioStream" id=4]
 [ext_resource path="res://TileSets/PlantTileset.tres" type="TileSet" id=5]
 [ext_resource path="res://TileSets/PropsTileset.tres" type="TileSet" id=6]
 [ext_resource path="res://Scenes/Player_Dh.tscn" type="PackedScene" id=7]
@@ -45,14 +48,8 @@ font_data = ExtResource( 15 )
 size = 40
 font_data = ExtResource( 15 )
 
-[sub_resource type="DynamicFont" id=16]
-size = 40
-font_data = ExtResource( 28 )
 
 [sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 1, 0.517647, 0.517647, 1 )
-
-[sub_resource type="StyleBoxFlat" id=18]
 bg_color = Color( 1, 0.517647, 0.517647, 1 )
 
 [sub_resource type="DynamicFontData" id=8]
@@ -63,10 +60,6 @@ size = 18
 font_data = SubResource( 8 )
 
 [sub_resource type="DynamicFont" id=11]
-size = 40
-font_data = ExtResource( 28 )
-
-[sub_resource type="DynamicFont" id=17]
 size = 40
 font_data = ExtResource( 28 )
 
@@ -307,7 +300,6 @@ margin_top = 254.0
 margin_right = 855.0
 margin_bottom = 283.0
 custom_styles/grabber_area_highlight = SubResource( 7 )
-custom_styles/grabber_area = SubResource( 18 )
 min_value = -80.0
 max_value = 0.0
 __meta__ = {
@@ -533,6 +525,11 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 4 )
+volume_db = -6.638
 
 [connection signal="pressed" from="MenuItems/MenuItemContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="MenuItems/MenuItemContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]

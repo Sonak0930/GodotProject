@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/bucket.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/waterObj_mj.gd" type="Script" id=2]
 [ext_resource path="res://assets/collect_effects.png" type="Texture" id=3]
-[ext_resource path="res://sounds/UIbutton_soundeffect/110393__soundscalpel-com__water-splash.wav" type="AudioStream" id=4]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -90,9 +89,5 @@ __meta__ = {
 [node name="Collect_anim" type="AnimationPlayer" parent="Animations"]
 root_node = NodePath("../..")
 anims/Collect_anim = SubResource( 3 )
-
-[node name="collectable_takenSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 4 )
-volume_db = -5.0
 
 [connection signal="animation_finished" from="Animations/Collect_anim" to="." method="_on_Collect_anim_animation_finished"]

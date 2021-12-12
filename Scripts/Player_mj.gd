@@ -47,5 +47,4 @@ func _on_Enemies_body_entered(body, enemyName):
 		return
 	emit_signal("attacked",enemyName)
 	animaPlayer.play("ouch")
-	$Player_OuchSound.play()
 	print("player said: I've just attacked by ",enemyName)

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/For River - Piano (Johnny's Version).mp3-31878e6f81a6b6625a8444db4a8472cd.mp3str"
+
+[deps]
+
+source_file="res://Jaemin/Assets_Jaemin/AmbientSounds/For River - Piano (Johnny's Version).mp3"
+dest_files=[ "res://.import/For River - Piano (Johnny's Version).mp3-31878e6f81a6b6625a8444db4a8472cd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

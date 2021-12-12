@@ -48,7 +48,7 @@ func _ready():
 	# reset game judgement var
 	is_same = false
 	#set TargetCol and  reset CurrentCol
-	TargetColor = Color(200,150,150,1)
+	TargetColor = Color(50,0,150,1)
 	CurrentColor = Color(50,50,50,1)
 	# set colorBukkit num
 	colorbucket_red_num = 1
@@ -192,6 +192,7 @@ func update_ui():
 	Waterbucket_label.text = "X" + str(Waterbucket_num)
 
 
+
 # reaction to button_pressed
 """
 var is_Waterbucket_pressed = false
@@ -236,8 +237,6 @@ func _on_Waterbukkit_pressed():
 
 func _on_Waterbukkit_pressed():
 	""" Updated """
-	print("waterBucket pressed!")
-	$waterBucket_buttonSound.play()
 	var sum = colorbucket_red_num + colorbucket_green_num + colorbucket_blue_num
 	if sum > 1 and Waterbucket_num > 0:
 		$"./Panels/WaterPanel".visible = true

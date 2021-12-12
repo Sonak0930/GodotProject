@@ -22,96 +22,96 @@
 [ext_resource path="res://Scenes/Enemies/MeleePathFollow2D.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scenes/Enemies/MeleeBot_Stop.tscn" type="PackedScene" id=21]
 
-[sub_resource type="Curve2D" id=1]
+[sub_resource type="Curve2D" id=14]
 _data = {
 "points": PoolVector2Array( -15.0129, 8.9797, 15.0129, -8.9797, 202, 178.592, -13.5442, 1.5749, 13.5442, -1.5749, 238, 230.592, -15.1191, 0.944941, 15.1191, -0.944941, 259, 185.592, -15.434, 0.629961, 15.434, -0.629961, 285, 226.592, -13.8591, 0.944941, 13.8591, -0.944941, 325, 179.592, -14.4891, 0.31498, 14.4891, -0.31498, 350, 221.592, -12.9142, 0, 12.9142, 0, 378, 181.592, 11.3393, -18.8988, -11.3393, 18.8988, 402, 262.592, 13.5442, 11.3393, -13.5442, -11.3393, 209, 265.592, -11.6543, 11.9692, 11.6543, -11.9692, 199, 177.592 )
 }
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="Curve2D" id=18]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 280, 806.592, 0, 0, 0, 0, 330, 808.592, 0, 0, 0, 0, 337, 877.592, 0, 0, 0, 0, 393, 872.592, 0, 0, 0, 0, 481, 872.592, 0, 0, 0, 0, 495, 811.592, 0, 0, 0, 0, 572, 801.592, 0, 0, 0, 0, 556, 743.592, 0, 0, 0, 0, 362, 737.592, 0, 0, 0, 0, 280, 743.592, 0, 0, 0, 0, 280, 805.592 )
 }
 
-[sub_resource type="Curve2D" id=3]
+[sub_resource type="Curve2D" id=21]
 _data = {
 "points": PoolVector2Array( 5.35143, 10.7029, -5.35143, -10.7029, -399, 613.592, 0, 0, 0, 0, -402, 423.592, -19.0273, 17.8381, 19.0273, -17.8381, -397, 365.592, -19.0273, -5.35143, 19.0273, 5.35143, -314, 365.592, 4.75683, -12.4867, -4.75683, 12.4867, -313, 426.592, 8.91905, -13.0813, -8.91905, 13.0813, -350, 452.592, -9.51366, -10.1083, 9.51366, 10.1083, -353, 515.592, -9.51366, -5.94603, 9.51366, 5.94603, -281, 518.592, 11.2975, -10.7029, -11.2975, 10.7029, -280, 578.592, 3.56762, -11.2975, -3.56762, 11.2975, -341, 586.592, -1.78381, -11.2975, 1.78381, 11.2975, -329, 626.592, -12.4867, -7.72985, 12.4867, 7.72985, -324, 652.592, -7.72985, -7.13524, 7.72985, 7.13524, -281, 649.592, 7.72985, -7.13524, -7.72985, 7.13524, -292, 679.592, 19.6219, 8.32445, -19.6219, -8.32445, -348, 685.592, 2.97302, 12.4867, -2.97302, -12.4867, -401, 612.592 )
 }
 
-[sub_resource type="Curve2D" id=4]
+[sub_resource type="Curve2D" id=23]
 _data = {
 "points": PoolVector2Array( -41.9526, 32.2136, 41.9526, -32.2136, 976, 361.592, -27.7187, -38.956, 27.7187, 38.956, 1150, 379.592, 26.2204, -25.4712, -26.2204, 25.4712, 1174, 523.592, 39.7051, 35.9594, -39.7051, -35.9594, 995, 512.592, -17.2305, 26.2204, 17.2305, -26.2204, 976, 362.592 )
 }
 
-[sub_resource type="Curve2D" id=5]
+[sub_resource type="Curve2D" id=24]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1322, 850.592, 0, 0, 0, 0, 1325, 902.592, 0, 0, 0, 0, 1467, 902.592, 0, 0, 0, 0, 1486, 795.592, 0, 0, 0, 0, 1461, 717.592, 0, 0, 0, 0, 1353, 706.592, 0, 0, 0, 0, 1311, 659.592, 0, 0, 0, 0, 1380, 681.592, 0, 0, 0, 0, 1406, 644.592, 0, 0, 0, 0, 1453, 645.592, 0, 0, 0, 0, 1517, 640.592, 0, 0, 0, 0, 1532, 616.592, 0, 0, 0, 0, 1572, 619.592, 0, 0, 0, 0, 1589, 686.592, 0, 0, 0, 0, 1570, 965.592, 0, 0, 0, 0, 1470, 979.592, 0, 0, 0, 0, 1343, 970.592, 0, 0, 0, 0, 1255, 963.592, 0, 0, 0, 0, 1243, 839.592, 0, 0, 0, 0, 1223, 684.592, 0, 0, 0, 0, 1300, 679.592, 0, 0, 0, 0, 1364, 685.592, 0, 0, 0, 0, 1372, 705.592, 0, 0, 0, 0, 1316, 712.592, 0, 0, 0, 0, 1296, 664.592, 0, 0, 0, 0, 1321, 650.592, 0, 0, 0, 0, 1394, 702.592, 0, 0, 0, 0, 1455, 734.592, 0, 0, 0, 0, 1489, 753.592, 0, 0, 0, 0, 1490, 854.592, 0, 0, 0, 0, 1451, 850.592, 0, 0, 0, 0, 1450, 816.592, 0, 0, 0, 0, 1478, 815.592, 0, 0, 0, 0, 1486, 881.592, 0, 0, 0, 0, 1453, 884.592, 0, 0, 0, 0, 1454, 868.592, 0, 0, 0, 0, 1479, 895.592, 0, 0, 0, 0, 1372, 901.592, 0, 0, 0, 0, 1333, 885.592, 0, 0, 0, 0, 1321, 849.592 )
 }
 
-[sub_resource type="Curve2D" id=6]
+[sub_resource type="Curve2D" id=25]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1584, 762.592, 0, 0, 0, 0, 1574, 622.592, 0, 0, 0, 0, 1517, 616.592, 0, 0, 0, 0, 1501, 644.592, 0, 0, 0, 0, 1419, 650.592, 0, 0, 0, 0, 1386, 664.592, 0, 0, 0, 0, 1384, 702.592, 0, 0, 0, 0, 1329, 711.592, 0, 0, 0, 0, 1302, 674.592, 0, 0, 0, 0, 1321, 651.592, 0, 0, 0, 0, 1378, 712.592, 0, 0, 0, 0, 1440, 714.592, 0, 0, 0, 0, 1458, 740.592, 0, 0, 0, 0, 1492, 774.592, 0, 0, 0, 0, 1494, 845.592, 0, 0, 0, 0, 1449, 807.592, 0, 0, 0, 0, 1449, 860.592, 0, 0, 0, 0, 1484, 883.592, 0, 0, 0, 0, 1461, 905.592, 0, 0, 0, 0, 1404, 908.592, 0, 0, 0, 0, 1386, 889.592, 0, 0, 0, 0, 1390, 845.592, 0, 0, 0, 0, 1400, 883.592, 0, 0, 0, 0, 1391, 902.592, 0, 0, 0, 0, 1350, 908.592, 0, 0, 0, 0, 1318, 897.592, 0, 0, 0, 0, 1315, 864.592, 0, 0, 0, 0, 1317, 835.592, 0, 0, 0, 0, 1334, 849.592, 0, 0, 0, 0, 1336, 881.592, 0, 0, 0, 0, 1342, 897.592, 0, 0, 0, 0, 1443, 904.592, 0, 0, 0, 0, 1482, 897.592, 0, 0, 0, 0, 1484, 858.592, 0, 0, 0, 0, 1546, 835.592, 0, 0, 0, 0, 1584, 760.592 )
 }
 
-[sub_resource type="Curve2D" id=7]
+[sub_resource type="Curve2D" id=27]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 813, -111.408, 0, 0, 0, 0, 813, 7.592, 0, 0, 0, 0, 873, 11.592, 0, 0, 0, 0, 879, -115.408, 0, 0, 0, 0, 946, -122.408, 0, 0, 0, 0, 944, 16.592, 0, 0, 0, 0, 1007, 6.592, 0, 0, 0, 0, 1005, -121.408, 0, 0, 0, 0, 838, -131.408, 0, 0, 0, 0, 812, -111.408 )
 }
 
-[sub_resource type="Curve2D" id=8]
+[sub_resource type="Curve2D" id=15]
 _data = {
 "points": PoolVector2Array( -17.2435, -7.72985, 17.2435, 7.72985, 138, 263.592, -23.7841, 1.18921, 23.7841, -1.18921, 189, 242.592, -34.487, -2.97302, 34.487, 2.97302, 223, 272.592, -32.7032, -2.37841, 32.7032, 2.37841, 266, 242.592, -23.1895, -1.18921, 23.1895, 1.18921, 342, 280.592, -33.8924, -1.18921, 33.8924, 1.18921, 379, 248.592, 5.94603, -19.6219, -5.94603, 19.6219, 399, 297.592, 24.3787, -17.2435, -24.3787, 17.2435, 377, 347.592, 42.2168, 29.1356, -42.2168, -29.1356, 191, 363.592, 18.4327, 31.514, -18.4327, -31.514, 116, 276.592, 29.7302, 3.56762, -29.7302, -3.56762, 45, 226.592, 21.4057, 21.4057, -21.4057, -21.4057, -43, 228.592, -19.0273, 19.0273, 19.0273, -19.0273, -42, 177.592, -29.1356, -7.72985, 29.1356, 7.72985, 48, 178.592, -11.8921, -15.4597, 11.8921, 15.4597, 104, 213.592, -14.8651, -7.72985, 14.8651, 7.72985, 139, 262.592 )
 }
 
-[sub_resource type="Curve2D" id=9]
+[sub_resource type="Curve2D" id=17]
 _data = {
 "points": PoolVector2Array( 21.7091, -16.0459, -21.7091, 16.0459, -38, 501.592, -21.7091, -0.471937, 21.7091, 0.471937, 24, 551.592, -29.2601, 4.71937, 29.2601, -4.71937, 84, 504.592, -36.8111, 3.7755, 36.8111, -3.7755, 126, 548.592, -42.0024, 9.91068, 42.0024, -9.91068, 177, 500.592, -37.283, 1.41581, 37.283, -1.41581, 243, 550.592, -31.6198, 2.83162, 31.6198, -2.83162, 281, 499.592, -31.1479, 2.35969, 31.1479, -2.35969, 344, 546.592, 24.0688, 22.181, -24.0688, -22.181, 381, 504.592, 27.8443, 4.24743, -27.8443, -4.24743, 289, 540.592, 20.2933, 4.24743, -20.2933, -4.24743, 232, 511.592, 19.8214, 0, -19.8214, 0, 170, 537.592, 14.1581, -4.24743, -14.1581, 4.24743, 116, 506.592, 20.7652, 2.83162, -20.7652, -2.83162, 66, 536.592, 0, 0, 0, 0, 4, 509.592, 18.8775, -18.4055, -18.8775, 18.4055, -39, 500.592 )
 }
 
-[sub_resource type="Curve2D" id=10]
+[sub_resource type="Curve2D" id=19]
 _data = {
 "points": PoolVector2Array( -1.19055, -15.874, 1.19055, 15.874, 270, 940.592, -15.4772, 15.874, 15.4772, -15.874, 576, 936.592, 0, 0, 0, 0, 575, 846.592, 15.874, 11.5087, -15.874, -11.5087, 564, 750.592, 11.5087, -15.874, -11.5087, 15.874, 274, 756.592, -13.4929, -7.54015, 13.4929, 7.54015, 269, 939.592 )
 }
 
-[sub_resource type="Curve2D" id=11]
+[sub_resource type="Curve2D" id=22]
 _data = {
 "points": PoolVector2Array( -20.8111, 14.2705, 20.8111, -14.2705, -186, 887.592, -21.4057, -19.0273, 21.4057, 19.0273, -23, 892.592, 23.1895, -11.8921, -23.1895, 11.8921, -25, 960.592, 29.7302, 19.6219, -29.7302, -19.6219, -177, 954.592, -12.4867, 16.6489, 12.4867, -16.6489, -186, 890.592 )
 }
 
-[sub_resource type="Curve2D" id=12]
+[sub_resource type="Curve2D" id=28]
 _data = {
 "points": PoolVector2Array( 23.5969, -17.9336, -23.5969, 17.9336, -125, -14.408, -18.8775, 0, 18.8775, 0, -74, 45.592, -18.4055, 12.2704, 18.4055, -12.2704, -25, -11.408, -19.8214, -0.943874, 19.8214, 0.943874, 28, 46.592, -19.8214, 5.66325, 19.8214, -5.66325, 97, -14.408, -14.6301, -1.41581, 14.6301, 1.41581, 206, 42.592, -15.102, 1.88775, 15.102, -1.88775, 319, -12.408, -17.9336, 9.43874, 17.9336, -9.43874, 405, 48.592, 27.8443, -1.88775, -27.8443, 1.88775, 383, -13.408, 22.181, 2.35969, -22.181, -2.35969, 301, 30.592, 24.0688, 1.88775, -24.0688, -1.88775, 206, -5.408, 28.3162, -4.24743, -28.3162, 4.24743, 110, 27.592, 14.6301, -8.49487, -14.6301, 8.49487, 12, -15.408, 23.1249, 1.88775, -23.1249, -1.88775, -44, 33.592, 22.653, 6.60712, -22.653, -6.60712, -88, -0.407997, 23.5969, -17.4617, -23.5969, 17.4617, -126, -15.408 )
 }
 
-[sub_resource type="Curve2D" id=13]
+[sub_resource type="Curve2D" id=16]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 555, 432.592, 0, 0, 0, 0, 668, 432.592, 0, 0, 0, 0, 609, 429.592, 0, 0, 0, 0, 554, 432.592 )
 }
 
-[sub_resource type="Curve2D" id=14]
+[sub_resource type="Curve2D" id=20]
 _data = {
 "points": PoolVector2Array( -19.3406, -12.6134, 19.3406, 12.6134, 651, 872.592, -31.9541, 5.04538, 31.9541, -5.04538, 691, 853.592, -23.5451, -10.0908, 23.5451, 10.0908, 732, 942.592, -22.7042, 17.6588, 22.7042, -17.6588, 770, 866.592, -21.0224, -10.9317, 21.0224, 10.9317, 818, 891.592, -2.52269, -23.5451, 2.52269, 23.5451, 864, 895.592, 0, 0, 0, 0, 791, 927.592, 0, 0, 0, 0, 634, 913.592, 11.7725, 32.795, -11.7725, -32.795, 552, 874.592, -25.2269, -1.68179, 25.2269, 1.68179, 604, 765.592, -25.2269, -17.6588, 25.2269, 17.6588, 651, 871.592 )
 }
 
-[sub_resource type="Curve2D" id=15]
+[sub_resource type="Curve2D" id=26]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1348, 514.592, 0, 0, 0, 0, 1436, 511.592, 0, 0, 0, 0, 1434, 569.592, 0, 0, 0, 0, 1279, 579.592, 0, 0, 0, 0, 1283, 550.592, 0, 0, 0, 0, 1346, 540.592, 0, 0, 0, 0, 1347, 515.592 )
 }
 
-[sub_resource type="Curve2D" id=16]
+[sub_resource type="Curve2D" id=29]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -333, 290.592, 0, 0, 0, 0, -177, 283.592, 0, 0, 0, 0, -213, 236.592, 0, 0, 0, 0, -302, 242.592, 0, 0, 0, 0, -333, 287.592 )
 }
 
-[sub_resource type="ConcavePolygonShape2D" id=17]
+[sub_resource type="ConcavePolygonShape2D" id=11]
 segments = PoolVector2Array( 49, 90, 30, 90, 30, 90, 30, 60, 30, 60, 49, 60, 49, 60, 49, 90 )
 
-[sub_resource type="ConvexPolygonShape2D" id=18]
+[sub_resource type="ConvexPolygonShape2D" id=12]
 points = PoolVector2Array( 49, 90, 30, 90, 30, 60, 49, 60 )
 
-[sub_resource type="ConvexPolygonShape2D" id=19]
+[sub_resource type="ConvexPolygonShape2D" id=13]
 points = PoolVector2Array( 95, 88, 83, 88, 83, 60, 95, 60 )
 
-[sub_resource type="TileSet" id=20]
+[sub_resource type="TileSet" id=10]
 0/name = "TX Struct.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -150,26 +150,26 @@ points = PoolVector2Array( 95, 88, 83, 88, 83, 60, 95, 60 )
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 17 )
+2/shape = SubResource( 11 )
 2/shape_one_way = false
 2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 17 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 18 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 19 ),
+"shape": SubResource( 13 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
@@ -353,7 +353,7 @@ modulate = Color( 0.392157, 0.196078, 0, 1 )
 [node name="Bat" type="Node2D" parent="Enemies"]
 
 [node name="batPath" type="Path2D" parent="Enemies/Bat"]
-curve = SubResource( 1 )
+curve = SubResource( 14 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Bat/batPath"]
 position = Vector2( 202, 178.592 )
@@ -364,7 +364,7 @@ rotate = false
 rotation = -0.965247
 
 [node name="batPath2" type="Path2D" parent="Enemies/Bat"]
-curve = SubResource( 2 )
+curve = SubResource( 18 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Bat/batPath2"]
 position = Vector2( 280, 806.592 )
@@ -375,7 +375,7 @@ rotate = false
 rotation = -0.0399597
 
 [node name="batPath3" type="Path2D" parent="Enemies/Bat"]
-curve = SubResource( 2 )
+curve = SubResource( 18 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Bat/batPath3"]
 position = Vector2( 555.356, 803.753 )
@@ -387,7 +387,7 @@ rotate = false
 rotation = -0.0399597
 
 [node name="Path2D" type="Path2D" parent="Enemies/Bat"]
-curve = SubResource( 3 )
+curve = SubResource( 21 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Bat/Path2D"]
 position = Vector2( -399, 613.592 )
@@ -396,7 +396,7 @@ rotate = false
 [node name="Bat" parent="Enemies/Bat/Path2D/PathFollow2D" instance=ExtResource( 13 )]
 
 [node name="Path2D2" type="Path2D" parent="Enemies/Bat"]
-curve = SubResource( 4 )
+curve = SubResource( 23 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Bat/Path2D2"]
 position = Vector2( 976, 361.592 )
@@ -406,7 +406,7 @@ rotate = false
 
 [node name="Path2D3" type="Path2D" parent="Enemies/Bat"]
 self_modulate = Color( 0.556863, 0.239216, 0.0666667, 0.701961 )
-curve = SubResource( 5 )
+curve = SubResource( 24 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Bat/Path2D3"]
 position = Vector2( 1322, 850.592 )
@@ -415,7 +415,7 @@ rotate = false
 [node name="Bat" parent="Enemies/Bat/Path2D3/PathFollow2D" instance=ExtResource( 13 )]
 
 [node name="Path2D4" type="Path2D" parent="Enemies/Bat"]
-curve = SubResource( 6 )
+curve = SubResource( 25 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Bat/Path2D4"]
 position = Vector2( 1584, 762.592 )
@@ -424,7 +424,7 @@ rotate = false
 [node name="Bat" parent="Enemies/Bat/Path2D4/PathFollow2D" instance=ExtResource( 13 )]
 
 [node name="Path2D5" type="Path2D" parent="Enemies/Bat"]
-curve = SubResource( 7 )
+curve = SubResource( 27 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Bat/Path2D5"]
 position = Vector2( 813, -111.408 )
@@ -436,7 +436,7 @@ rotate = false
 
 [node name="ShooterPath" type="Path2D" parent="Enemies/Shooter"]
 self_modulate = Color( 0.490196, 0.0470588, 0, 0.701961 )
-curve = SubResource( 8 )
+curve = SubResource( 15 )
 
 [node name="ShooterPathFollow2D" parent="Enemies/Shooter/ShooterPath" instance=ExtResource( 14 )]
 position = Vector2( 138, 263.592 )
@@ -447,7 +447,7 @@ position = Vector2( 722, 396.592 )
 scale = Vector2( -1, 1 )
 
 [node name="ShooterPath2" type="Path2D" parent="Enemies/Shooter"]
-curve = SubResource( 9 )
+curve = SubResource( 17 )
 
 [node name="ShooterPathFollow2D" parent="Enemies/Shooter/ShooterPath2" instance=ExtResource( 14 )]
 position = Vector2( -38, 501.592 )
@@ -455,14 +455,14 @@ rotation = 2.3596
 
 [node name="Path2D" type="Path2D" parent="Enemies/Shooter"]
 self_modulate = Color( 0.541176, 0.0392157, 0, 0.701961 )
-curve = SubResource( 10 )
+curve = SubResource( 19 )
 
 [node name="ShooterPathFollow2D" parent="Enemies/Shooter/Path2D" instance=ExtResource( 14 )]
 position = Vector2( 270, 940.592 )
 rotation = 0.661852
 
 [node name="Path2D2" type="Path2D" parent="Enemies/Shooter"]
-curve = SubResource( 11 )
+curve = SubResource( 22 )
 
 [node name="ShooterPathFollow2D" parent="Enemies/Shooter/Path2D2" instance=ExtResource( 14 )]
 position = Vector2( -186, 887.592 )
@@ -479,7 +479,7 @@ position = Vector2( 1177, -58.408 )
 scale = Vector2( -1, 1 )
 
 [node name="Path2D3" type="Path2D" parent="Enemies/Shooter"]
-curve = SubResource( 12 )
+curve = SubResource( 28 )
 
 [node name="ShooterPathFollow2D" parent="Enemies/Shooter/Path2D3" instance=ExtResource( 14 )]
 position = Vector2( -125, -14.408 )
@@ -488,7 +488,7 @@ rotation = 2.37288
 [node name="MeleeBot" type="Node2D" parent="Enemies"]
 
 [node name="meleePath" type="Path2D" parent="Enemies/MeleeBot"]
-curve = SubResource( 13 )
+curve = SubResource( 16 )
 
 [node name="MeleePathFollow2D" parent="Enemies/MeleeBot/meleePath" instance=ExtResource( 20 )]
 position = Vector2( 555, 432.592 )
@@ -497,13 +497,13 @@ position = Vector2( 555, 432.592 )
 position = Vector2( 794, 268.592 )
 
 [node name="Path2D" type="Path2D" parent="Enemies/MeleeBot"]
-curve = SubResource( 14 )
+curve = SubResource( 20 )
 
 [node name="MeleePathFollow2D" parent="Enemies/MeleeBot/Path2D" instance=ExtResource( 20 )]
 position = Vector2( 651, 872.592 )
 
 [node name="Path2D2" type="Path2D" parent="Enemies/MeleeBot"]
-curve = SubResource( 15 )
+curve = SubResource( 26 )
 
 [node name="MeleePathFollow2D" parent="Enemies/MeleeBot/Path2D2" instance=ExtResource( 20 )]
 position = Vector2( 1348, 514.592 )
@@ -512,13 +512,13 @@ position = Vector2( 1348, 514.592 )
 position = Vector2( 1436, -22.408 )
 
 [node name="Path2D3" type="Path2D" parent="Enemies/MeleeBot"]
-curve = SubResource( 16 )
+curve = SubResource( 29 )
 
 [node name="MeleePathFollow2D" parent="Enemies/MeleeBot/Path2D3" instance=ExtResource( 20 )]
 position = Vector2( -333, 290.592 )
 
 [node name="StructTileMap" type="TileMap" parent="."]
-tile_set = SubResource( 20 )
+tile_set = SubResource( 10 )
 cell_size = Vector2( 32, 32 )
 show_collision = true
 collision_layer = 8
