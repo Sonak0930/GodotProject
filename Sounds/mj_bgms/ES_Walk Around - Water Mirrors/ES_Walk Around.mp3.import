@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ES_Walk Around.mp3-906c3ad1d5dcdd3046f19973ec0e9f40.mp3str"
+
+[deps]
+
+source_file="res://Sounds/mj_bgms/ES_Walk Around - Water Mirrors/ES_Walk Around.mp3"
+dest_files=[ "res://.import/ES_Walk Around.mp3-906c3ad1d5dcdd3046f19973ec0e9f40.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

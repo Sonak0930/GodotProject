@@ -12,23 +12,20 @@ var sec = 0.0
 
 func _ready():
 	animated_sprite.play("run")
-
 	#connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
-	
-	
-	
-
 	if world_node != null:
 		for child in world_node.get_children():
 			if child is Player_mj:
 				player = child
-				connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
+		connect("body_entered",player,"_on_Enemies_body_entered",enemyName)
+		connect("body_entered",self,"_on_Enemies_body_entered",enemyName)
 
 
 func _process(delta):
 	sec += delta
 	if sec >= 3: # Starts to attack
 		animated_sprite.play("shoot")
+		$shooter_gunshotSound.play()
 		sec = 0.0
 
 	get_parent().offset += speed * delta
@@ -57,5 +54,7 @@ func shoot():
 	
 	# move the bullet to the muzzle of the gun
 	bullet.transform = $Muzzle.global_transform
-	
-	
+
+func _on_Enemies_body_entered(body,enemyName):
+	if body is Player_mj:
+		$shooter_attackSound.play()

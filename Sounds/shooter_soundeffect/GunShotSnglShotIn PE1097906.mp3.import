@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/GunShotSnglShotIn PE1097906.mp3-cd422a1fb6a781e5f2a6070e5cbbe46b.mp3str"
+
+[deps]
+
+source_file="res://Sounds/shooter_soundeffect/GunShotSnglShotIn PE1097906.mp3"
+dest_files=[ "res://.import/GunShotSnglShotIn PE1097906.mp3-cd422a1fb6a781e5f2a6070e5cbbe46b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

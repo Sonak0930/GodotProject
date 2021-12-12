@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dungeon Theme.mp3-f742fa091606fc2307c5bfce86dc9942.mp3str"
+
+[deps]
+
+source_file="res://Sounds/platformerGame_bgm_package/Dungeon Theme.mp3"
+dest_files=[ "res://.import/Dungeon Theme.mp3-f742fa091606fc2307c5bfce86dc9942.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

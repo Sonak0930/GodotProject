@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/407625__aryanotstark__paint-brush.wav-8a075904b7650038c1fe8a4872e447e9.sample"
+
+[deps]
+
+source_file="res://Sounds/connectingScene_sketch_Soundeffect/407625__aryanotstark__paint-brush.wav"
+dest_files=[ "res://.import/407625__aryanotstark__paint-brush.wav-8a075904b7650038c1fe8a4872e447e9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
