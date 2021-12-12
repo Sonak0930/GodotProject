@@ -154,7 +154,6 @@ __meta__ = {
 [node name="deleteBucket_sound" type="AudioStreamPlayer2D" parent="."]
 pause_mode = 2
 stream = ExtResource( 10 )
-volume_db = -15.0
 
 [connection signal="visibility_changed" from="." to="." method="_on_WaterPanel_visibility_changed"]
 [connection signal="pressed" from="UI_colorBucket_buttons/colorBucket_red_button" to="." method="_on_colorBucket_red_button_pressed"]
