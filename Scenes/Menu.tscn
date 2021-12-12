@@ -327,9 +327,11 @@ margin_left = 637.0
 margin_top = 254.0
 margin_right = 855.0
 margin_bottom = 283.0
-custom_styles/grabber_area_highlight = SubResource( 5 )
-custom_styles/grabber_area = SubResource( 6 )
-min_value = -80.0
+
+custom_styles/grabber_area_highlight = SubResource( 7 )
+custom_styles/grabber_area = SubResource( 18 )
+min_value = -20.0
+
 max_value = 0.0
 __meta__ = {
 "_edit_use_anchors_": false
