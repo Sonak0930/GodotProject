@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/colorObjs/ColorObj_blue_mj.gd" type="Script" id=1]
 [ext_resource path="res://assets/collect_effects.png" type="Texture" id=2]
 [ext_resource path="res://assets/painting-bucket.png" type="Texture" id=3]
 [ext_resource path="res://assets/Animations/Item_default_anim.tres" type="Animation" id=4]
-[ext_resource path="res://sounds/collectables_Soundeffect/30341__junggle__waterdrop24.wav" type="AudioStream" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Collect_anim"
@@ -68,9 +67,5 @@ anims/item_default_anim = ExtResource( 4 )
 [node name="Collect_anim" type="AnimationPlayer" parent="Animations"]
 root_node = NodePath("../..")
 anims/Collect_anim = SubResource( 1 )
-
-[node name="collectable_takenSound" type="AudioStreamPlayer2D" parent="."]
-pause_mode = 2
-stream = ExtResource( 5 )
 
 [connection signal="animation_finished" from="Animations/Collect_anim" to="." method="_on_Collect_anim_animation_finished"]
