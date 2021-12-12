@@ -198,3 +198,15 @@ func _on_LoadGameButton_pressed():
 		get_tree().change_scene("res://Scenes/Levels/L6.tscn")
 	elif GameManagerJm.stage == 7:
 		get_tree().change_scene("res://Scenes/Levels/L6.tscn")
+
+
+""" Showing drawing signal """
+func _on_PaintingArea_body_entered(body):
+	$PaintPanel.show_drawing()
+	$PaintingArea.modulate = Color(0.41, 0.41, 0.41, 1)
+
+
+
+func _on_PaintingArea_body_exited(body):
+	$PaintPanel.hide_drawing()
+	$PaintingArea.modulate = Color(1, 1, 1, 1)

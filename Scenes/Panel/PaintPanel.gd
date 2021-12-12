@@ -1,10 +1,9 @@
 extends Node2D
 
-func _ready():
-	show_drawing()
 
 func show_drawing():
 	self.visible = true
+	$Panel.visible = true
 	if GameManagerJm.stage - 1 == 0:
 		return
 	
@@ -16,6 +15,7 @@ func show_drawing():
 
 func hide_drawing():
 	self.visible = false
+	$Panel.visible = false
 	if GameManagerJm.stage - 1 == 0:
 		return
 	
