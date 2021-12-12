@@ -11,5 +11,5 @@ dest_files=[ "res://.import/60143__promete__wing-flaps.mp3-8703bc65708a3885d6d36
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
