@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/407625__aryanotstark__paint-brush.wav-8a075904b7650038c1fe8a4872e447e9.sample"
+path="res://.import/407625__aryanotstark__paint-brush.wav-9b573417a635db4c6cd1908e5c19b37c.sample"
 
 [deps]
 
-source_file="res://Sounds/connectingScene_sketch_Soundeffect/407625__aryanotstark__paint-brush.wav"
-dest_files=[ "res://.import/407625__aryanotstark__paint-brush.wav-8a075904b7650038c1fe8a4872e447e9.sample" ]
+source_file="res://sounds/connectingScene_sketch_Soundeffect/407625__aryanotstark__paint-brush.wav"
+dest_files=[ "res://.import/407625__aryanotstark__paint-brush.wav-9b573417a635db4c6cd1908e5c19b37c.sample" ]
 
 [params]
 

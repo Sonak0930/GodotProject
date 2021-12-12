@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Coin 1.mp3-b4aef454a64f537e0527aa2dbeea52aa.mp3str"
+path="res://.import/Coin 1.mp3-ce2be20da66904222de9aae14324a982.mp3str"
 
 [deps]
 
-source_file="res://Sounds/collectables_Soundeffect/Coin 1.mp3"
-dest_files=[ "res://.import/Coin 1.mp3-b4aef454a64f537e0527aa2dbeea52aa.mp3str" ]
+source_file="res://sounds/collectables_Soundeffect/Coin 1.mp3"
+dest_files=[ "res://.import/Coin 1.mp3-ce2be20da66904222de9aae14324a982.mp3str" ]
 
 [params]
 

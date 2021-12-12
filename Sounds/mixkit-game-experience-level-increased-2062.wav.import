@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/mixkit-game-experience-level-increased-2062.wav-3b6f06818ef9ef542f9d68ffd1e3a7a1.sample"
+path="res://.import/mixkit-game-experience-level-increased-2062.wav-2efa239ad9046ee299d950904f73e7a2.sample"
 
 [deps]
 
-source_file="res://Sounds/mixkit-game-experience-level-increased-2062.wav"
-dest_files=[ "res://.import/mixkit-game-experience-level-increased-2062.wav-3b6f06818ef9ef542f9d68ffd1e3a7a1.sample" ]
+source_file="res://sounds/mixkit-game-experience-level-increased-2062.wav"
+dest_files=[ "res://.import/mixkit-game-experience-level-increased-2062.wav-2efa239ad9046ee299d950904f73e7a2.sample" ]
 
 [params]
 

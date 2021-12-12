@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Monkeys-Spinning-Monkey(stage or credit)s.mp3-ead863bc1d6de2d9c9837a39a6ddedc4.mp3str"
+path="res://.import/Monkeys-Spinning-Monkey(stage or credit)s.mp3-17280d7bb7fb50df15fe8d752377c528.mp3str"
 
 [deps]
 
-source_file="res://Sounds/jm_bgms/Monkeys-Spinning-Monkey(stage or credit)s.mp3"
-dest_files=[ "res://.import/Monkeys-Spinning-Monkey(stage or credit)s.mp3-ead863bc1d6de2d9c9837a39a6ddedc4.mp3str" ]
+source_file="res://sounds/jm_bgms/Monkeys-Spinning-Monkey(stage or credit)s.mp3"
+dest_files=[ "res://.import/Monkeys-Spinning-Monkey(stage or credit)s.mp3-17280d7bb7fb50df15fe8d752377c528.mp3str" ]
 
 [params]
 
