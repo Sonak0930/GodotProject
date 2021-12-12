@@ -116,16 +116,19 @@ func life_is_color():
 	if(CurrentColor[0]+CurrentColor[1]+CurrentColor[2]==0):
 		print("you lose!")
 		$"./Panels/GameOverPanel".visible = true
+		$"Panels/GameOverPanel/gameover_sound".play()
 		get_tree().paused = true
 		
 	elif sum==0 && (!is_same) && Waterbucket_num == 0:
 		print("Left color obj num:",sum)
 		print("you lose!")
 		$"./Panels/GameOverPanel".visible = true
+		$"Panels/GameOverPanel/gameover_sound".play()
 		get_tree().paused = true
 	elif (CurrentColor[0]<TargetColor[0]||CurrentColor[1]<TargetColor[1]||CurrentColor[2]<TargetColor[2])&& sum==0:
 		print("you lose")
 		$"./Panels/GameOverPanel".visible = true
+		$"Panels/GameOverPanel/gameover_sound".play()
 		get_tree().paused = true
 
 

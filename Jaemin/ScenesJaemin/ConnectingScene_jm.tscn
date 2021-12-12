@@ -407,7 +407,7 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
-volume_db = -10.907
+volume_db = -22.049
 autoplay = true
 
 [connection signal="pressed" from="ExitGameButton" to="." method="_on_ExitGameButton_pressed"]

@@ -542,9 +542,9 @@ collision_layer = 8
 format = 1
 tile_data = PoolIntArray( -458708, 0, 0, -327698, 0, 0, -327666, 0, 0, -327634, 0, 0, -7, 0, 0, 2, 0, 0, 5, 0, 0, 21, 0, 0, 23, 0, 0, 30, 0, 0, 327708, 0, 0, 524270, 0, 0, 524288, 0, 0, 589863, 0, 0, 720878, 0, 0, 786471, 0, 0, 917486, 0, 0, 851981, 0, 0, 851993, 0, 0, 1114094, 0, 0, 1179640, 0, 0, 1310745, 0, 0, 1376277, 0, 0, 1572890, 0, 0, 1703935, 0, 0 )
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 22 )
-volume_db = -10.0
+volume_db = -12.786
 autoplay = true
 
 [connection signal="body_entered" from="Collectibles/Color/Random/RandomColor" to="Collectibles/Color/Random/RandomColor" method="_on_RandomColor_body_entered"]
