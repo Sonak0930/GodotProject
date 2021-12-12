@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/GunShotSnglShotIn PE1097906.mp3-cd422a1fb6a781e5f2a6070e5cbbe46b.mp3str"
+path="res://.import/GunShotSnglShotIn PE1097906.mp3-02e33529e8baea2cf8a84fdbe5f5119c.mp3str"
 
 [deps]
 
-source_file="res://Sounds/shooter_soundeffect/GunShotSnglShotIn PE1097906.mp3"
-dest_files=[ "res://.import/GunShotSnglShotIn PE1097906.mp3-cd422a1fb6a781e5f2a6070e5cbbe46b.mp3str" ]
+source_file="res://sounds/shooter_soundeffect/GunShotSnglShotIn PE1097906.mp3"
+dest_files=[ "res://.import/GunShotSnglShotIn PE1097906.mp3-02e33529e8baea2cf8a84fdbe5f5119c.mp3str" ]
 
 [params]
 

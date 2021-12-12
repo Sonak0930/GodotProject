@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Fast Drawing Sound.mp3-5e5ee6579c4fa073f7b44f6d80c6ff2b.mp3str"
+path="res://.import/Fast Drawing Sound.mp3-f391c3e09400026a11eaab14e1584d31.mp3str"
 
 [deps]
 
-source_file="res://Sounds/connectingScene_sketch_Soundeffect/Fast Drawing Sound.mp3"
-dest_files=[ "res://.import/Fast Drawing Sound.mp3-5e5ee6579c4fa073f7b44f6d80c6ff2b.mp3str" ]
+source_file="res://sounds/connectingScene_sketch_Soundeffect/Fast Drawing Sound.mp3"
+dest_files=[ "res://.import/Fast Drawing Sound.mp3-f391c3e09400026a11eaab14e1584d31.mp3str" ]
 
 [params]
 

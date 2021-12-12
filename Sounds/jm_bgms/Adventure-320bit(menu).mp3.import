@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Adventure-320bit(menu).mp3-1c6598bfd883bb2edc84d0c3c7677a9c.mp3str"
+path="res://.import/Adventure-320bit(menu).mp3-b9b18cb0c24fc4c3fb5a0c0fe9e75ac3.mp3str"
 
 [deps]
 
-source_file="res://Sounds/jm_bgms/Adventure-320bit(menu).mp3"
-dest_files=[ "res://.import/Adventure-320bit(menu).mp3-1c6598bfd883bb2edc84d0c3c7677a9c.mp3str" ]
+source_file="res://sounds/jm_bgms/Adventure-320bit(menu).mp3"
+dest_files=[ "res://.import/Adventure-320bit(menu).mp3-b9b18cb0c24fc4c3fb5a0c0fe9e75ac3.mp3str" ]
 
 [params]
 
