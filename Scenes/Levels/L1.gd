@@ -43,7 +43,16 @@ onready var GameManager = $"/root/GameManagerJm"
 var is_complited
 
 
+func _process(delta):
+	"""Just for test"""
+	if Input.is_action_pressed("ui_accept"):
+		CurrentColor = TargetColor
+		compare_color()
+		
+
 func _ready():
+	GameManager.stage = 1
+	get_node("UI_mj/LvText").text = "Lv. 1"
 	
 	#connect with player
 	player.connect("attacked",self,"_on_attacked")
@@ -85,11 +94,9 @@ func compare_color():
 		is_same = true
 		print("congrates!! you win!!")
 		
-		get_tree().change_scene("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
 		GameManager.advanceStage()
+		get_tree().change_scene("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
 		
-		print_tree_pretty()
-
 	else:
 		print("cheer up!!")
 
