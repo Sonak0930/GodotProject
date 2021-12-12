@@ -40,6 +40,8 @@ var is_complited
 
 
 func _ready():
+	GameManager.stage = 2
+	get_node("UI_mj/LvText").text = "Lv. 2"
 	#connect with player
 	player.connect("attacked",self,"_on_attacked")
 	player.connect("collected",self,"_on_collected")
@@ -73,9 +75,12 @@ var bat_speed = 100
 var melee_speed = 100
 # Enemy movment control
 func _process(delta):
+	"""Just for test"""
+	if Input.is_action_pressed("ui_accept"):
+		CurrentColor = TargetColor
+		compare_color()
+	
 	# Update bat offset
-	
-	
 	if $Enemies/BatPath/PathFollow2D != null:
 		$Enemies/BatPath/PathFollow2D.offset += bat_speed * delta
 	
@@ -98,10 +103,9 @@ func compare_color():
 		is_same = true
 		print("congrates!! you win!!")
 
-		get_tree().change_scene("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
 		GameManager.advanceStage()
-		
-		print_tree_pretty()
+		get_tree().change_scene("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
+
 
 	else:
 		print("cheer up!!")

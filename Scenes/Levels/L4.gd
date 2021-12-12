@@ -42,9 +42,15 @@ onready var GameManager = $"/root/GameManagerJm"
 # game judgement var
 var is_complited
 
+func _process(delta):
+	"""Just for test"""
+	if Input.is_action_pressed("ui_accept"):
+		CurrentColor = TargetColor
+		compare_color()
 
 func _ready():
-	
+	GameManager.stage = 4
+	get_node("CanvasLayer/UI_mj/LvText").text = "Lv. 4"
 	#connect with player
 	player.connect("attacked",self,"_on_attacked")
 	player.connect("collected",self,"_on_collected")
@@ -83,16 +89,6 @@ var bat_speed = 90
 var melee_speed = 100
 var shooter_speed = 90
 
-# Enemy movment control
-func _process(delta):
-	pass
-	# Update bat offset
-
-	# Update Meleebot offset
-
-	# Update Shooter offset
-
-	
 
 
 
@@ -102,10 +98,9 @@ func compare_color():
 		is_same = true
 		print("congrates!! you win!!")
 		
-		get_tree().change_scene("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
 		GameManager.advanceStage()
+		get_tree().change_scene("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
 		
-		print_tree_pretty()
 
 	else:
 		print("cheer up!!")
