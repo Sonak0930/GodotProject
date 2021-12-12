@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Intro Theme.mp3-51c04b37af0b6c0f4daeee4c96ad0c7b.mp3str"
+
+[deps]
+
+source_file="res://Sounds/platformerGame_bgm_package/Intro Theme.mp3"
+dest_files=[ "res://.import/Intro Theme.mp3-51c04b37af0b6c0f4daeee4c96ad0c7b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/421184__inspectorj__water-pouring-a.wav-5925b7795adc41712df5e03e4141a79a.sample"
+
+[deps]
+
+source_file="res://Sounds/collectables_Soundeffect/421184__inspectorj__water-pouring-a.wav"
+dest_files=[ "res://.import/421184__inspectorj__water-pouring-a.wav-5925b7795adc41712df5e03e4141a79a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

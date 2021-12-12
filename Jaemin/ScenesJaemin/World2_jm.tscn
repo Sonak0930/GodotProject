@@ -544,3 +544,8 @@ position = Vector2( 18, -90.408 )
 [node name="WaterPanel" parent="Panels" instance=ExtResource( 18 )]
 visible = false
 position = Vector2( 23, -76.408 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -9.613
+autoplay = true
