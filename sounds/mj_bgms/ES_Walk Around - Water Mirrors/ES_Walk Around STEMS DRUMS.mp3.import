@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/ES_Walk Around STEMS DRUMS.mp3-3ab9b1ece04e2442ce992830d2580223.mp3str"
+path="res://.import/ES_Walk Around STEMS DRUMS.mp3-2a16e500babcbdb7cf44d467c5b0cd60.mp3str"
 
 [deps]
 
-source_file="res://sounds/mj_bgms/ES_Walk Around - Water Mirrors/ES_Walk Around STEMS DRUMS.mp3"
-dest_files=[ "res://.import/ES_Walk Around STEMS DRUMS.mp3-3ab9b1ece04e2442ce992830d2580223.mp3str" ]
+source_file="res://Sounds/mj_bgms/ES_Walk Around - Water Mirrors/ES_Walk Around STEMS DRUMS.mp3"
+dest_files=[ "res://.import/ES_Walk Around STEMS DRUMS.mp3-2a16e500babcbdb7cf44d467c5b0cd60.mp3str" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/30341__junggle__waterdrop24.wav-b5602981794c4c9d883a3adbed0cd181.sample"
+path="res://.import/30341__junggle__waterdrop24.wav-928375b1378f4e39e0ef68ce1c49b1ba.sample"
 
 [deps]
 
-source_file="res://sounds/collectables_Soundeffect/30341__junggle__waterdrop24.wav"
-dest_files=[ "res://.import/30341__junggle__waterdrop24.wav-b5602981794c4c9d883a3adbed0cd181.sample" ]
+source_file="res://Sounds/collectables_Soundeffect/30341__junggle__waterdrop24.wav"
+dest_files=[ "res://.import/30341__junggle__waterdrop24.wav-928375b1378f4e39e0ef68ce1c49b1ba.sample" ]
 
 [params]
 

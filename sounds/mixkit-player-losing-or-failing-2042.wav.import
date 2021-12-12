@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/mixkit-player-losing-or-failing-2042.wav-c080bbad26cb2d7e97d8c2ca18e983c9.sample"
+path="res://.import/mixkit-player-losing-or-failing-2042.wav-bac70b9f0679ee6fbb2e2ecd2193bb6c.sample"
 
 [deps]
 
-source_file="res://sounds/mixkit-player-losing-or-failing-2042.wav"
-dest_files=[ "res://.import/mixkit-player-losing-or-failing-2042.wav-c080bbad26cb2d7e97d8c2ca18e983c9.sample" ]
+source_file="res://Sounds/mixkit-player-losing-or-failing-2042.wav"
+dest_files=[ "res://.import/mixkit-player-losing-or-failing-2042.wav-bac70b9f0679ee6fbb2e2ecd2193bb6c.sample" ]
 
 [params]
 

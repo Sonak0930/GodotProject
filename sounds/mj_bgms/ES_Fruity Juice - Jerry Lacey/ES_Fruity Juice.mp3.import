@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/ES_Fruity Juice.mp3-fe5f52b1859f000e2721706c65d72c28.mp3str"
+path="res://.import/ES_Fruity Juice.mp3-096fe92bc2904a91fd469928dae7dc84.mp3str"
 
 [deps]
 
-source_file="res://sounds/mj_bgms/ES_Fruity Juice - Jerry Lacey/ES_Fruity Juice.mp3"
-dest_files=[ "res://.import/ES_Fruity Juice.mp3-fe5f52b1859f000e2721706c65d72c28.mp3str" ]
+source_file="res://Sounds/mj_bgms/ES_Fruity Juice - Jerry Lacey/ES_Fruity Juice.mp3"
+dest_files=[ "res://.import/ES_Fruity Juice.mp3-096fe92bc2904a91fd469928dae7dc84.mp3str" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/we_ak47s_lb_04_hpx.mp3-858521c3efe18728e74cf3bdd519ed3a.mp3str"
+path="res://.import/we_ak47s_lb_04_hpx.mp3-448cec727c0a8d8e59466336a709c44f.mp3str"
 
 [deps]
 
-source_file="res://sounds/shooter_soundeffect/we_ak47s_lb_04_hpx.mp3"
-dest_files=[ "res://.import/we_ak47s_lb_04_hpx.mp3-858521c3efe18728e74cf3bdd519ed3a.mp3str" ]
+source_file="res://Sounds/shooter_soundeffect/we_ak47s_lb_04_hpx.mp3"
+dest_files=[ "res://.import/we_ak47s_lb_04_hpx.mp3-448cec727c0a8d8e59466336a709c44f.mp3str" ]
 
 [params]
 

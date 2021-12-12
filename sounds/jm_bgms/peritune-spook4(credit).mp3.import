@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/peritune-spook4(credit).mp3-8c47a88e8c51043837c3c3d0b0314cbf.mp3str"
+path="res://.import/peritune-spook4(credit).mp3-5135400587e0ec731fee2d4dfac31767.mp3str"
 
 [deps]
 
-source_file="res://sounds/jm_bgms/peritune-spook4(credit).mp3"
-dest_files=[ "res://.import/peritune-spook4(credit).mp3-8c47a88e8c51043837c3c3d0b0314cbf.mp3str" ]
+source_file="res://Sounds/jm_bgms/peritune-spook4(credit).mp3"
+dest_files=[ "res://.import/peritune-spook4(credit).mp3-5135400587e0ec731fee2d4dfac31767.mp3str" ]
 
 [params]
 

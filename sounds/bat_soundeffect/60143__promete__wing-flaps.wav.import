@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/60143__promete__wing-flaps.wav-c1533e8c72cd8928f3238396fcdd8b0a.sample"
+path="res://.import/60143__promete__wing-flaps.wav-9d5ad521e8552275f0ce80f3f97a9c3c.sample"
 
 [deps]
 
-source_file="res://sounds/bat_soundeffect/60143__promete__wing-flaps.wav"
-dest_files=[ "res://.import/60143__promete__wing-flaps.wav-c1533e8c72cd8928f3238396fcdd8b0a.sample" ]
+source_file="res://Sounds/bat_soundeffect/60143__promete__wing-flaps.wav"
+dest_files=[ "res://.import/60143__promete__wing-flaps.wav-9d5ad521e8552275f0ce80f3f97a9c3c.sample" ]
 
 [params]
 

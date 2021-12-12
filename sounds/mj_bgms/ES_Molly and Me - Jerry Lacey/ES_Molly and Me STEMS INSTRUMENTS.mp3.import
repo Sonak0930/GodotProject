@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/ES_Molly and Me STEMS INSTRUMENTS.mp3-784aafe3ff8baf0d0c9b1acdadf5554b.mp3str"
+path="res://.import/ES_Molly and Me STEMS INSTRUMENTS.mp3-d08cabfc54611f1a9ee7925ce609b264.mp3str"
 
 [deps]
 
-source_file="res://sounds/mj_bgms/ES_Molly and Me - Jerry Lacey/ES_Molly and Me STEMS INSTRUMENTS.mp3"
-dest_files=[ "res://.import/ES_Molly and Me STEMS INSTRUMENTS.mp3-784aafe3ff8baf0d0c9b1acdadf5554b.mp3str" ]
+source_file="res://Sounds/mj_bgms/ES_Molly and Me - Jerry Lacey/ES_Molly and Me STEMS INSTRUMENTS.mp3"
+dest_files=[ "res://.import/ES_Molly and Me STEMS INSTRUMENTS.mp3-d08cabfc54611f1a9ee7925ce609b264.mp3str" ]
 
 [params]
 

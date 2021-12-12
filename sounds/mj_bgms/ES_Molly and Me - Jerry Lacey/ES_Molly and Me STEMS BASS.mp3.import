@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/ES_Molly and Me STEMS BASS.mp3-aca4c9e22327749a0b653db8dca2edb1.mp3str"
+path="res://.import/ES_Molly and Me STEMS BASS.mp3-a649bb73092dfa4ec26facc43a0d5bba.mp3str"
 
 [deps]
 
-source_file="res://sounds/mj_bgms/ES_Molly and Me - Jerry Lacey/ES_Molly and Me STEMS BASS.mp3"
-dest_files=[ "res://.import/ES_Molly and Me STEMS BASS.mp3-aca4c9e22327749a0b653db8dca2edb1.mp3str" ]
+source_file="res://Sounds/mj_bgms/ES_Molly and Me - Jerry Lacey/ES_Molly and Me STEMS BASS.mp3"
+dest_files=[ "res://.import/ES_Molly and Me STEMS BASS.mp3-a649bb73092dfa4ec26facc43a0d5bba.mp3str" ]
 
 [params]
 

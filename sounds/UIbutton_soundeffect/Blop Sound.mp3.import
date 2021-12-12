@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Blop Sound.mp3-f3f8428bc919802105915afcb5e62685.mp3str"
+path="res://.import/Blop Sound.mp3-9b695709ff05bcf61c4e45efe6b9719f.mp3str"
 
 [deps]
 
-source_file="res://sounds/UIbutton_soundeffect/Blop Sound.mp3"
-dest_files=[ "res://.import/Blop Sound.mp3-f3f8428bc919802105915afcb5e62685.mp3str" ]
+source_file="res://Sounds/UIbutton_soundeffect/Blop Sound.mp3"
+dest_files=[ "res://.import/Blop Sound.mp3-9b695709ff05bcf61c4e45efe6b9719f.mp3str" ]
 
 [params]
 

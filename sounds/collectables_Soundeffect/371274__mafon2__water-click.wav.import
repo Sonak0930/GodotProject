@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/371274__mafon2__water-click.wav-c7ec79d4f47d14b939bab822eb8f690d.sample"
+path="res://.import/371274__mafon2__water-click.wav-2298714c0292195d5da6ad5abf6a210a.sample"
 
 [deps]
 
-source_file="res://sounds/collectables_Soundeffect/371274__mafon2__water-click.wav"
-dest_files=[ "res://.import/371274__mafon2__water-click.wav-c7ec79d4f47d14b939bab822eb8f690d.sample" ]
+source_file="res://Sounds/collectables_Soundeffect/371274__mafon2__water-click.wav"
+dest_files=[ "res://.import/371274__mafon2__water-click.wav-2298714c0292195d5da6ad5abf6a210a.sample" ]
 
 [params]
 

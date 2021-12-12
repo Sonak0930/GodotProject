@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/60143__promete__wing-flaps.mp3-5d5389907d24ef30f463532c6d9c0b14.mp3str"
+path="res://.import/60143__promete__wing-flaps.mp3-8703bc65708a3885d6d36df5cc97957b.mp3str"
 
 [deps]
 
-source_file="res://sounds/bat_soundeffect/60143__promete__wing-flaps.mp3"
-dest_files=[ "res://.import/60143__promete__wing-flaps.mp3-5d5389907d24ef30f463532c6d9c0b14.mp3str" ]
+source_file="res://Sounds/bat_soundeffect/60143__promete__wing-flaps.mp3"
+dest_files=[ "res://.import/60143__promete__wing-flaps.mp3-8703bc65708a3885d6d36df5cc97957b.mp3str" ]
 
 [params]
 

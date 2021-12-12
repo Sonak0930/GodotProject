@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/457280__xcallono__short-oww.wav-0cff4bf0507c37813430c1510d173159.sample"
+path="res://.import/457280__xcallono__short-oww.wav-d43b30e02f70054be7d03ede361ed053.sample"
 
 [deps]
 
-source_file="res://sounds/Player_Soundeffect/457280__xcallono__short-oww.wav"
-dest_files=[ "res://.import/457280__xcallono__short-oww.wav-0cff4bf0507c37813430c1510d173159.sample" ]
+source_file="res://Sounds/Player_Soundeffect/457280__xcallono__short-oww.wav"
+dest_files=[ "res://.import/457280__xcallono__short-oww.wav-d43b30e02f70054be7d03ede361ed053.sample" ]
 
 [params]
 

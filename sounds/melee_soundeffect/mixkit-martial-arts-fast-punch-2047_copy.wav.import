@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/mixkit-martial-arts-fast-punch-2047_copy.wav-1ac4b75d74cb8ce7dd32b760ce7e30de.sample"
+path="res://.import/mixkit-martial-arts-fast-punch-2047_copy.wav-db986a11ed1d31e5e3214f24078c940a.sample"
 
 [deps]
 
-source_file="res://sounds/melee_soundeffect/mixkit-martial-arts-fast-punch-2047_copy.wav"
-dest_files=[ "res://.import/mixkit-martial-arts-fast-punch-2047_copy.wav-1ac4b75d74cb8ce7dd32b760ce7e30de.sample" ]
+source_file="res://Sounds/melee_soundeffect/mixkit-martial-arts-fast-punch-2047_copy.wav"
+dest_files=[ "res://.import/mixkit-martial-arts-fast-punch-2047_copy.wav-db986a11ed1d31e5e3214f24078c940a.sample" ]
 
 [params]
 
