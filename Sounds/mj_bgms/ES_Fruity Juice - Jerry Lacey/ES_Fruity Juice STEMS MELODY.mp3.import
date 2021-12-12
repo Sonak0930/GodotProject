@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ES_Fruity Juice STEMS MELODY.mp3-9802fe8cc7f6bd65435f868a0b1555c7.mp3str"
+
+[deps]
+
+source_file="res://Sounds/mj_bgms/ES_Fruity Juice - Jerry Lacey/ES_Fruity Juice STEMS MELODY.mp3"
+dest_files=[ "res://.import/ES_Fruity Juice STEMS MELODY.mp3-9802fe8cc7f6bd65435f868a0b1555c7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

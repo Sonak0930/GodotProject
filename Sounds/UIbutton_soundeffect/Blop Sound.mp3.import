@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Blop Sound.mp3-9b695709ff05bcf61c4e45efe6b9719f.mp3str"
+
+[deps]
+
+source_file="res://Sounds/UIbutton_soundeffect/Blop Sound.mp3"
+dest_files=[ "res://.import/Blop Sound.mp3-9b695709ff05bcf61c4e45efe6b9719f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
