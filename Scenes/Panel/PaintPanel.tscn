@@ -10,9 +10,11 @@
 [ext_resource path="res://Scenes/Panel/PaintPanel.gd" type="Script" id=8]
 
 [node name="PaintPanel" type="Node2D"]
+visible = false
 script = ExtResource( 8 )
 
 [node name="Panel" type="Sprite" parent="."]
+visible = false
 scale = Vector2( 0.783972, 0.603116 )
 texture = ExtResource( 5 )
 
