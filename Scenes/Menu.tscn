@@ -38,33 +38,33 @@
 [ext_resource path="res://assets/UIButtonsVideogames/arrows/Icon45.png" type="Texture" id=36]
 [ext_resource path="res://assets/UIButtonsVideogames/72ppp/Buttons-165.png" type="Texture" id=37]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=4]
 size = 40
 font_data = ExtResource( 15 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=15]
 size = 40
 font_data = ExtResource( 15 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 1, 0.517647, 0.517647, 1 )
 
-[sub_resource type="DynamicFontData" id=4]
+[sub_resource type="DynamicFontData" id=8]
 font_path = "res://assets/UIButtonsVideogames/72ppp/font/Colby-StBlk.ttf"
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=9]
 size = 18
-font_data = SubResource( 4 )
+font_data = SubResource( 8 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=11]
 size = 40
 font_data = ExtResource( 28 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=12]
 size = 40
 font_data = ExtResource( 28 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=14]
 size = 40
 font_data = ExtResource( 28 )
 
@@ -149,7 +149,6 @@ margin_left = 230.0
 margin_top = 97.0
 margin_right = 794.0
 margin_bottom = 198.0
-
 custom_colors/font_color = Color( 0.980392, 1, 0.337255, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "MONO TO COLOR"
@@ -210,7 +209,7 @@ margin_left = 414.0
 margin_top = 286.0
 margin_right = 611.0
 margin_bottom = 337.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 15 )
 text = "Play"
 align = 1
 valign = 1
@@ -223,7 +222,7 @@ margin_left = 368.0
 margin_top = 381.0
 margin_right = 651.0
 margin_bottom = 432.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 15 )
 text = "Options"
 align = 1
 valign = 1
@@ -236,7 +235,7 @@ margin_left = 412.0
 margin_top = 470.0
 margin_right = 611.0
 margin_bottom = 521.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 15 )
 text = "Credit"
 align = 1
 valign = 1
@@ -249,7 +248,7 @@ margin_left = 413.0
 margin_top = 559.0
 margin_right = 610.0
 margin_bottom = 610.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 15 )
 text = "Exit"
 align = 1
 valign = 1
@@ -296,7 +295,7 @@ margin_left = 637.0
 margin_top = 254.0
 margin_right = 855.0
 margin_bottom = 283.0
-custom_styles/grabber_area_highlight = SubResource( 3 )
+custom_styles/grabber_area_highlight = SubResource( 7 )
 min_value = -80.0
 max_value = 0.0
 __meta__ = {
@@ -311,7 +310,6 @@ margin_left = 637.0
 margin_top = 313.0
 margin_right = 805.0
 margin_bottom = 338.0
-
 custom_colors/font_color = Color( 0.654902, 0.654902, 0.654902, 1 )
 custom_fonts/font = SubResource( 9 )
 text = "- Change keys -"
@@ -388,7 +386,7 @@ margin_left = 619.0
 margin_top = 239.0
 margin_right = 817.0
 margin_bottom = 269.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 11 )
 text = "- Press Key -"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -489,7 +487,7 @@ margin_left = 404.0
 margin_top = 390.0
 margin_right = 624.0
 margin_bottom = 431.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 12 )
 text = "New game"
 align = 1
 valign = 1
@@ -502,7 +500,7 @@ margin_left = 396.0
 margin_top = 481.0
 margin_right = 632.0
 margin_bottom = 522.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 14 )
 text = "Load game"
 align = 1
 valign = 1
@@ -515,7 +513,7 @@ margin_left = 396.0
 margin_top = 573.0
 margin_right = 632.0
 margin_bottom = 614.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 14 )
 text = "Back"
 align = 1
 valign = 1

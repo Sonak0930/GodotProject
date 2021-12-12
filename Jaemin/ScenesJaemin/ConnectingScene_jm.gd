@@ -15,7 +15,6 @@ func advanceStage():
 	stage += 1
 	drawing = get_child(stage)
 	drawing.visible = true
-	$connectingScene_sound.play()
 	
 
 	#drawing.set_visible(true)

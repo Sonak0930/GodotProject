@@ -1,10 +1,9 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/pink_walk/Pink_Monster_Walk_6.png" type="Texture" id=1]
 [ext_resource path="res://assets/pink_walk/walk Reverted.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Player_mj.gd" type="Script" id=3]
 [ext_resource path="res://assets/Animations/player_ouch.tres" type="Animation" id=4]
-[ext_resource path="res://sounds/Player_Soundeffect/457280__xcallono__short-oww.wav" type="AudioStream" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -96,9 +95,3 @@ polygon = PoolVector2Array( 6.68025, 4.14724, 5, 9, 6.97789, 15.5567, -8.10242, 
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/ouch = ExtResource( 4 )
-
-[node name="Player_OuchSound" type="AudioStreamPlayer2D" parent="."]
-pause_mode = 2
-stream = ExtResource( 5 )
-volume_db = -20.0
-pitch_scale = 1.6
