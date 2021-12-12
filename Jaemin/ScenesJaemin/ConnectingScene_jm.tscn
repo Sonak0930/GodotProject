@@ -17,6 +17,8 @@
 [ext_resource path="res://Jaemin/Assets_Jaemin/ConnectingSceneDrawings/L2.png" type="Texture" id=15]
 [ext_resource path="res://Jaemin/Assets_Jaemin/UI_Jm/HomeButton.png" type="Texture" id=16]
 [ext_resource path="res://sounds/mixkit-game-experience-level-increased-2062.wav" type="AudioStream" id=17]
+[ext_resource path="res://Jaemin/Assets_Jaemin/AmbientSounds/Solemnis.mp3" type="AudioStream" id=18]
+
 
 [node name="ConnectingScene" type="Node2D"]
 script = ExtResource( 13 )
@@ -191,3 +193,8 @@ __meta__ = {
 pause_mode = 2
 stream = ExtResource( 17 )
 volume_db = -15.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -6.18
+

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Monkeys-Spinning-Monkey(stage or credit)s.mp3-08863434fd6bc922907c488c79c000e0.mp3str"
+
+[deps]
+
+source_file="res://Jaemin/Assets_Jaemin/AmbientSounds/Monkeys-Spinning-Monkey(stage or credit)s.mp3"
+dest_files=[ "res://.import/Monkeys-Spinning-Monkey(stage or credit)s.mp3-08863434fd6bc922907c488c79c000e0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

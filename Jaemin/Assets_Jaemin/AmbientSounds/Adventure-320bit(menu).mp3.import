@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Adventure-320bit(menu).mp3-843c644578ee0365310b89d9f6e4eb37.mp3str"
+
+[deps]
+
+source_file="res://Jaemin/Assets_Jaemin/AmbientSounds/Adventure-320bit(menu).mp3"
+dest_files=[ "res://.import/Adventure-320bit(menu).mp3-843c644578ee0365310b89d9f6e4eb37.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

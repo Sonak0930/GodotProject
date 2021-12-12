@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/peritune-spook4(credit).mp3-732600b5df1e725953f625006777f723.mp3str"
+
+[deps]
+
+source_file="res://Jaemin/Assets_Jaemin/AmbientSounds/peritune-spook4(credit).mp3"
+dest_files=[ "res://.import/peritune-spook4(credit).mp3-732600b5df1e725953f625006777f723.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
