@@ -36,6 +36,7 @@ func _on_ExitGameButton_pressed():
 	get_tree().change_scene("res://Scenes/Menu.tscn")
 
 
+
 func _on_NextLevelButton_pressed():
 	match GameManagerJm.stage:
 		2: # go to lv 2...
@@ -50,4 +51,5 @@ func _on_NextLevelButton_pressed():
 			get_tree().change_scene("res://Scenes/Levels/L6.tscn")
 		7:  # All level finished
 			get_tree().change_scene("res://Jaemin/ScenesJaemin/Credit.tscn")
+
 

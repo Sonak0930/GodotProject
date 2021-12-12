@@ -33,6 +33,7 @@ func _on_colorBucket_red_button_pressed():
 		world_node.life_is_color()
 		update_panel()
 		print(world_node.colorbucket_red_num)
+	$deleteBucket_sound.play()
 
 
 func _on_colorBucket_green_button_pressed():
@@ -45,6 +46,7 @@ func _on_colorBucket_green_button_pressed():
 		world_node.compare_color()
 		world_node.life_is_color()
 		update_panel()
+	$deleteBucket_sound.play()
 
 
 func _on_colorBucket_blue_button_pressed():
@@ -57,6 +59,7 @@ func _on_colorBucket_blue_button_pressed():
 		world_node.compare_color()
 		world_node.life_is_color()
 		update_panel()
+	$deleteBucket_sound.play()
 
 
 func _on_WaterPanel_visibility_changed():

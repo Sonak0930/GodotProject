@@ -84,7 +84,7 @@ points = PoolVector2Array( 32, 32, 32, 32, 24.6929, 31.5831, 23.5765, 27.3969, 1
 3/shapes = [  ]
 3/z_index = 0
 
-[sub_resource type="GDScript" id=4]
+[sub_resource type="GDScript" id=3]
 script/source = "extends Area2D
 
 class_name ColorObj_blue_mj
@@ -110,7 +110,7 @@ func _on_Collect_anim_animation_finished(anim_name):
 	queue_free()
 "
 
-[sub_resource type="GDScript" id=5]
+[sub_resource type="GDScript" id=4]
 script/source = "extends Area2D
 
 class_name ColorObj_red_mj
@@ -136,7 +136,7 @@ func _on_Collect_anim_animation_finished(anim_name):
 	queue_free()
 "
 
-[sub_resource type="Curve2D" id=3]
+[sub_resource type="Curve2D" id=5]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 78, 35.592, 0, 0, 0, 0, 75, 145.592, 0, 0, 0, 0, 138, 36.592, 0, 0, 0, 0, 150, 130.592, 0, 0, 0, 0, 210, 34.592, 0, 0, 0, 0, 217, 140.592, 0, 0, 0, 0, 270, 40.592, 0, 0, 0, 0, 277, 135.592, 0, 0, 0, 0, 331, 40.592, 0, 0, 0, 0, 360, 127.592, 0, 0, 0, 0, 341, 89.592, 0, 0, 0, 0, 77, 76.592, 0, 0, 0, 0, 78, 33.592 )
 }
@@ -146,14 +146,14 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 113, 33, 0, 0, 0, 0, 197, 100, 0, 0, 0, 0, 95, 169, 0, 0, 0, 0, -13, 97, 0, 0, 0, 0, 113, 33 )
 }
 
-[sub_resource type="Curve2D" id=8]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 248, -34, 0, 0, 0, 0, 237, 19, 0, 0, 0, 0, 230, 73, 0, 0, 0, 0, 337, 73, 0, 0, 0, 0, 359, -38, 0, 0, 0, 0, 412, -104, 0, 0, 0, 0, 419, -159, 0, 0, 0, 0, 465, -158, 0, 0, 0, 0, 481, -119, 0, 0, 0, 0, 551, -116, 0, 0, 0, 0, 491, -84, 0, 0, 0, 0, 509, -35, 0, 0, 0, 0, 561, -33, 0, 0, 0, 0, 561, 32, 0, 0, 0, 0, 528, 68, 0, 0, 0, 0, 442, 62, 0, 0, 0, 0, 375, 63, 0, 0, 0, 0, 351, 35, 0, 0, 0, 0, 342, -84, 0, 0, 0, 0, 284, -85, 0, 0, 0, 0, 214, -97, 0, 0, 0, 0, 173, -122, 0, 0, 0, 0, 154, -151, 0, 0, 0, 0, 130, -65, 0, 0, 0, 0, 144, 8, 0, 0, 0, 0, 126, 9, 0, 0, 0, 0, 117, 19, 0, 0, 0, 0, 158, 52, 0, 0, 0, 0, 207, 38, 0, 0, 0, 0, 247, -35 )
-}
-
 [sub_resource type="Curve2D" id=7]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 127, -4, 0, 0, 0, 0, 203, 54, 0, 0, 0, 0, 285, -35, 0, 0, 0, 0, 233, -87, 0, 0, 0, 0, 170, -119, 0, 0, 0, 0, 159, -61, 0, 0, 0, 0, 113, -59, 0, 0, 0, 0, 49, -122, 0, 0, 0, 0, -26, -82, 0, 0, 0, 0, -38, -14, 0, 0, 0, 0, -3, -2 )
+}
+
+[sub_resource type="Curve2D" id=8]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 248, -34, 0, 0, 0, 0, 237, 19, 0, 0, 0, 0, 230, 73, 0, 0, 0, 0, 337, 73, 0, 0, 0, 0, 359, -38, 0, 0, 0, 0, 412, -104, 0, 0, 0, 0, 419, -159, 0, 0, 0, 0, 465, -158, 0, 0, 0, 0, 481, -119, 0, 0, 0, 0, 551, -116, 0, 0, 0, 0, 491, -84, 0, 0, 0, 0, 509, -35, 0, 0, 0, 0, 561, -33, 0, 0, 0, 0, 561, 32, 0, 0, 0, 0, 528, 68, 0, 0, 0, 0, 442, 62, 0, 0, 0, 0, 375, 63, 0, 0, 0, 0, 351, 35, 0, 0, 0, 0, 342, -84, 0, 0, 0, 0, 284, -85, 0, 0, 0, 0, 214, -97, 0, 0, 0, 0, 173, -122, 0, 0, 0, 0, 154, -151, 0, 0, 0, 0, 130, -65, 0, 0, 0, 0, 144, 8, 0, 0, 0, 0, 126, 9, 0, 0, 0, 0, 117, 19, 0, 0, 0, 0, 158, 52, 0, 0, 0, 0, 207, 38, 0, 0, 0, 0, 247, -35 )
 }
 
 [node name="World_mj" type="Node2D"]
@@ -221,7 +221,7 @@ position = Vector2( 0, -121.231 )
 position = Vector2( 276, 468.592 )
 
 [node name="ColorObj_blue_mj" parent="Buckets/colorObjs_mj/Node2D" instance=ExtResource( 3 )]
-script = SubResource( 4 )
+script = SubResource( 3 )
 
 [node name="Node2D2" type="Node2D" parent="Buckets/colorObjs_mj"]
 position = Vector2( 979, 449.592 )
@@ -262,7 +262,7 @@ position = Vector2( 242, 136.592 )
 position = Vector2( 176, 135.592 )
 
 [node name="ColorObj_red2" parent="Buckets/colorObjs_mj/Node2D9" instance=ExtResource( 5 )]
-script = SubResource( 5 )
+script = SubResource( 4 )
 
 [node name="Node2D10" type="Node2D" parent="Buckets/colorObjs_mj"]
 position = Vector2( 113, 135.592 )
@@ -310,7 +310,7 @@ scale = Vector2( 0.163015, 0.163015 )
 position = Vector2( 10, 6.592 )
 
 [node name="BatPath" type="Path2D" parent="Enemies"]
-curve = SubResource( 3 )
+curve = SubResource( 5 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/BatPath"]
 position = Vector2( 77.4112, 57.1819 )
@@ -332,21 +332,22 @@ rotate = false
 
 [node name="Path2D2" type="Path2D" parent="Enemies"]
 position = Vector2( 422, 492 )
-curve = SubResource( 8 )
+curve = SubResource( 7 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D2"]
-position = Vector2( 248, -34 )
-rotation = 1.77544
+position = Vector2( -1, -1 )
+rotation = -0.0234332
 
 [node name="Shooter_Move" parent="Enemies/Path2D2/PathFollow2D" instance=ExtResource( 15 )]
 
 [node name="Path2D" type="Path2D" parent="Enemies"]
 position = Vector2( 412, 498 )
-curve = SubResource( 7 )
+curve = SubResource( 8 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemies/Path2D"]
-position = Vector2( -1, -1 )
-rotation = -0.0234332
+position = Vector2( 248, -34 )
+rotation = 1.77544
+
 
 [node name="Shooter_Move" parent="Enemies/Path2D/PathFollow2D" instance=ExtResource( 15 )]
 

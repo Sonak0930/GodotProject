@@ -42,6 +42,7 @@ var is_complited
 func _ready():
 	GameManager.stage = 5
 	get_node("UI_mj/LvText").text = "Lv. 5"
+  
 	#connect with player
 	player.connect("attacked",self,"_on_attacked")
 	player.connect("collected",self,"_on_collected")
@@ -103,9 +104,9 @@ func compare_color():
 		is_same = true
 		print("congrates!! you win!!")
 
+
 		GameManager.advanceStage()
 		get_tree().change_scene("res://Jaemin/ScenesJaemin/ConnectingScene_jm.tscn")
-
 
 	else:
 		print("cheer up!!")

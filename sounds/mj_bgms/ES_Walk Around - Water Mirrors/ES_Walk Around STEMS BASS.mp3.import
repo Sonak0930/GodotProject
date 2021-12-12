@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ES_Walk Around STEMS BASS.mp3-03c4c34acbe098a39f7acfe135879907.mp3str"
+
+[deps]
+
+source_file="res://sounds/mj_bgms/ES_Walk Around - Water Mirrors/ES_Walk Around STEMS BASS.mp3"
+dest_files=[ "res://.import/ES_Walk Around STEMS BASS.mp3-03c4c34acbe098a39f7acfe135879907.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

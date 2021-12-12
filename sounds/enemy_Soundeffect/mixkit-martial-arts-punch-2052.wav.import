@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mixkit-martial-arts-punch-2052.wav-11fcd050c355232be30462a4fdba4450.sample"
+
+[deps]
+
+source_file="res://sounds/enemy_Soundeffect/mixkit-martial-arts-punch-2052.wav"
+dest_files=[ "res://.import/mixkit-martial-arts-punch-2052.wav-11fcd050c355232be30462a4fdba4450.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
