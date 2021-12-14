@@ -1,3 +1,9 @@
+"""
+Scene owner: DongHyun
+Support: MyungJi
+"""
+
+
 extends Area2D
 
 onready var default_anim = $Animations/Item_default_anim

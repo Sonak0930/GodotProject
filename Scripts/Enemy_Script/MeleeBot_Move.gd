@@ -1,3 +1,9 @@
+"""
+Scene owner: DongHyun
+Support: MyungJi
+"""
+
+
 extends Area2D
 
 # get a reference to the sprite

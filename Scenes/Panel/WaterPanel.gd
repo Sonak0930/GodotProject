@@ -1,3 +1,9 @@
+"""
+Scene owner: DongHyun
+"""
+
+
+
 extends Node2D
 
 onready var world_node = $"./".owner

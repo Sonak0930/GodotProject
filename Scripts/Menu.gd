@@ -1,3 +1,8 @@
+"""
+Scene owner: DongHyun
+"""
+
+
 extends Node2D
 
 """ Volume ref """
@@ -159,7 +164,7 @@ func _on_NewGameButton_pressed():
 	# save level data to level 1
 	GameManagerJm.stage = 1
 	GameManagerJm.save_game()
-	get_tree().change_scene("res://Scenes/Levels/L1.tscn")
+	get_tree().change_scene("res://Scenes/StoryScene/Story.tscn")
 
 
 func _on_LoadGameButton_pressed():

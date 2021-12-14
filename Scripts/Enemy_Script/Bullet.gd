@@ -1,3 +1,9 @@
+"""
+Scene owner: DongHyun
+Suport: MyungJi
+"""
+
+
 extends Area2D
 
 class_name Bullet

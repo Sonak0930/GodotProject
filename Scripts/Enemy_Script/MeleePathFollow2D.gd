@@ -1,3 +1,8 @@
+"""
+Scene owner: DongHyun
+"""
+
+
 extends PathFollow2D
 
 var last_position

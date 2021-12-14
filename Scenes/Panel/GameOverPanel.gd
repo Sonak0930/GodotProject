@@ -1,3 +1,7 @@
+"""
+Scene owner: DongHyun
+"""
+
 extends Node2D
 
 var menu_scene = preload("res://Scenes/Menu.tscn")

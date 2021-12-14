@@ -1,3 +1,8 @@
+"""
+Scene owner: DongHyun
+Support: MyungJi
+"""
+
 extends Area2D
 
 class_name ColorObj_blue_mj

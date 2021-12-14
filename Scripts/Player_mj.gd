@@ -1,3 +1,9 @@
+"""
+Scene owner: JaeMin
+Support: Myungji, DongHyun
+"""
+
+
 extends KinematicBody2D
 
 class_name Player_mj
