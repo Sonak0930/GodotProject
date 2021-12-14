@@ -410,15 +410,15 @@ visible = false
 
 [node name="PressKeyPanel" type="Sprite" parent="OptionsPanel/KeyOptions/panel"]
 modulate = Color( 1, 1, 1, 0.733333 )
-position = Vector2( 707.98, 270.375 )
+position = Vector2( 713.98, 270.375 )
 scale = Vector2( 0.77451, 0.219933 )
 texture = ExtResource( 22 )
 
 [node name="Presskey" type="Label" parent="OptionsPanel/KeyOptions/panel"]
-margin_left = 619.0
+margin_left = 588.98
 margin_top = 239.0
-margin_right = 817.0
-margin_bottom = 269.0
+margin_right = 860.98
+margin_bottom = 280.0
 custom_fonts/font = SubResource( 11 )
 text = "- Press Key -"
 __meta__ = {

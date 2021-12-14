@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Ghost.gd" type="Script" id=1]
-[ext_resource path="res://GhostWalk/MonsterReversedWalking.png" type="Texture" id=2]
-[ext_resource path="res://GhostWalk/Owlet_Monster_Walk_6.png" type="Texture" id=3]
+[ext_resource path="res://Jaemin/ScriptJaemin/Ghost.gd" type="Script" id=1]
+[ext_resource path="res://Jaemin/GhostWalk/MonsterReversedWalking.png" type="Texture" id=2]
+[ext_resource path="res://Jaemin/GhostWalk/Owlet_Monster_Walk_6.png" type="Texture" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
