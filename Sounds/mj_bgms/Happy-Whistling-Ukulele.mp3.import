@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Happy-Whistling-Ukulele.mp3-50c790e2e6ad5ee67ee1f8e59724759b.mp3str"
+path="res://.import/Happy-Whistling-Ukulele.mp3-f55b9ed260ddbaab76027bc02aa9318d.mp3str"
 
 [deps]
 
-source_file="res://Sounds/mj_bgms/Happy-Whistling-Ukulele.mp3"
-dest_files=[ "res://.import/Happy-Whistling-Ukulele.mp3-50c790e2e6ad5ee67ee1f8e59724759b.mp3str" ]
+source_file="res://sounds/mj_bgms/Happy-Whistling-Ukulele.mp3"
+dest_files=[ "res://.import/Happy-Whistling-Ukulele.mp3-f55b9ed260ddbaab76027bc02aa9318d.mp3str" ]
 
 [params]
 

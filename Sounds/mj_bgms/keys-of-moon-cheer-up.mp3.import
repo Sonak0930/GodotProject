@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/keys-of-moon-cheer-up.mp3-5a0931cb4a029269d90476d9a2b2af0d.mp3str"
+path="res://.import/keys-of-moon-cheer-up.mp3-cbd287cd8f7562fa4aea4a2957c39e0a.mp3str"
 
 [deps]
 
-source_file="res://Sounds/mj_bgms/keys-of-moon-cheer-up.mp3"
-dest_files=[ "res://.import/keys-of-moon-cheer-up.mp3-5a0931cb4a029269d90476d9a2b2af0d.mp3str" ]
+source_file="res://sounds/mj_bgms/keys-of-moon-cheer-up.mp3"
+dest_files=[ "res://.import/keys-of-moon-cheer-up.mp3-cbd287cd8f7562fa4aea4a2957c39e0a.mp3str" ]
 
 [params]
 

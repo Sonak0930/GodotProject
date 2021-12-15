@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/442602__topschool__ow-sound (1).mp3-750051c8c883892b05250bc3c072c4ae.mp3str"
+path="res://.import/442602__topschool__ow-sound (1).mp3-ea5f50bccab55b42288cc54bef6d6014.mp3str"
 
 [deps]
 
-source_file="res://Sounds/Player_Soundeffect/442602__topschool__ow-sound (1).mp3"
-dest_files=[ "res://.import/442602__topschool__ow-sound (1).mp3-750051c8c883892b05250bc3c072c4ae.mp3str" ]
+source_file="res://sounds/Player_Soundeffect/442602__topschool__ow-sound (1).mp3"
+dest_files=[ "res://.import/442602__topschool__ow-sound (1).mp3-ea5f50bccab55b42288cc54bef6d6014.mp3str" ]
 
 [params]
 

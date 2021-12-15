@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/552855__joao-janz__draw-circle-paintbrush-04.wav-0dd970e8f4f6208e9c067a4d73afea83.sample"
+path="res://.import/552855__joao-janz__draw-circle-paintbrush-04.wav-fbee6ccff81c3173601a7b4b5227fbea.sample"
 
 [deps]
 
-source_file="res://Sounds/connectingScene_sketch_Soundeffect/552855__joao-janz__draw-circle-paintbrush-04.wav"
-dest_files=[ "res://.import/552855__joao-janz__draw-circle-paintbrush-04.wav-0dd970e8f4f6208e9c067a4d73afea83.sample" ]
+source_file="res://sounds/connectingScene_sketch_Soundeffect/552855__joao-janz__draw-circle-paintbrush-04.wav"
+dest_files=[ "res://.import/552855__joao-janz__draw-circle-paintbrush-04.wav-fbee6ccff81c3173601a7b4b5227fbea.sample" ]
 
 [params]
 

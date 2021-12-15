@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/110393__soundscalpel-com__water-splash.wav-134aca6eb396bde69b91b53a4b3f688a.sample"
+path="res://.import/110393__soundscalpel-com__water-splash.wav-413e9bf387508bd2386bb98d6d6f8eed.sample"
 
 [deps]
 
-source_file="res://Sounds/UIbutton_soundeffect/110393__soundscalpel-com__water-splash.wav"
-dest_files=[ "res://.import/110393__soundscalpel-com__water-splash.wav-134aca6eb396bde69b91b53a4b3f688a.sample" ]
+source_file="res://sounds/UIbutton_soundeffect/110393__soundscalpel-com__water-splash.wav"
+dest_files=[ "res://.import/110393__soundscalpel-com__water-splash.wav-413e9bf387508bd2386bb98d6d6f8eed.sample" ]
 
 [params]
 

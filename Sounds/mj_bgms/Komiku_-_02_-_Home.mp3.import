@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Komiku_-_02_-_Home.mp3-60b92f2e94098c9d51b96dea27cbb6a7.mp3str"
+path="res://.import/Komiku_-_02_-_Home.mp3-0efb20df0f9e84a3565c2a64d4828e55.mp3str"
 
 [deps]
 
-source_file="res://Sounds/mj_bgms/Komiku_-_02_-_Home.mp3"
-dest_files=[ "res://.import/Komiku_-_02_-_Home.mp3-60b92f2e94098c9d51b96dea27cbb6a7.mp3str" ]
+source_file="res://sounds/mj_bgms/Komiku_-_02_-_Home.mp3"
+dest_files=[ "res://.import/Komiku_-_02_-_Home.mp3-0efb20df0f9e84a3565c2a64d4828e55.mp3str" ]
 
 [params]
 

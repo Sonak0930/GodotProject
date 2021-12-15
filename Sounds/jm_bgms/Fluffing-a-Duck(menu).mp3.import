@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Fluffing-a-Duck(menu).mp3-3f862676527bdfb2a37a32de0864c293.mp3str"
+path="res://.import/Fluffing-a-Duck(menu).mp3-3b275c0a64999f16d7f0fcc583084220.mp3str"
 
 [deps]
 
-source_file="res://Sounds/jm_bgms/Fluffing-a-Duck(menu).mp3"
-dest_files=[ "res://.import/Fluffing-a-Duck(menu).mp3-3f862676527bdfb2a37a32de0864c293.mp3str" ]
+source_file="res://sounds/jm_bgms/Fluffing-a-Duck(menu).mp3"
+dest_files=[ "res://.import/Fluffing-a-Duck(menu).mp3-3b275c0a64999f16d7f0fcc583084220.mp3str" ]
 
 [params]
 

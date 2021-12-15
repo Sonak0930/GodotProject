@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/389634__stubb__wing-flap-1.wav-c87fa6162a1d19f914aa5bb13c421c14.sample"
+path="res://.import/389634__stubb__wing-flap-1.wav-37919372aaa3ebf135c60398d4c7601e.sample"
 
 [deps]
 
-source_file="res://Sounds/bat_soundeffect/389634__stubb__wing-flap-1.wav"
-dest_files=[ "res://.import/389634__stubb__wing-flap-1.wav-c87fa6162a1d19f914aa5bb13c421c14.sample" ]
+source_file="res://sounds/bat_soundeffect/389634__stubb__wing-flap-1.wav"
+dest_files=[ "res://.import/389634__stubb__wing-flap-1.wav-37919372aaa3ebf135c60398d4c7601e.sample" ]
 
 [params]
 

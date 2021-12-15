@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/398271__inspectorj__pencil-writing-close-a.wav-d0481f4a513ac7a515c5fabb25785034.sample"
+path="res://.import/398271__inspectorj__pencil-writing-close-a.wav-b6d972973dbb29daec9202fbc7eeb14c.sample"
 
 [deps]
 
-source_file="res://Sounds/connectingScene_sketch_Soundeffect/398271__inspectorj__pencil-writing-close-a.wav"
-dest_files=[ "res://.import/398271__inspectorj__pencil-writing-close-a.wav-d0481f4a513ac7a515c5fabb25785034.sample" ]
+source_file="res://sounds/connectingScene_sketch_Soundeffect/398271__inspectorj__pencil-writing-close-a.wav"
+dest_files=[ "res://.import/398271__inspectorj__pencil-writing-close-a.wav-b6d972973dbb29daec9202fbc7eeb14c.sample" ]
 
 [params]
 

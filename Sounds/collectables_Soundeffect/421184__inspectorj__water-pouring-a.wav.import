@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/421184__inspectorj__water-pouring-a.wav-5925b7795adc41712df5e03e4141a79a.sample"
+path="res://.import/421184__inspectorj__water-pouring-a.wav-6966fb7293ab5b4f2d7dff92b3fff2ac.sample"
 
 [deps]
 
-source_file="res://Sounds/collectables_Soundeffect/421184__inspectorj__water-pouring-a.wav"
-dest_files=[ "res://.import/421184__inspectorj__water-pouring-a.wav-5925b7795adc41712df5e03e4141a79a.sample" ]
+source_file="res://sounds/collectables_Soundeffect/421184__inspectorj__water-pouring-a.wav"
+dest_files=[ "res://.import/421184__inspectorj__water-pouring-a.wav-6966fb7293ab5b4f2d7dff92b3fff2ac.sample" ]
 
 [params]
 
