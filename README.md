@@ -22,7 +22,7 @@ Scenes mainly used to make this game
 * B Bucket: res://Scenes/colorObjs/ColorObj_blue_mj.tscn
 * Random Bucket: res://Scenes/RandomColor_OBJ.tscn
 * WaterBucket: res://Scenes/waterObj_mj.tscn
-
+* Player: res://Scenes/Player_mj.tscn
 * Enemy scenes: (under the Enemies folder) - res://Scenes/Enemies/
 
 * Wall: res://Scenes/waterObj_mj.tscn
