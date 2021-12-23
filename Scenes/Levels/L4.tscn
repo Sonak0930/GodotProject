@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://assets/Texture/TX Struct.png" type="Texture" id=1]
 [ext_resource path="res://TileSets/WallTileSet.tres" type="TileSet" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://TileSets/groundTileSet.tres" type="TileSet" id=6]
 [ext_resource path="res://Scenes/Levels/L4.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/waterObj_mj.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/RandomColor_OBJ.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/colorObjs/ColorObj_blue_mj.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/colorObjs/ColorObj_red_mj.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/colorObjs/ColorObj_green_mj.tscn" type="PackedScene" id=12]
@@ -337,18 +336,6 @@ position = Vector2( 1448, 500.592 )
 
 [node name="ColorObj_blue_mj" parent="Collectibles/Color/Blue4" instance=ExtResource( 10 )]
 
-[node name="Random" type="Node2D" parent="Collectibles/Color"]
-position = Vector2( 841, 274.592 )
-
-[node name="RandomColor" parent="Collectibles/Color/Random" instance=ExtResource( 9 )]
-modulate = Color( 0.196078, 0.196078, 0.392157, 1 )
-
-[node name="Random2" type="Node2D" parent="Collectibles/Color"]
-position = Vector2( 1391, -122.408 )
-
-[node name="RandomColor" parent="Collectibles/Color/Random2" instance=ExtResource( 9 )]
-modulate = Color( 0.392157, 0.196078, 0, 1 )
-
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Bat" type="Node2D" parent="Enemies"]
@@ -546,6 +533,3 @@ tile_data = PoolIntArray( -458708, 0, 0, -327698, 0, 0, -327666, 0, 0, -327634, 
 stream = ExtResource( 22 )
 volume_db = -12.786
 autoplay = true
-
-[connection signal="body_entered" from="Collectibles/Color/Random/RandomColor" to="Collectibles/Color/Random/RandomColor" method="_on_RandomColor_body_entered"]
-[connection signal="body_entered" from="Collectibles/Color/Random2/RandomColor" to="Collectibles/Color/Random2/RandomColor" method="_on_RandomColor_body_entered"]

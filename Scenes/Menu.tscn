@@ -113,14 +113,6 @@ show_collision = true
 collision_layer = 8
 format = 1
 
-[node name="PropsTileMap" type="TileMap" parent="."]
-tile_set = ExtResource( 6 )
-cell_size = Vector2( 32, 32 )
-show_collision = true
-collision_layer = 8
-format = 1
-tile_data = PoolIntArray( -65505, 22, 0, 26, 15, 0, 65558, 5, 0, 131075, 12, 0, 131083, 13, 0, 196610, 12, 0, 196616, 13, 0, 262169, 16, 0, 393246, 14, 0, 458756, 15, 0, 458770, 15, 0, 589832, 15, 0, 851988, 1, 0, 851993, 13, 0, 917505, 15, 0, 917507, 5, 0, 917509, 5, 0, 917532, 13, 0, 1114118, 17, 0, 1114129, 15, 0, 1114139, 13, 0, 1179660, 17, 0, 1179661, 16, 0, 1245193, 15, 0 )
-
 [node name="StructTileMap" type="TileMap" parent="."]
 cell_size = Vector2( 32, 32 )
 show_collision = true
@@ -141,6 +133,14 @@ shape = SubResource( 19 )
 
 [node name="Player_mj" parent="." instance=ExtResource( 7 )]
 position = Vector2( 859, 364 )
+
+[node name="PropsTileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 32, 32 )
+show_collision = true
+collision_layer = 8
+format = 1
+tile_data = PoolIntArray( -65505, 22, 0, 26, 15, 0, 65558, 5, 0, 131075, 12, 0, 131083, 13, 0, 196610, 12, 0, 196616, 13, 0, 262169, 16, 0, 393246, 14, 0, 458756, 15, 0, 458770, 15, 0, 589832, 15, 0, 851988, 1, 0, 851993, 13, 0, 917505, 15, 0, 917507, 5, 0, 917509, 5, 0, 917532, 13, 0, 1114118, 17, 0, 1114129, 15, 0, 1114139, 13, 0, 1179660, 17, 0, 1179661, 16, 0, 1245193, 15, 0 )
 
 [node name="PlantTileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 5 )

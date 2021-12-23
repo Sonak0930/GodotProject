@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Pink_Monster_Idle_4.png-068337cef1373fef4481444e63573595.stex"
+path="res://.import/idle_flipped.png-74369b65154a17006cc7ef192e7f2bea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Jaemin/craftpix-675522-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/Pink_Monster_Idle_4.png"
-dest_files=[ "res://.import/Pink_Monster_Idle_4.png-068337cef1373fef4481444e63573595.stex" ]
+source_file="res://Jaemin/craftpix-675522-free-pixel-art-tiny-hero-sprites/1 Pink_Monster/idle_flipped.png"
+dest_files=[ "res://.import/idle_flipped.png-74369b65154a17006cc7ef192e7f2bea.stex" ]
 
 [params]
 
