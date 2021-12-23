@@ -8,9 +8,12 @@ extends KinematicBody2D
 
 class_name Player_mj
 
+enum State {RUN_RIGHT, RUN_LEFT}
+var run_state = State.RUN_RIGHT
+
 onready var anima = $AnimatedSprite
 onready var animaPlayer = $AnimationPlayer
-#var speed = 120.0
+
 var speed = 150
 
 var sec_cur = 0.0
@@ -20,6 +23,10 @@ var is_collided = false
 signal attacked(body, enemyName)
 signal collected(colorObjName)
 
+func _ready():
+	anima.play("IdleRight")
+
+
 func _process(delta):
 	if is_collided:
 		sec_cur += delta
@@ -28,14 +35,24 @@ func _process(delta):
 			sec_cur = 0
 	
 	_moveWithKeyboard()
+	
+	# Animation updated
 	if Input.is_action_pressed("ui_right"):
-		anima.play("run")
 		anima.set_animation("Right")
+		run_state = State.RUN_RIGHT
 	elif Input.is_action_pressed("ui_left"):
-		anima.play("run")
 		anima.set_animation("Left")
+		run_state = State.RUN_LEFT
+	elif Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_down"):
+		if run_state == State.RUN_RIGHT:
+			anima.set_animation("Right")
+		else:
+			anima.set_animation("Left")
 	else:
-		anima.stop()
+		if run_state == State.RUN_RIGHT:
+			anima.set_animation("IdleRight")
+		else:
+			anima.set_animation("IdleLeft")
 	
 # Normalize update
 func _moveWithKeyboard():
